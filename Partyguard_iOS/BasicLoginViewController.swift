@@ -37,6 +37,7 @@ class BasicLoginViewController: UIViewController {
     override func viewDidLoad()
     {
         TitleLBL.text = "PartyGuard"
+        self.view.backgroundColor = UIColor.lightTextColor()
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }

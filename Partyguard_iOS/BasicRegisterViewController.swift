@@ -40,12 +40,18 @@ class BasicRegisterViewController: UIViewController {
     
     
     @IBAction func CreateAccountButton(sender: AnyObject) {
+        let alert = UIAlertView()
+        alert.title = "Account Creation Was Successful"
+        alert.message = "Click OK"
+        alert.addButtonWithTitle("OK")
+        alert.show()
     }
     
     override func viewDidLoad()
     {
         
         ProfileIV.image = UIImage(named: "Dummy_profile.jpg")
+        self.view.backgroundColor = UIColor.lightTextColor()
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.

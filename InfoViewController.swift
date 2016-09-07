@@ -1,30 +1,20 @@
 //
-//  GuardLoginViewController.swift
+//  InfoViewController.swift
 //  Partyguard_iOS
 //
-//  Created by Tankasala,Nandeesh on 9/6/16.
+//  Created by Somu,Vinod Reddy on 9/7/16.
 //  Copyright © 2016 BashGuardians. All rights reserved.
 //
 
 import UIKit
 
-class GuardLoginViewController: UIViewController {
-    
-    
-    
-    
-    @IBOutlet weak var TitleLBL: UILabel!
-    
-    
-    @IBOutlet weak var EmailTF: UITextField!
-    
-    
-    @IBOutlet weak var PasswordTF: UITextField!
+class InfoViewController: UIViewController {
 
-    override func viewDidLoad()
+    @IBAction func NextButtonClicked(sender: AnyObject)
     {
-        TitleLBL.text = "PartyGuard"
-        self.view.backgroundColor = UIColor.lightTextColor()
+        self.performSegueWithIdentifier("segue5", sender: self)
+    }
+    override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.

@@ -15,6 +15,8 @@
 		23DDEB691D7FA2220045A2AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23DDEB671D7FA2220045A2AA /* Main.storyboard */; };
 		23DDEB6B1D7FA2220045A2AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23DDEB6A1D7FA2220045A2AA /* Assets.xcassets */; };
 		23DDEB6E1D7FA2220045A2AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23DDEB6C1D7FA2220045A2AA /* LaunchScreen.storyboard */; };
+		7F04B7131D89F234002581CC /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F04B7121D89F234002581CC /* MenuViewController.swift */; };
+		7F04B7151D89F5DE002581CC /* ProfileImage 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7F04B7141D89F5DE002581CC /* ProfileImage 2.jpg */; };
 		AC6347721D80B4860080B62A /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6347711D80B4860080B62A /* InfoViewController.swift */; };
 		AC6347781D80C1A50080B62A /* SPE.gif in Resources */ = {isa = PBXBuildFile; fileRef = AC6347771D80C1A50080B62A /* SPE.gif */; };
 		AC63477A1D80C1AA0080B62A /* TKE.gif in Resources */ = {isa = PBXBuildFile; fileRef = AC6347791D80C1AA0080B62A /* TKE.gif */; };
@@ -37,6 +39,8 @@
 		23DDEB6A1D7FA2220045A2AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		23DDEB6D1D7FA2220045A2AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		23DDEB6F1D7FA2220045A2AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F04B7121D89F234002581CC /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		7F04B7141D89F5DE002581CC /* ProfileImage 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ProfileImage 2.jpg"; sourceTree = "<group>"; };
 		AC6347711D80B4860080B62A /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InfoViewController.swift; path = ../InfoViewController.swift; sourceTree = "<group>"; };
 		AC6347771D80C1A50080B62A /* SPE.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = SPE.gif; sourceTree = "<group>"; };
 		AC6347791D80C1AA0080B62A /* TKE.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = TKE.gif; sourceTree = "<group>"; };
@@ -88,6 +92,8 @@
 				AC6347711D80B4860080B62A /* InfoViewController.swift */,
 				231704D31D7FB0D7005BEF99 /* GuardLoginViewController.swift */,
 				231704CF1D7FA6B5005BEF99 /* BasicRegisterViewController.swift */,
+				7F04B7121D89F234002581CC /* MenuViewController.swift */,
+				7F04B7141D89F5DE002581CC /* ProfileImage 2.jpg */,
 				23DDEB6A1D7FA2220045A2AA /* Assets.xcassets */,
 				ACFFE5E61D89EE8C005EFB35 /* Menu Filled-50.png */,
 				AC6347771D80C1A50080B62A /* SPE.gif */,
@@ -175,6 +181,7 @@
 				231704D21D7FAB14005BEF99 /* Dummy_profile.jpg in Resources */,
 				23DDEB6E1D7FA2220045A2AA /* LaunchScreen.storyboard in Resources */,
 				AC63477C1D80C1AF0080B62A /* PDT.gif in Resources */,
+				7F04B7151D89F5DE002581CC /* ProfileImage 2.jpg in Resources */,
 				AC6347781D80C1A50080B62A /* SPE.gif in Resources */,
 				AC63477A1D80C1AA0080B62A /* TKE.gif in Resources */,
 				23DDEB6B1D7FA2220045A2AA /* Assets.xcassets in Resources */,
@@ -197,6 +204,7 @@
 				231704D01D7FA6B5005BEF99 /* BasicRegisterViewController.swift in Sources */,
 				AC6347BE1D80C8A60080B62A /* FraternityTableViewController.swift in Sources */,
 				AC6347721D80B4860080B62A /* InfoViewController.swift in Sources */,
+				7F04B7131D89F234002581CC /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

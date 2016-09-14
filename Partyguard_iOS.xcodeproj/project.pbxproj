@@ -22,8 +22,8 @@
 		AC63477E1D80C1B40080B62A /* PSK.png in Resources */ = {isa = PBXBuildFile; fileRef = AC63477D1D80C1B40080B62A /* PSK.png */; };
 		AC6347801D80C2B20080B62A /* PSK1.png in Resources */ = {isa = PBXBuildFile; fileRef = AC63477F1D80C2B20080B62A /* PSK1.png */; };
 		AC6347BE1D80C8A60080B62A /* FraternityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6347BD1D80C8A60080B62A /* FraternityTableViewController.swift */; };
-		AF2A97B91D88A7B100C0D52E /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2A97B81D88A7B100C0D52E /* SWRevealViewController.m */; };
-		AF2A97BB1D88CF6A00C0D52E /* Menu Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = AF2A97BA1D88CF6A00C0D52E /* Menu Filled-50.png */; };
+		ACFFE5E71D89EE8C005EFB35 /* Menu Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = ACFFE5E61D89EE8C005EFB35 /* Menu Filled-50.png */; };
+		ACFFE5EA1D89EF24005EFB35 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACFFE5E91D89EF24005EFB35 /* SWRevealViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,10 +44,10 @@
 		AC63477D1D80C1B40080B62A /* PSK.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PSK.png; sourceTree = "<group>"; };
 		AC63477F1D80C2B20080B62A /* PSK1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PSK1.png; sourceTree = "<group>"; };
 		AC6347BD1D80C8A60080B62A /* FraternityTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FraternityTableViewController.swift; sourceTree = "<group>"; };
+		ACFFE5E61D89EE8C005EFB35 /* Menu Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Menu Filled-50.png"; sourceTree = "<group>"; };
+		ACFFE5E81D89EF1A005EFB35 /* SWRevealViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		ACFFE5E91D89EF24005EFB35 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		AF2A97B61D88A7B100C0D52E /* Partyguard_iOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Partyguard_iOS-Bridging-Header.h"; sourceTree = "<group>"; };
-		AF2A97B71D88A7B100C0D52E /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = "../../SWRevealViewController-master/SWRevealViewController/SWRevealViewController.h"; sourceTree = "<group>"; };
-		AF2A97B81D88A7B100C0D52E /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = "../../SWRevealViewController-master/SWRevealViewController/SWRevealViewController.m"; sourceTree = "<group>"; };
-		AF2A97BA1D88CF6A00C0D52E /* Menu Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Menu Filled-50.png"; path = "../../../Downloads/Menu Filled-50.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +80,6 @@
 		23DDEB621D7FA2220045A2AA /* Partyguard_iOS */ = {
 			isa = PBXGroup;
 			children = (
-				AF2A97BA1D88CF6A00C0D52E /* Menu Filled-50.png */,
 				AF2A97B51D88A76100C0D52E /* SWRevealViewController */,
 				23DDEB631D7FA2220045A2AA /* AppDelegate.swift */,
 				23DDEB651D7FA2220045A2AA /* BasicLoginViewController.swift */,
@@ -90,6 +89,7 @@
 				231704D31D7FB0D7005BEF99 /* GuardLoginViewController.swift */,
 				231704CF1D7FA6B5005BEF99 /* BasicRegisterViewController.swift */,
 				23DDEB6A1D7FA2220045A2AA /* Assets.xcassets */,
+				ACFFE5E61D89EE8C005EFB35 /* Menu Filled-50.png */,
 				AC6347771D80C1A50080B62A /* SPE.gif */,
 				AC6347791D80C1AA0080B62A /* TKE.gif */,
 				AC63477B1D80C1AF0080B62A /* PDT.gif */,
@@ -105,9 +105,9 @@
 		AF2A97B51D88A76100C0D52E /* SWRevealViewController */ = {
 			isa = PBXGroup;
 			children = (
-				AF2A97B71D88A7B100C0D52E /* SWRevealViewController.h */,
-				AF2A97B81D88A7B100C0D52E /* SWRevealViewController.m */,
 				AF2A97B61D88A7B100C0D52E /* Partyguard_iOS-Bridging-Header.h */,
+				ACFFE5E81D89EF1A005EFB35 /* SWRevealViewController.h */,
+				ACFFE5E91D89EF24005EFB35 /* SWRevealViewController.m */,
 			);
 			name = SWRevealViewController;
 			sourceTree = "<group>";
@@ -172,13 +172,13 @@
 			files = (
 				AC6347801D80C2B20080B62A /* PSK1.png in Resources */,
 				AC63477E1D80C1B40080B62A /* PSK.png in Resources */,
-				AF2A97BB1D88CF6A00C0D52E /* Menu Filled-50.png in Resources */,
 				231704D21D7FAB14005BEF99 /* Dummy_profile.jpg in Resources */,
 				23DDEB6E1D7FA2220045A2AA /* LaunchScreen.storyboard in Resources */,
 				AC63477C1D80C1AF0080B62A /* PDT.gif in Resources */,
 				AC6347781D80C1A50080B62A /* SPE.gif in Resources */,
 				AC63477A1D80C1AA0080B62A /* TKE.gif in Resources */,
 				23DDEB6B1D7FA2220045A2AA /* Assets.xcassets in Resources */,
+				ACFFE5E71D89EE8C005EFB35 /* Menu Filled-50.png in Resources */,
 				23DDEB691D7FA2220045A2AA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -190,7 +190,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF2A97B91D88A7B100C0D52E /* SWRevealViewController.m in Sources */,
+				ACFFE5EA1D89EF24005EFB35 /* SWRevealViewController.m in Sources */,
 				231704D41D7FB0D7005BEF99 /* GuardLoginViewController.swift in Sources */,
 				23DDEB661D7FA2220045A2AA /* BasicLoginViewController.swift in Sources */,
 				23DDEB641D7FA2220045A2AA /* AppDelegate.swift in Sources */,

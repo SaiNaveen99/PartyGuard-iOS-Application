@@ -10,10 +10,8 @@ import UIKit
 
 class InfoViewController: UIViewController {
 
-    @IBAction func NextButtonClicked(sender: AnyObject)
-    {
-        self.performSegueWithIdentifier("segue5", sender: self)
-    }
+ 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,6 +21,10 @@ class InfoViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    
+    @IBAction func onclickNextButton(sender: UIBarButtonItem) {
     }
     
 

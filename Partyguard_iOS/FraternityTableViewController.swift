@@ -8,14 +8,23 @@
 
 import UIKit
 
+
 class FraternityTableViewController: UITableViewController {
 
+
     
+    @IBOutlet weak var menuBarButton: UIBarButtonItem!
     var Fraternities = ["SigEp","TKE","PhiDelta","PhiSig"]
     var subtitles = ["Sigma Phi Epsilon","Tau Kappa Epsilon","Phi Delta Theta","Phi Sigma Kappa"]
     var Icons = ["SPE.gif","TKE.gif","PDT.gif","PSK1.png"]
+    
+    
+    
+    
     override func viewDidLoad() {
                 super.viewDidLoad()
+                menuBarButton.target = self.revealViewController()
+                menuBarButton.action = #selector(SWRevealViewController.revealToggle(_:))
         
         // Do any additional setup after loading the view.
     }
@@ -29,6 +38,11 @@ class FraternityTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
+    
+    
+    @IBAction func onClickMenuBarButton(sender: UIBarButtonItem) {
+    }
+    
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows

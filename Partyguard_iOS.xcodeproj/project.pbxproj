@@ -22,6 +22,8 @@
 		AC63477E1D80C1B40080B62A /* PSK.png in Resources */ = {isa = PBXBuildFile; fileRef = AC63477D1D80C1B40080B62A /* PSK.png */; };
 		AC6347801D80C2B20080B62A /* PSK1.png in Resources */ = {isa = PBXBuildFile; fileRef = AC63477F1D80C2B20080B62A /* PSK1.png */; };
 		AC6347BE1D80C8A60080B62A /* FraternityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6347BD1D80C8A60080B62A /* FraternityTableViewController.swift */; };
+		AF2A97B91D88A7B100C0D52E /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2A97B81D88A7B100C0D52E /* SWRevealViewController.m */; };
+		AF2A97BB1D88CF6A00C0D52E /* Menu Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = AF2A97BA1D88CF6A00C0D52E /* Menu Filled-50.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,10 @@
 		AC63477D1D80C1B40080B62A /* PSK.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PSK.png; sourceTree = "<group>"; };
 		AC63477F1D80C2B20080B62A /* PSK1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PSK1.png; sourceTree = "<group>"; };
 		AC6347BD1D80C8A60080B62A /* FraternityTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FraternityTableViewController.swift; sourceTree = "<group>"; };
+		AF2A97B61D88A7B100C0D52E /* Partyguard_iOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Partyguard_iOS-Bridging-Header.h"; sourceTree = "<group>"; };
+		AF2A97B71D88A7B100C0D52E /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = "../../SWRevealViewController-master/SWRevealViewController/SWRevealViewController.h"; sourceTree = "<group>"; };
+		AF2A97B81D88A7B100C0D52E /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = "../../SWRevealViewController-master/SWRevealViewController/SWRevealViewController.m"; sourceTree = "<group>"; };
+		AF2A97BA1D88CF6A00C0D52E /* Menu Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Menu Filled-50.png"; path = "../../../Downloads/Menu Filled-50.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +80,8 @@
 		23DDEB621D7FA2220045A2AA /* Partyguard_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				AF2A97BA1D88CF6A00C0D52E /* Menu Filled-50.png */,
+				AF2A97B51D88A76100C0D52E /* SWRevealViewController */,
 				23DDEB631D7FA2220045A2AA /* AppDelegate.swift */,
 				23DDEB651D7FA2220045A2AA /* BasicLoginViewController.swift */,
 				23DDEB671D7FA2220045A2AA /* Main.storyboard */,
@@ -92,6 +100,16 @@
 				23DDEB6F1D7FA2220045A2AA /* Info.plist */,
 			);
 			path = Partyguard_iOS;
+			sourceTree = "<group>";
+		};
+		AF2A97B51D88A76100C0D52E /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AF2A97B71D88A7B100C0D52E /* SWRevealViewController.h */,
+				AF2A97B81D88A7B100C0D52E /* SWRevealViewController.m */,
+				AF2A97B61D88A7B100C0D52E /* Partyguard_iOS-Bridging-Header.h */,
+			);
+			name = SWRevealViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +172,7 @@
 			files = (
 				AC6347801D80C2B20080B62A /* PSK1.png in Resources */,
 				AC63477E1D80C1B40080B62A /* PSK.png in Resources */,
+				AF2A97BB1D88CF6A00C0D52E /* Menu Filled-50.png in Resources */,
 				231704D21D7FAB14005BEF99 /* Dummy_profile.jpg in Resources */,
 				23DDEB6E1D7FA2220045A2AA /* LaunchScreen.storyboard in Resources */,
 				AC63477C1D80C1AF0080B62A /* PDT.gif in Resources */,
@@ -171,6 +190,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF2A97B91D88A7B100C0D52E /* SWRevealViewController.m in Sources */,
 				231704D41D7FB0D7005BEF99 /* GuardLoginViewController.swift in Sources */,
 				23DDEB661D7FA2220045A2AA /* BasicLoginViewController.swift in Sources */,
 				23DDEB641D7FA2220045A2AA /* AppDelegate.swift in Sources */,
@@ -289,10 +309,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Partyguard_iOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "bashguardians.Partyguard-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Partyguard_iOS/Partyguard_iOS-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -300,10 +323,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Partyguard_iOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "bashguardians.Partyguard-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Partyguard_iOS/Partyguard_iOS-Bridging-Header.h";
 			};
 			name = Release;
 		};

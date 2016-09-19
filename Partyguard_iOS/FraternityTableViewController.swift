@@ -68,11 +68,7 @@ class FraternityTableViewController: UITableViewController {
      return true
      }
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let alert = UIAlertView()
-        alert.title = "Nothing Done Yet!"
-        alert.message = "Click Exit"
-        alert.addButtonWithTitle("Exit")
-        alert.show()
+        
     }
     /*
      // Override to support editing the table view.

@@ -17,6 +17,8 @@
 		23DDEB6E1D7FA2220045A2AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23DDEB6C1D7FA2220045A2AA /* LaunchScreen.storyboard */; };
 		7F04B7131D89F234002581CC /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F04B7121D89F234002581CC /* MenuViewController.swift */; };
 		7F04B7151D89F5DE002581CC /* ProfileImage 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7F04B7141D89F5DE002581CC /* ProfileImage 2.jpg */; };
+		7FA413311D90684C00ADCC92 /* IssueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA413301D90684C00ADCC92 /* IssueViewController.swift */; };
+		7FA413331D90759500ADCC92 /* IssueTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA413321D90759500ADCC92 /* IssueTableViewController.swift */; };
 		AC6347721D80B4860080B62A /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6347711D80B4860080B62A /* InfoViewController.swift */; };
 		AC6347781D80C1A50080B62A /* SPE.gif in Resources */ = {isa = PBXBuildFile; fileRef = AC6347771D80C1A50080B62A /* SPE.gif */; };
 		AC63477A1D80C1AA0080B62A /* TKE.gif in Resources */ = {isa = PBXBuildFile; fileRef = AC6347791D80C1AA0080B62A /* TKE.gif */; };
@@ -45,6 +47,8 @@
 		23DDEB6F1D7FA2220045A2AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F04B7121D89F234002581CC /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		7F04B7141D89F5DE002581CC /* ProfileImage 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ProfileImage 2.jpg"; sourceTree = "<group>"; };
+		7FA413301D90684C00ADCC92 /* IssueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssueViewController.swift; sourceTree = "<group>"; };
+		7FA413321D90759500ADCC92 /* IssueTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssueTableViewController.swift; sourceTree = "<group>"; };
 		AC6347711D80B4860080B62A /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InfoViewController.swift; path = ../InfoViewController.swift; sourceTree = "<group>"; };
 		AC6347771D80C1A50080B62A /* SPE.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = SPE.gif; sourceTree = "<group>"; };
 		AC6347791D80C1AA0080B62A /* TKE.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = TKE.gif; sourceTree = "<group>"; };
@@ -116,6 +120,8 @@
 				231704D11D7FAB14005BEF99 /* Dummy_profile.jpg */,
 				23DDEB6C1D7FA2220045A2AA /* LaunchScreen.storyboard */,
 				23DDEB6F1D7FA2220045A2AA /* Info.plist */,
+				7FA413301D90684C00ADCC92 /* IssueViewController.swift */,
+				7FA413321D90759500ADCC92 /* IssueTableViewController.swift */,
 			);
 			path = Partyguard_iOS;
 			sourceTree = "<group>";
@@ -211,6 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FA413311D90684C00ADCC92 /* IssueViewController.swift in Sources */,
 				ACFFE5EA1D89EF24005EFB35 /* SWRevealViewController.m in Sources */,
 				231704D41D7FB0D7005BEF99 /* GuardLoginViewController.swift in Sources */,
 				23DDEB661D7FA2220045A2AA /* BasicLoginViewController.swift in Sources */,

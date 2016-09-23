@@ -26,6 +26,10 @@
 		AC6347BE1D80C8A60080B62A /* FraternityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6347BD1D80C8A60080B62A /* FraternityTableViewController.swift */; };
 		ACFFE5E71D89EE8C005EFB35 /* Menu Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = ACFFE5E61D89EE8C005EFB35 /* Menu Filled-50.png */; };
 		ACFFE5EA1D89EF24005EFB35 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACFFE5E91D89EF24005EFB35 /* SWRevealViewController.m */; };
+		AF13E90B1D94BDA400D4A757 /* SituationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF13E90A1D94BDA400D4A757 /* SituationTableViewController.swift */; };
+		AF13E90D1D94C14000D4A757 /* IncidentLocationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF13E90C1D94C14000D4A757 /* IncidentLocationTableViewController.swift */; };
+		AF13E9131D94C75100D4A757 /* DC.png in Resources */ = {isa = PBXBuildFile; fileRef = AF13E9121D94C75100D4A757 /* DC.png */; };
+		AF13E9151D94C75700D4A757 /* AKL.png in Resources */ = {isa = PBXBuildFile; fileRef = AF13E9141D94C75700D4A757 /* AKL.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +55,10 @@
 		ACFFE5E61D89EE8C005EFB35 /* Menu Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Menu Filled-50.png"; sourceTree = "<group>"; };
 		ACFFE5E81D89EF1A005EFB35 /* SWRevealViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		ACFFE5E91D89EF24005EFB35 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		AF13E90A1D94BDA400D4A757 /* SituationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SituationTableViewController.swift; sourceTree = "<group>"; };
+		AF13E90C1D94C14000D4A757 /* IncidentLocationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IncidentLocationTableViewController.swift; sourceTree = "<group>"; };
+		AF13E9121D94C75100D4A757 /* DC.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DC.png; sourceTree = "<group>"; };
+		AF13E9141D94C75700D4A757 /* AKL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AKL.png; sourceTree = "<group>"; };
 		AF2A97B61D88A7B100C0D52E /* Partyguard_iOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Partyguard_iOS-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,6 +96,8 @@
 				23DDEB631D7FA2220045A2AA /* AppDelegate.swift */,
 				23DDEB651D7FA2220045A2AA /* BasicLoginViewController.swift */,
 				23DDEB671D7FA2220045A2AA /* Main.storyboard */,
+				AF13E90C1D94C14000D4A757 /* IncidentLocationTableViewController.swift */,
+				AF13E90A1D94BDA400D4A757 /* SituationTableViewController.swift */,
 				AC6347BD1D80C8A60080B62A /* FraternityTableViewController.swift */,
 				AC6347711D80B4860080B62A /* InfoViewController.swift */,
 				231704D31D7FB0D7005BEF99 /* GuardLoginViewController.swift */,
@@ -98,6 +108,8 @@
 				ACFFE5E61D89EE8C005EFB35 /* Menu Filled-50.png */,
 				AC6347771D80C1A50080B62A /* SPE.gif */,
 				AC6347791D80C1AA0080B62A /* TKE.gif */,
+				AF13E9141D94C75700D4A757 /* AKL.png */,
+				AF13E9121D94C75100D4A757 /* DC.png */,
 				AC63477B1D80C1AF0080B62A /* PDT.gif */,
 				AC63477D1D80C1B40080B62A /* PSK.png */,
 				AC63477F1D80C2B20080B62A /* PSK1.png */,
@@ -184,6 +196,8 @@
 				7F04B7151D89F5DE002581CC /* ProfileImage 2.jpg in Resources */,
 				AC6347781D80C1A50080B62A /* SPE.gif in Resources */,
 				AC63477A1D80C1AA0080B62A /* TKE.gif in Resources */,
+				AF13E9151D94C75700D4A757 /* AKL.png in Resources */,
+				AF13E9131D94C75100D4A757 /* DC.png in Resources */,
 				23DDEB6B1D7FA2220045A2AA /* Assets.xcassets in Resources */,
 				ACFFE5E71D89EE8C005EFB35 /* Menu Filled-50.png in Resources */,
 				23DDEB691D7FA2220045A2AA /* Main.storyboard in Resources */,
@@ -201,8 +215,10 @@
 				231704D41D7FB0D7005BEF99 /* GuardLoginViewController.swift in Sources */,
 				23DDEB661D7FA2220045A2AA /* BasicLoginViewController.swift in Sources */,
 				23DDEB641D7FA2220045A2AA /* AppDelegate.swift in Sources */,
+				AF13E90D1D94C14000D4A757 /* IncidentLocationTableViewController.swift in Sources */,
 				231704D01D7FA6B5005BEF99 /* BasicRegisterViewController.swift in Sources */,
 				AC6347BE1D80C8A60080B62A /* FraternityTableViewController.swift in Sources */,
+				AF13E90B1D94BDA400D4A757 /* SituationTableViewController.swift in Sources */,
 				AC6347721D80B4860080B62A /* InfoViewController.swift in Sources */,
 				7F04B7131D89F234002581CC /* MenuViewController.swift in Sources */,
 			);

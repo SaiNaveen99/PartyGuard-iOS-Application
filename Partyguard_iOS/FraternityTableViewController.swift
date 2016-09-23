@@ -14,9 +14,9 @@ class FraternityTableViewController: UITableViewController {
 
     
     @IBOutlet weak var menuBarButton: UIBarButtonItem!
-    var Fraternities = ["SigEp","TKE","PhiDelta","PhiSig"]
-    var subtitles = ["Sigma Phi Epsilon","Tau Kappa Epsilon","Phi Delta Theta","Phi Sigma Kappa"]
-    var Icons = ["SPE.gif","TKE.gif","PDT.gif","PSK1.png"]
+    var Fraternities = ["SigEp","TKE","PhiDelta","PhiSig","Delta Chi","AKL"]
+    var subtitles = ["Sigma Phi Epsilon","Tau Kappa Epsilon","Phi Delta Theta","Phi Sigma Kappa","Delta Chi","Alpha Kappa Lambda"]
+    var Icons = ["SPE.gif","TKE.gif","PDT.gif","PSK1.png","DC.png","AKL.png"]
     
     
     
@@ -67,13 +67,13 @@ class FraternityTableViewController: UITableViewController {
      // Return false if you do not want the specified item to be editable.
      return true
      }
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let alert = UIAlertView()
-        alert.title = "Nothing Done Yet!"
-        alert.message = "Click Exit"
-        alert.addButtonWithTitle("Exit")
-        alert.show()
-    }
+//    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+//        let alert = UIAlertView()
+//        alert.title = "Nothing Done Yet!"
+//        alert.message = "Click Exit"
+//        alert.addButtonWithTitle("Exit")
+//        alert.show()
+//    }
     /*
      // Override to support editing the table view.
      override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {

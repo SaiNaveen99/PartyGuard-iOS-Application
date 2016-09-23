@@ -13,6 +13,7 @@ class MenuViewController: UIViewController {
     
     
     @IBOutlet weak var profileImageView: UIImageView!
+    var MenuItem = ["Profile","Location Change","Log","Settings","About PartyGuard"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,22 @@ class MenuViewController: UIViewController {
         
 
         // Do any additional setup after loading the view.
+    }
+
+   func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
+    }
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return MenuItem.count
+    }
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("MenuCellID", forIndexPath: indexPath)
+        cell.textLabel?.text = MenuItem[indexPath.row]
+        // Configure the cell...
+        
+        return cell
     }
 
     override func didReceiveMemoryWarning() {

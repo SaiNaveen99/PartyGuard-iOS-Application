@@ -13,6 +13,7 @@ class InfoViewController: UIViewController {
  
 // extending the UIViewController class
     override func viewDidLoad() {
+        
         super.viewDidLoad()  // calling the method from the parent class.
 
         // Do any additional setup after loading the view.

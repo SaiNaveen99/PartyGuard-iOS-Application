@@ -3,16 +3,16 @@
 //  Partyguard_iOS
 //
 //  Created by Somu,Vinod Reddy on 9/7/16.
-//  Copyright Â© 2016 BashGuardians. All rights reserved.
+//  Copyright © 2016 BashGuardians. All rights reserved.
 //
 
 import UIKit
 
 class FraternitiesTableViewController: UITableViewController {
     
-    var Fraternities = ["SigEp","TKE","PhiDelta","PhiSig"]
-    var subtitles = ["Sigma Phi Epsilon","Tau Kappa Epsilon","Phi Delta Theta","Phi Sigma Kappa"]
-    var Icons = ["SPE.gif","TKE.gif","PDT.gif","PSK1.png"]
+    var Fraternities = ["SigEp","TKE","PhiDelta","PhiSig"]     // array of fraterneties 
+    var subtitles = ["Sigma Phi Epsilon","Tau Kappa Epsilon","Phi Delta Theta","Phi Sigma Kappa"] // array of subtitles 
+    var Icons = ["SPE.gif","TKE.gif","PDT.gif","PSK1.png"]  // icons given in the form of .gif 
 
     override func viewDidLoad() {
         super.viewDidLoad()

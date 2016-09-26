@@ -14,13 +14,13 @@ class InfoViewController: UIViewController {
 // extending the UIViewController class
     override func viewDidLoad() {
         
-        super.viewDidLoad()  // calling the method from the parent class.
+        super.viewDidLoad()  // calling method from parent class.
 
         // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+        super.didReceiveMemoryWarning()// Dispose 
         // Dispose of any resources that can be recreated.
     }
     

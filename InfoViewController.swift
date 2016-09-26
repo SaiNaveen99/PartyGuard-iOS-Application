@@ -3,7 +3,7 @@
 //  Partyguard_iOS
 //
 //  Created by Somu,Vinod Reddy on 9/7/16.
-//  Copyright Â© 2016 BashGuardians. All rights reserved.
+//  Copyright © 2016 BashGuardians. All rights reserved.
 //
 
 import UIKit
@@ -11,9 +11,9 @@ import UIKit
 class InfoViewController: UIViewController {
 
  
-    
+// extending the UIViewController class
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad()  // calling the method from the parent class.
 
         // Do any additional setup after loading the view.
     }

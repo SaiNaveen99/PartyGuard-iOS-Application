@@ -48,12 +48,8 @@ cell.textLabel?.text = incidentLocation[indexPath.row]
     }
  
         override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-            let alert = UIAlertView()
-            alert.title = "Nothing Done Yet!"
-            alert.message = "Click Exit"
-            alert.addButtonWithTitle("Exit")
-            alert.show()
-        }
+            
+                 }
 
     /*
     // Override to support conditional editing of the table view.

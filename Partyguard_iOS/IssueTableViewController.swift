@@ -19,7 +19,7 @@ class IssueTableViewController: UITableViewController {
         let backItem = UIBarButtonItem()
         backItem.title = ""
         navigationItem.backBarButtonItem = backItem
-        
+       
             }
 
     override func didReceiveMemoryWarning() {
@@ -55,13 +55,14 @@ class IssueTableViewController: UITableViewController {
         {
                        cell.textLabel?.text = Issues[indexPath.row-1]
             cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
-            cell.backgroundColor = UIColor.purpleColor()
+            cell.backgroundColor = UIColor.lightGrayColor()
         }
         else if(indexPath.row == 5)
         {
             
             cell.textLabel?.text = "EMERGENCY"
-            cell.backgroundColor = UIColor.redColor()
+            cell.backgroundColor = UIColor(red: 185.0/255.0, green: 0.0/255.0, blue: 35.0/255.0, alpha: 1.0)
+            cell.textLabel?.textAlignment = .Center
         }
 
         

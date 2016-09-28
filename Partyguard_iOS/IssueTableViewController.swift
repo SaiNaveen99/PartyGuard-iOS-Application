@@ -16,8 +16,10 @@ class IssueTableViewController: UITableViewController {
         super.viewDidLoad()
               print("Issue Table View Controller")
         self.navigationItem.title = "PartyGuard"
-        self.navigationItem.leftBarButtonItem?.title = "Back"
-        self.navigationController?.navigationBar.barTintColor = UIColor.redColor()
+        let backItem = UIBarButtonItem()
+        backItem.title = ""
+        navigationItem.backBarButtonItem = backItem
+        
             }
 
     override func didReceiveMemoryWarning() {
@@ -71,7 +73,7 @@ class IssueTableViewController: UITableViewController {
         
         let tableHeight = self.tableView.bounds.height
         
-        let cellHeight:CGFloat = tableHeight/6.0
+        let cellHeight:CGFloat = tableHeight/7.0
         
         return cellHeight
     }

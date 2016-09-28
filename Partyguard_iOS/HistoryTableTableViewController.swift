@@ -1,19 +1,18 @@
 //
-//  SituationTableViewController.swift
+//  HistoryTableTableViewController.swift
 //  Partyguard_iOS
 //
-//  Created by BashGuardians on 9/22/16.
+//  Created by Somu,Vinod Reddy on 9/19/16.
 //  Copyright © 2016 BashGuardians. All rights reserved.
 //
 
 import UIKit
 
-class SituationTableViewController: UITableViewController {
+class HistoryTableTableViewController: UITableViewController {
 
-    var Situation = ["Accident","Feeling Unsafe","Fight","Other"]
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        tableView.tableFooterView = UIView()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -35,18 +34,28 @@ class SituationTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return Situation.count
+        return 2
     }
 
-    
+   
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("SituationCellID", forIndexPath: indexPath)
-cell.textLabel?.text = Situation[indexPath.row]
+        let cell = tableView.dequeueReusableCellWithIdentifier("HistoryCell", forIndexPath: indexPath)
+         if(indexPath.row == 0)
+         {
+            cell.textLabel!.text = "Katie Harris"
+            cell.detailTextLabel?.text = "Main Floor"
+            cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+        }
+         else{
+            cell.textLabel!.text = "Jill Braid"
+            cell.detailTextLabel?.text = "Main Floor"
+            cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+        }
         // Configure the cell...
 
         return cell
     }
- 
+    
 
     /*
     // Override to support conditional editing of the table view.

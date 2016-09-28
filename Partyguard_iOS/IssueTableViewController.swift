@@ -15,6 +15,9 @@ class IssueTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
               print("Issue Table View Controller")
+        self.navigationItem.title = "PartyGuard"
+        self.navigationItem.leftBarButtonItem?.title = "Back"
+        self.navigationController?.navigationBar.barTintColor = UIColor.redColor()
             }
 
     override func didReceiveMemoryWarning() {
@@ -50,7 +53,7 @@ class IssueTableViewController: UITableViewController {
         {
                        cell.textLabel?.text = Issues[indexPath.row-1]
             cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
-            cell.backgroundColor = UIColor.lightGrayColor()
+            cell.backgroundColor = UIColor.purpleColor()
         }
         else if(indexPath.row == 5)
         {

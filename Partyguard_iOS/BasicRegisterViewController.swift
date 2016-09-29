@@ -40,14 +40,53 @@ class BasicRegisterViewController: UIViewController {
     
     
     @IBAction func CreateAccountButton(sender: AnyObject) {
-        let alert = UIAlertView()
-        alert.title = "Account Creation Was Successful"
-        alert.message = "Click OK"
-        alert.addButtonWithTitle("OK")
-        alert.show()
+        
+        var parameters = ["Email": EmailTF.text!, "Password": PasswordTF.text!, "ConfirmPassword" : RepeatPasswordTF.text!] as Dictionary<String, String>
+        
+      do {
+            
+            let jsonData = try NSJSONSerialization.dataWithJSONObject(parameters, options: .PrettyPrinted)
+            
+            let url = NSURL(string: "http://partyguardservices20160912122440.azurewebsites.net/api/Account/Register")
+            
+            let request = NSMutableURLRequest(URL: url!)
+            request.HTTPMethod = "POST"
+            
+        
+            request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+            request.HTTPBody = jsonData
+            
+            
+            let task = NSURLSession.sharedSession().dataTaskWithRequest(request){ data, response, error in
+                if error != nil{
+                    print("Error -> \(error)")
+                    return
+                }
+                else
+                {
+                    print("Success")
+                }
+                
+//                do {
+//                    let result = try NSJSONSerialization.JSONObjectWithData(data!, options: .MutableLeaves) as? [String:AnyObject]
+//                    
+//                    print("Result -> \(result)")
+//                    
+//                } catch {
+//                    print("Error -> \(error)")
+//                }
+            }
+            
+            task.resume()
+            //return task
+        
+            } catch {
+            print(error)
+        }
+       
     }
-    
-    override func viewDidLoad()
+
+override func viewDidLoad()
     {
         
         ProfileIV.image = UIImage(named: "Dummy_profile.jpg")

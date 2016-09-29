@@ -35,18 +35,46 @@ class IncidentLocationTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return incidentLocation.count
+        return incidentLocation.count+2
     }
 
    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("IncidentLocationCellID", forIndexPath: indexPath)
-cell.textLabel?.text = incidentLocation[indexPath.row]
-        // Configure the cell...
+        if (indexPath.row == 0)
+        {
+            print("Inside loop")
+            
+            cell.textLabel?.text = "SigEp"
+            cell.detailTextLabel?.text = "Sigma Phi Epsilon"
+            cell.imageView?.image = UIImage(named: "SPE.gif")
+        }
+        else if(indexPath.row == 1)
+        {
+            cell.textLabel?.text = "Feeling Unsafe"
+             cell.backgroundColor = UIColor.lightGrayColor()
+            
+        }
+        else if(indexPath.row >= 2 && indexPath.row <= 5)
+        {
+         cell.textLabel?.text = incidentLocation[indexPath.row-2]
+        cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+       cell.backgroundColor = UIColor.grayColor()
+            
+    }
+    
 
         return cell
     }
  
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        
+        let tableHeight = self.tableView.bounds.height
+        
+        let cellHeight:CGFloat = tableHeight/6.5
+        
+        return cellHeight
+    }
         override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
             
                  }

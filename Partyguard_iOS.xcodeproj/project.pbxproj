@@ -15,6 +15,7 @@
 		23DDEB691D7FA2220045A2AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23DDEB671D7FA2220045A2AA /* Main.storyboard */; };
 		23DDEB6B1D7FA2220045A2AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23DDEB6A1D7FA2220045A2AA /* Assets.xcassets */; };
 		23DDEB6E1D7FA2220045A2AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23DDEB6C1D7FA2220045A2AA /* LaunchScreen.storyboard */; };
+		30616C881D9E0CA700771AEB /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30616C871D9E0CA700771AEB /* ForgotPasswordViewController.swift */; };
 		7F04B7131D89F234002581CC /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F04B7121D89F234002581CC /* MenuViewController.swift */; };
 		7F04B7151D89F5DE002581CC /* ProfileImage 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7F04B7141D89F5DE002581CC /* ProfileImage 2.jpg */; };
 		7F82DDC01D9B05A30095E5E1 /* AcceptAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F82DDBF1D9B05A30095E5E1 /* AcceptAlertViewController.swift */; };
@@ -56,6 +57,7 @@
 		23DDEB6A1D7FA2220045A2AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		23DDEB6D1D7FA2220045A2AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		23DDEB6F1D7FA2220045A2AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30616C871D9E0CA700771AEB /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		7F04B7121D89F234002581CC /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		7F04B7141D89F5DE002581CC /* ProfileImage 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ProfileImage 2.jpg"; sourceTree = "<group>"; };
 		7F82DDBF1D9B05A30095E5E1 /* AcceptAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcceptAlertViewController.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				ACC34A371D9C69A400C60FFA /* GuardTabViewController.swift */,
 				23DDEB651D7FA2220045A2AA /* BasicLoginViewController.swift */,
 				23DDEB671D7FA2220045A2AA /* Main.storyboard */,
+				30616C871D9E0CA700771AEB /* ForgotPasswordViewController.swift */,
 				AF13E90C1D94C14000D4A757 /* IncidentLocationTableViewController.swift */,
 				AC6347BD1D80C8A60080B62A /* FraternityTableViewController.swift */,
 				AC6347711D80B4860080B62A /* InfoViewController.swift */,
@@ -262,6 +265,7 @@
 				7F82DDC01D9B05A30095E5E1 /* AcceptAlertViewController.swift in Sources */,
 				AF13E90D1D94C14000D4A757 /* IncidentLocationTableViewController.swift in Sources */,
 				ACC34A391D9C69A400C60FFA /* ProfileViewController.swift in Sources */,
+				30616C881D9E0CA700771AEB /* ForgotPasswordViewController.swift in Sources */,
 				231704D01D7FA6B5005BEF99 /* BasicRegisterViewController.swift in Sources */,
 				ACC34A381D9C69A400C60FFA /* AlertTableViewController.swift in Sources */,
 				7F82DDC21D9B19DF0095E5E1 /* ClaimAlertViewController.swift in Sources */,

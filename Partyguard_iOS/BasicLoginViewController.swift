@@ -10,27 +10,25 @@ import UIKit
 
 class BasicLoginViewController: UIViewController {
 
-    @IBOutlet weak var TitleLBL: UILabel!
     
     
     @IBOutlet weak var EmailTF: UITextField!
     
     
     @IBOutlet weak var PasswordTF: UITextField!
-    
-    
-    @IBOutlet weak var validationLBL: UILabel!
-    
-    
+   
+
     
     @IBAction func LoginButton(sender: AnyObject)
     {
         
         if(EmailTF.text == "" || PasswordTF.text == "")
         {
-            
-            validationLBL.hidden = false
-            validationLBL.text = " Invalid Username and Password"
+            let alert = UIAlertView()
+            alert.title = "Invalid Login"
+            alert.message = "Please enter valid details"
+            alert.addButtonWithTitle("Ok!")
+            alert.show()
             
         }
         else
@@ -76,13 +74,13 @@ class BasicLoginViewController: UIViewController {
         }
         }
         
-    }
-    
+    }    
     
     @IBAction func HostLoginButton(sender: AnyObject)
     {
         self.performSegueWithIdentifier("segue2", sender: self)
     }
+   
    
     @IBAction func RegisterButton(sender: AnyObject)
     {
@@ -90,9 +88,8 @@ class BasicLoginViewController: UIViewController {
     }
     override func viewDidLoad()
     {
-        TitleLBL.text = "PartyGuard"
         self.view.backgroundColor = UIColor.lightTextColor()
-        validationLBL.hidden = true
+//        validationLBL.hidden = true
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }

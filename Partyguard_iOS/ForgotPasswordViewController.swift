@@ -1,27 +1,16 @@
 //
-//  GuardLoginViewController.swift
+//  ForgotPasswordViewController.swift
 //  Partyguard_iOS
 //
-//  Created by Tankasala,Nandeesh on 9/6/16.
+//  Created by Koneru,Naga Venkata Sanjeev on 9/29/16.
 //  Copyright © 2016 BashGuardians. All rights reserved.
 //
 
 import UIKit
 
-class GuardLoginViewController: UIViewController {
-    
-    
-    
-    
-    @IBOutlet weak var EmailTF: UITextField!
-    
-    
-    @IBOutlet weak var PasswordTF: UITextField!
-   
+class ForgotPasswordViewController: UIViewController {
 
-    override func viewDidLoad()
-    {
-        self.view.backgroundColor = UIColor.lightTextColor()
+    override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.

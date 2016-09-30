@@ -13,7 +13,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var LBL: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        LBL.text = "Sign Up"
+        LBL.text = "Profile"
         // Do any additional setup after loading the view.
     }
 

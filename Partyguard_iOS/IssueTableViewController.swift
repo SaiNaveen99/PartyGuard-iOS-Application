@@ -74,7 +74,7 @@ class IssueTableViewController: UITableViewController {
         
         let tableHeight = self.tableView.bounds.height
         
-        let cellHeight:CGFloat = tableHeight/7.0
+        let cellHeight:CGFloat = tableHeight/6.5
         
         return cellHeight
     }

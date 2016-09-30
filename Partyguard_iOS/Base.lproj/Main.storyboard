@@ -235,7 +235,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5kJ-53-Gxd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1402.5" y="2057"/>
+            <point key="canvasLocation" x="1356" y="2046.75"/>
         </scene>
         <!--Issue Table View Controller-->
         <scene sceneID="L6a-TA-obo">
@@ -281,7 +281,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="64L-rz-Z30" id="a1I-wD-rmT">
-                                    <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uyw-3a-6xk">
@@ -645,6 +645,12 @@
                                 <exclude reference="Nta-ic-l1r"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="N1U-De-VtT"/>
+                                <exclude reference="o1g-IS-GlO"/>
+                                <exclude reference="vRr-T2-MBg"/>
+                                <exclude reference="7TR-tf-9mg"/>
+                                <exclude reference="AwE-VZ-ICE"/>
+                                <exclude reference="OgF-aZ-u8f"/>
                                 <exclude reference="3Fd-Jl-H6Z"/>
                                 <exclude reference="3Zu-YZ-h7d"/>
                                 <exclude reference="6pK-Dd-a7Y"/>
@@ -670,12 +676,6 @@
                                 <exclude reference="aaX-Un-Igq"/>
                                 <exclude reference="jxv-cV-MOc"/>
                                 <exclude reference="zdu-xW-qVu"/>
-                                <exclude reference="N1U-De-VtT"/>
-                                <exclude reference="o1g-IS-GlO"/>
-                                <exclude reference="vRr-T2-MBg"/>
-                                <exclude reference="7TR-tf-9mg"/>
-                                <exclude reference="AwE-VZ-ICE"/>
-                                <exclude reference="OgF-aZ-u8f"/>
                                 <exclude reference="44f-bl-wwg"/>
                                 <exclude reference="DpV-f2-Z0x"/>
                             </mask>
@@ -686,6 +686,8 @@
                                 <include reference="Nta-ic-l1r"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="o1g-IS-GlO"/>
+                                <include reference="vRr-T2-MBg"/>
                                 <include reference="3Zu-YZ-h7d"/>
                                 <include reference="6pK-Dd-a7Y"/>
                                 <exclude reference="BaJ-PR-xky"/>
@@ -710,14 +712,18 @@
                                 <include reference="aaX-Un-Igq"/>
                                 <exclude reference="gxP-ii-ePg"/>
                                 <include reference="jxv-cV-MOc"/>
-                                <include reference="o1g-IS-GlO"/>
-                                <include reference="vRr-T2-MBg"/>
                                 <include reference="DpV-f2-Z0x"/>
                                 <exclude reference="ZUo-kn-Eju"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="constraints">
+                                <include reference="N1U-De-VtT"/>
+                                <exclude reference="o1g-IS-GlO"/>
+                                <exclude reference="vRr-T2-MBg"/>
+                                <include reference="7TR-tf-9mg"/>
+                                <include reference="AwE-VZ-ICE"/>
+                                <include reference="OgF-aZ-u8f"/>
                                 <include reference="3Fd-Jl-H6Z"/>
                                 <exclude reference="3Zu-YZ-h7d"/>
                                 <exclude reference="6pK-Dd-a7Y"/>
@@ -743,12 +749,6 @@
                                 <exclude reference="aaX-Un-Igq"/>
                                 <exclude reference="jxv-cV-MOc"/>
                                 <include reference="zdu-xW-qVu"/>
-                                <include reference="N1U-De-VtT"/>
-                                <exclude reference="o1g-IS-GlO"/>
-                                <exclude reference="vRr-T2-MBg"/>
-                                <include reference="7TR-tf-9mg"/>
-                                <include reference="AwE-VZ-ICE"/>
-                                <include reference="OgF-aZ-u8f"/>
                                 <include reference="44f-bl-wwg"/>
                                 <exclude reference="DpV-f2-Z0x"/>
                             </mask>
@@ -765,7 +765,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="583.5" y="504.75"/>
+            <point key="canvasLocation" x="-286.5" y="1049.25"/>
         </scene>
         <!--Guard Login View Controller-->
         <scene sceneID="YYU-6y-1W9">
@@ -1303,11 +1303,12 @@
                     </view>
                     <connections>
                         <outlet property="profileImageView" destination="dtN-HU-nnd" id="Ag0-BH-OdE"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="LogoutSegue" id="ohb-sP-3bW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4fV-PU-hBh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2265" y="2057"/>
+            <point key="canvasLocation" x="2194.5" y="2050.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Okj-KE-nQD">
@@ -1394,19 +1395,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8Gt-5h-dfu">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="99" width="109" height="86"/>
-                                </variation>
-                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8tQ-3Y-VsS">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="160" y="99" width="149" height="30"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="170" y="83" width="149" height="30"/>
                                 </variation>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xdw-qm-aES">
@@ -1415,6 +1412,9 @@
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="160" y="155" width="149" height="30"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="165" y="139" width="149" height="30"/>
                                 </variation>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="brZ-uq-rz8">
@@ -1468,10 +1468,16 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iHS-yA-QGo">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Update Profile"/>
+                                <state key="normal" title="Logout"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="133" y="472" width="99" height="30"/>
                                 </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="270" y="45" width="99" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="logoutAction:" destination="5gP-s4-eq0" eventType="touchUpInside" id="df7-nO-1pX"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PIN" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DHK-b7-jVp">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
@@ -1481,11 +1487,20 @@
                                     <rect key="frame" x="203" y="422" width="106" height="30"/>
                                 </variation>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8Gt-5h-dfu">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="99" width="109" height="86"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="83" width="109" height="86"/>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="8Gt-5h-dfu"/>
                                 <exclude reference="8tQ-3Y-VsS"/>
                                 <exclude reference="xdw-qm-aES"/>
                                 <exclude reference="brZ-uq-rz8"/>
@@ -1496,11 +1511,11 @@
                                 <exclude reference="HtF-zL-8AW"/>
                                 <exclude reference="iHS-yA-QGo"/>
                                 <exclude reference="DHK-b7-jVp"/>
+                                <exclude reference="8Gt-5h-dfu"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="8Gt-5h-dfu"/>
                                 <include reference="8tQ-3Y-VsS"/>
                                 <include reference="xdw-qm-aES"/>
                                 <include reference="brZ-uq-rz8"/>
@@ -1511,17 +1526,19 @@
                                 <include reference="HtF-zL-8AW"/>
                                 <include reference="iHS-yA-QGo"/>
                                 <include reference="DHK-b7-jVp"/>
+                                <include reference="8Gt-5h-dfu"/>
                             </mask>
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="User Female-25.png" id="YBE-6U-bAO"/>
                     <connections>
                         <outlet property="LBL" destination="j0k-hx-ZCR" id="2gv-N5-7lM"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="LogoutGuard" id="ZAH-mM-X8n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3eq-TI-eTi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3472.5" y="2250"/>
+            <point key="canvasLocation" x="2668.5" y="1278"/>
         </scene>
         <!--PG Team-->
         <scene sceneID="qJP-dx-fym">
@@ -2030,7 +2047,8 @@
         <image name="User Groups-25.png" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="hHP-S6-rLc"/>
+        <segue reference="ZAH-mM-X8n"/>
+        <segue reference="Hbh-P6-PgG"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>

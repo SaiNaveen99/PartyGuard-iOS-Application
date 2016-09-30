@@ -14,7 +14,10 @@ class ClaimAlertViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.view.backgroundColor = UIColor.whiteColor()
+        
+        
+        
         // Do any additional setup after loading the view.
     }
 
@@ -23,6 +26,7 @@ class ClaimAlertViewController: UIViewController {
          let claimAlert = UIAlertController(title:titleText, message: " ", preferredStyle: UIAlertControllerStyle.Alert)
         
         claimAlert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: { action in self.claimHandler() }))
+        
          self.presentViewController(claimAlert, animated: true, completion: nil)
         
        

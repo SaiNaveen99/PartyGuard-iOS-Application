@@ -15,6 +15,7 @@ class ResolutionAlertViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor.whiteColor()
 
         // Do any additional setup after loading the view.
     }
@@ -28,9 +29,9 @@ class ResolutionAlertViewController: UIViewController {
         let titleText:String = guardUserResolved + " sent a resolution"
         let resolutionAlert = UIAlertController(title:titleText, message: " ", preferredStyle: UIAlertControllerStyle.Alert)
         
-        resolutionAlert.addAction(UIAlertAction(title: "Decline", style: UIAlertActionStyle.Default, handler: nil))
+        resolutionAlert.addAction(UIAlertAction(title: "Decline", style: UIAlertActionStyle.Default, handler: { action in self.acceptHandler() }))
         
-        resolutionAlert.addAction(UIAlertAction(title: "Accept", style: UIAlertActionStyle.Default, handler: nil))
+        resolutionAlert.addAction(UIAlertAction(title: "Accept", style: UIAlertActionStyle.Default, handler: { action in self.acceptHandler() }))
         
         
         self.presentViewController(resolutionAlert, animated: true, completion: nil)
@@ -38,5 +39,14 @@ class ResolutionAlertViewController: UIViewController {
         
     }
 
-   
+    func acceptHandler()
+    {
+        
+    }
+    func declineHandler()
+    {
+        let fvc = FraternityTableViewController()
+        presentViewController(fvc, animated: true, completion: nil)
+        
+    }
 }

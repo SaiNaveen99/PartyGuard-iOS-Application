@@ -50,7 +50,7 @@ class AcceptAlertViewController: UIViewController {
         
         
         
-        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: { action in self.declineHandler() }))
         alert.addAction(UIAlertAction(title: "Accept", style: UIAlertActionStyle.Default, handler: { action in self.acceptHandler() }))
         
         self.presentViewController(alert, animated: true, completion: nil)
@@ -65,7 +65,8 @@ class AcceptAlertViewController: UIViewController {
     
     func declineHandler()
     {
-        
+        let ivc = IncidentLocationTableViewController()
+        self.presentViewController(ivc, animated: true, completion: nil)
     }
     
 

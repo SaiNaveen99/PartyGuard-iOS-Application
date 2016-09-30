@@ -8,12 +8,12 @@
 
 import UIKit
 
-class MenuViewController: UIViewController {
+class MenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     
     
     @IBOutlet weak var profileImageView: UIImageView!
-    var MenuItem = ["Profile","Location Change","Log","Settings","About PartyGuard"]
+    var MenuItem = ["Profile","Location Change","Logout","Settings","About PartyGuard"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +39,15 @@ class MenuViewController: UIViewController {
         // Configure the cell...
         
         return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    
+        print("Logout")
+        if(indexPath.row == 2)
+        {
+            self.performSegueWithIdentifier("LogoutSegue", sender: self)
+        }
     }
 
     override func didReceiveMemoryWarning() {

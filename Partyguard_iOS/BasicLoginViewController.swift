@@ -39,7 +39,7 @@ class BasicLoginViewController: UIViewController {
             
             presentViewController(ivc, animated: true, completion: nil)
             
-        let textdata = "username="+EmailTF.text!+"&password="+PasswordTF.text!+"grant_type=password"
+        let textdata = "username="+EmailTF.text!+"&password="+PasswordTF.text!+"&grant_type=password"
         
         do {
            
@@ -49,7 +49,7 @@ class BasicLoginViewController: UIViewController {
             request.HTTPMethod = "POST"
             
             // insert json data to the request
-            request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+            request.setValue("text/plain; charset=utf-8", forHTTPHeaderField: "Content-Type")
             request.HTTPBody = textdata.dataUsingEncoding(NSUTF8StringEncoding)
             
             

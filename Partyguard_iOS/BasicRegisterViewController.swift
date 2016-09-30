@@ -42,7 +42,18 @@ class BasicRegisterViewController: UIViewController, UIImagePickerControllerDele
     
     
     @IBAction func CreateAccountButton(sender: AnyObject) {
-        
+        if(EmailTF.text == "" || PasswordTF == "" || RepeatPasswordTF == "" || PhoneNumberTF == "" || DobTF == "")
+        {
+            let alert = UIAlertView()
+            alert.title = "All Fields are required"
+            alert.message = "Password must contain and one letter, symbol and a number with atleast six characters long"
+            alert.addButtonWithTitle("Ok!")
+            alert.show()
+            
+        }
+        else
+        {
+            self.performSegueWithIdentifier("createAccountSegue", sender: self)
         var parameters = ["Email": EmailTF.text!, "Password": PasswordTF.text!, "ConfirmPassword" : RepeatPasswordTF.text!] as Dictionary<String, String>
         
       do {
@@ -85,7 +96,7 @@ class BasicRegisterViewController: UIViewController, UIImagePickerControllerDele
             } catch {
             print(error)
         }
-       
+        }
     }
 
 override func viewDidLoad()

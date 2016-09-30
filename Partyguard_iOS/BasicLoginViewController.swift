@@ -34,7 +34,7 @@ class BasicLoginViewController: UIViewController {
         else
         {
          
-            self.performSegueWithIdentifier("LoginSegue", sender: self)
+           
             let ivc:InfoViewController = InfoViewController()
             
             presentViewController(ivc, animated: true, completion: nil)
@@ -56,20 +56,29 @@ class BasicLoginViewController: UIViewController {
             let task = NSURLSession.sharedSession().dataTaskWithRequest(request){ data, response, error in
                 if error != nil{
                     print("Error -> \(error)")
+                    let alert1 = UIAlertView()
+                    alert1.title = "Invalid Login"
+                    alert1.message = "Username or password does not exists"
+                    alert1.addButtonWithTitle("Ok!")
+                    alert1.show()
                     return
                 }
-                
+                else
+                {
                 do {
                     let result = try NSJSONSerialization.JSONObjectWithData(data!, options: []) as? [String:AnyObject]
                     
                     print("Result -> \(result)")
+                     self.performSegueWithIdentifier("LoginSegue", sender: self)
                     
                 } catch {
                     print("Error -> \(error)")
                 }
+                }
             }
             
             task.resume()
+                
            
         }
         }

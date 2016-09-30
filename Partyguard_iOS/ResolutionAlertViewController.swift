@@ -29,19 +29,26 @@ class ResolutionAlertViewController: UIViewController {
         let titleText:String = guardUserResolved + " sent a resolution"
         let resolutionAlert = UIAlertController(title:titleText, message: " ", preferredStyle: UIAlertControllerStyle.Alert)
         
-        resolutionAlert.addAction(UIAlertAction(title: "Decline", style: UIAlertActionStyle.Default, handler: { action in self.acceptHandler() }))
+        resolutionAlert.addAction(UIAlertAction(title: "Decline", style: UIAlertActionStyle.Default, handler: { action in self.declineHandler() }))
         
         resolutionAlert.addAction(UIAlertAction(title: "Accept", style: UIAlertActionStyle.Default, handler: { action in self.acceptHandler() }))
         
         
         self.presentViewController(resolutionAlert, animated: true, completion: nil)
-
+       
         
     }
 
+    
+    
+    
+    @IBAction func buttonAction(sender: AnyObject) {
+        self.performSegueWithIdentifier("ResolutionSegue", sender: self)
+        
+    }
     func acceptHandler()
     {
-        
+       self.viewDidLoad()
     }
     func declineHandler()
     {

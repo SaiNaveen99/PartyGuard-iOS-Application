@@ -46,7 +46,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         print("Logout")
         if(indexPath.row == 2)
         {
-            self.performSegueWithIdentifier("LogoutSegue", sender: self)
+            self.performSegueWithIdentifier("LogoutBasic", sender: self)
         }
     }
 

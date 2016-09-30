@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BasicRegisterViewController: UIViewController {
+class BasicRegisterViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
 
     @IBOutlet weak var FirstNameTF: UITextField!
     
@@ -37,6 +37,8 @@ class BasicRegisterViewController: UIViewController {
     
     
     @IBOutlet weak var PinTF: UITextField!
+    
+    let imagePicker = UIImagePickerController()
     
     
     @IBAction func CreateAccountButton(sender: AnyObject) {
@@ -89,18 +91,39 @@ class BasicRegisterViewController: UIViewController {
 override func viewDidLoad()
     {
         
-        ProfileIV.image = UIImage(named: "Dummy_profile.jpg")
+       
+        imagePicker.delegate = self
         self.view.backgroundColor = UIColor.lightTextColor()
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    
+    
+    @IBAction func uploadImageButtonAction(sender: UIButton) {
+        imagePicker.allowsEditing = false
+        imagePicker.sourceType = .PhotoLibrary
+        
+        presentViewController(imagePicker, animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            ProfileIV.contentMode = .ScaleAspectFit
+            ProfileIV.image = pickedImage
+        }
+        
+        dismissViewControllerAnimated(true, completion: nil)
+    }
     
+    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
 
     /*
     // MARK: - Navigation

@@ -3,7 +3,7 @@
 //  Partyguard_iOS
 //
 //  Created by Somu,Vinod Reddy on 9/28/16.
-//  Copyright Â© 2016 BashGuardians. All rights reserved.
+//  Copyright © 2016 BashGuardians. All rights reserved.
 //
 
 import UIKit
@@ -23,6 +23,7 @@ class AlertTableViewController: UITableViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+        
     }
 
     // MARK: - Table view data source

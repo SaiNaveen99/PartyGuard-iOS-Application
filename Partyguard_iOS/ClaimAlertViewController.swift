@@ -3,7 +3,7 @@
 //  Partyguard_iOS
 //
 //  Created by Mallampati,Sai Naveen on 9/27/16.
-//  Copyright Â© 2016 BashGuardians. All rights reserved.
+//  Copyright © 2016 BashGuardians. All rights reserved.
 //
 
 import UIKit
@@ -23,7 +23,7 @@ class ClaimAlertViewController: UIViewController {
 
     override func viewWillAppear(animated: Bool) {
         let titleText:String = guardUserClaimed + " has claimed your request for assistance"
-         let claimAlert = UIAlertController(title:titleText, message: " ", preferredStyle: UIAlertControllerStyle.Alert)
+         let claimAlert = UIAlertController(title:titleText, message: " ", preferredStyle: UIAlertControllerStyle.Alert)//
         
         claimAlert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: { action in self.claimHandler() }))
         

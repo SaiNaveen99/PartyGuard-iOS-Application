@@ -1,5 +1,5 @@
 #What is JIRA for?
-Quick summary
+##Quick summary
 •	Jira is a proprietary issue tracking product, developed by Atlassian.
 •	It provides bug tracking, issue tracking, and project management functions.
 •	It allows us to track any kind of unit of work through a predefined workflow.

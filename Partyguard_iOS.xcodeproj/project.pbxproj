@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		231704D01D7FA6B5005BEF99 /* BasicRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231704CF1D7FA6B5005BEF99 /* BasicRegisterViewController.swift */; };
 		231704D21D7FAB14005BEF99 /* Dummy_profile.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 231704D11D7FAB14005BEF99 /* Dummy_profile.jpg */; };
-		231704D41D7FB0D7005BEF99 /* GuardLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231704D31D7FB0D7005BEF99 /* GuardLoginViewController.swift */; };
+		231704D41D7FB0D7005BEF99 /* HostLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231704D31D7FB0D7005BEF99 /* HostLoginViewController.swift */; };
 		23DDEB641D7FA2220045A2AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DDEB631D7FA2220045A2AA /* AppDelegate.swift */; };
 		23DDEB661D7FA2220045A2AA /* BasicLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DDEB651D7FA2220045A2AA /* BasicLoginViewController.swift */; };
 		23DDEB691D7FA2220045A2AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23DDEB671D7FA2220045A2AA /* Main.storyboard */; };
@@ -49,7 +49,7 @@
 /* Begin PBXFileReference section */
 		231704CF1D7FA6B5005BEF99 /* BasicRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicRegisterViewController.swift; sourceTree = "<group>"; };
 		231704D11D7FAB14005BEF99 /* Dummy_profile.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Dummy_profile.jpg; sourceTree = "<group>"; };
-		231704D31D7FB0D7005BEF99 /* GuardLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuardLoginViewController.swift; sourceTree = "<group>"; };
+		231704D31D7FB0D7005BEF99 /* HostLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostLoginViewController.swift; sourceTree = "<group>"; };
 		23DDEB601D7FA2220045A2AA /* Partyguard_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Partyguard_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23DDEB631D7FA2220045A2AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23DDEB651D7FA2220045A2AA /* BasicLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicLoginViewController.swift; sourceTree = "<group>"; };
@@ -133,7 +133,7 @@
 				AF13E90C1D94C14000D4A757 /* IncidentLocationTableViewController.swift */,
 				AC6347BD1D80C8A60080B62A /* FraternityTableViewController.swift */,
 				AC6347711D80B4860080B62A /* InfoViewController.swift */,
-				231704D31D7FB0D7005BEF99 /* GuardLoginViewController.swift */,
+				231704D31D7FB0D7005BEF99 /* HostLoginViewController.swift */,
 				231704CF1D7FA6B5005BEF99 /* BasicRegisterViewController.swift */,
 				7F04B7121D89F234002581CC /* MenuViewController.swift */,
 				7F04B7141D89F5DE002581CC /* ProfileImage 2.jpg */,
@@ -259,7 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACFFE5EA1D89EF24005EFB35 /* SWRevealViewController.m in Sources */,
-				231704D41D7FB0D7005BEF99 /* GuardLoginViewController.swift in Sources */,
+				231704D41D7FB0D7005BEF99 /* HostLoginViewController.swift in Sources */,
 				23DDEB661D7FA2220045A2AA /* BasicLoginViewController.swift in Sources */,
 				23DDEB641D7FA2220045A2AA /* AppDelegate.swift in Sources */,
 				7F82DDC01D9B05A30095E5E1 /* AcceptAlertViewController.swift in Sources */,

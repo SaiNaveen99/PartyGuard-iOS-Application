@@ -85,11 +85,15 @@ class BasicLoginViewController: UIViewController {
         
     }    
     
-    @IBAction func HostLoginButton(sender: AnyObject)
-    {
+    
+    @IBAction func HostLoginButton(sender: AnyObject) {
         self.performSegueWithIdentifier("segue2", sender: self)
     }
    
+   
+    @IBAction func GuardLoginButton(sender: AnyObject) {
+        self.performSegueWithIdentifier("segue3", sender: self)
+    }
    
     @IBAction func RegisterButton(sender: AnyObject)
     {

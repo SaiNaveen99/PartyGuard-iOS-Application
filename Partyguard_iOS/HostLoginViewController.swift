@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GuardLoginViewController: UIViewController {
+class HostLoginViewController: UIViewController {
     
     
     

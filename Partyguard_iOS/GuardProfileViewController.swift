@@ -1,5 +1,5 @@
 //
-//  GuardTabViewController.swift
+//  GuardProfileViewController.swift
 //  Partyguard_iOS
 //
 //  Created by Tankasala,Nandeesh on 10/16/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GuardTabViewController: UITabBarController{
+class GuardProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

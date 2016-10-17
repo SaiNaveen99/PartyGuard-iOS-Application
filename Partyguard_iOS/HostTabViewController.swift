@@ -2,13 +2,13 @@
 //  GuardTabViewController.swift
 //  Partyguard_iOS
 //
-//  Created by Tankasala,Nandeesh on 10/16/16.
+//  Created by Somu,Vinod Reddy on 9/19/16.
 //  Copyright © 2016 BashGuardians. All rights reserved.
 //
 
 import UIKit
 
-class GuardTabViewController: UITabBarController{
+class HostTabViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -1,5 +1,5 @@
 //
-//  GuardTabViewController.swift
+//  GuardLoginViewController.swift
 //  Partyguard_iOS
 //
 //  Created by Tankasala,Nandeesh on 10/16/16.
@@ -8,9 +8,13 @@
 
 import UIKit
 
-class GuardTabViewController: UITabBarController{
+class GuardLoginViewController: UIViewController {
 
-    override func viewDidLoad() {
+    @IBOutlet weak var EmailTF: UITextField!
+    
+    @IBOutlet weak var passwordTF: UITextField!
+    
+        override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
@@ -20,6 +24,13 @@ class GuardTabViewController: UITabBarController{
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    @IBAction func GuardLogin(sender: AnyObject) {
+        self.performSegueWithIdentifier("GuardLoginSegue", sender: self)
+    }
+    @IBAction func ForgetPasswordButtonClicked(sender: AnyObject) {
+        self.performSegueWithIdentifier("fpGuardSegue", sender: self);
+    }
+
     
 
     /*

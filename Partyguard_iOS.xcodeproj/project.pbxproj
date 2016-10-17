@@ -15,6 +15,12 @@
 		23DDEB691D7FA2220045A2AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23DDEB671D7FA2220045A2AA /* Main.storyboard */; };
 		23DDEB6B1D7FA2220045A2AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23DDEB6A1D7FA2220045A2AA /* Assets.xcassets */; };
 		23DDEB6E1D7FA2220045A2AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23DDEB6C1D7FA2220045A2AA /* LaunchScreen.storyboard */; };
+		23ED111C1DB478750087D88E /* GuardLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ED111B1DB478750087D88E /* GuardLoginViewController.swift */; };
+		23ED111E1DB47D5E0087D88E /* GuardTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ED111D1DB47D5E0087D88E /* GuardTabViewController.swift */; };
+		23ED11201DB47FB20087D88E /* GuardAlertTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ED111F1DB47FB20087D88E /* GuardAlertTableViewController.swift */; };
+		23ED11221DB4805D0087D88E /* GuardHistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ED11211DB4805D0087D88E /* GuardHistoryTableViewController.swift */; };
+		23ED11241DB481830087D88E /* GuardProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ED11231DB481830087D88E /* GuardProfileViewController.swift */; };
+		23ED11261DB482770087D88E /* Personal Trainer-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 23ED11251DB482770087D88E /* Personal Trainer-25.png */; };
 		30616C881D9E0CA700771AEB /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30616C871D9E0CA700771AEB /* ForgotPasswordViewController.swift */; };
 		7F04B7131D89F234002581CC /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F04B7121D89F234002581CC /* MenuViewController.swift */; };
 		7F04B7151D89F5DE002581CC /* ProfileImage 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7F04B7141D89F5DE002581CC /* ProfileImage 2.jpg */; };
@@ -38,7 +44,7 @@
 		ACC34A391D9C69A400C60FFA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC34A341D9C69A400C60FFA /* ProfileViewController.swift */; };
 		ACC34A3A1D9C69A400C60FFA /* HistoryTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC34A351D9C69A400C60FFA /* HistoryTableTableViewController.swift */; };
 		ACC34A3B1D9C69A400C60FFA /* PGTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC34A361D9C69A400C60FFA /* PGTeamViewController.swift */; };
-		ACC34A3C1D9C69A400C60FFA /* GuardTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC34A371D9C69A400C60FFA /* GuardTabViewController.swift */; };
+		ACC34A3C1D9C69A400C60FFA /* HostTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC34A371D9C69A400C60FFA /* HostTabViewController.swift */; };
 		ACFFE5E71D89EE8C005EFB35 /* Menu Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = ACFFE5E61D89EE8C005EFB35 /* Menu Filled-50.png */; };
 		ACFFE5EA1D89EF24005EFB35 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACFFE5E91D89EF24005EFB35 /* SWRevealViewController.m */; };
 		AF13E90D1D94C14000D4A757 /* IncidentLocationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF13E90C1D94C14000D4A757 /* IncidentLocationTableViewController.swift */; };
@@ -57,6 +63,12 @@
 		23DDEB6A1D7FA2220045A2AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		23DDEB6D1D7FA2220045A2AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		23DDEB6F1D7FA2220045A2AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23ED111B1DB478750087D88E /* GuardLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuardLoginViewController.swift; sourceTree = "<group>"; };
+		23ED111D1DB47D5E0087D88E /* GuardTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuardTabViewController.swift; sourceTree = "<group>"; };
+		23ED111F1DB47FB20087D88E /* GuardAlertTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuardAlertTableViewController.swift; sourceTree = "<group>"; };
+		23ED11211DB4805D0087D88E /* GuardHistoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuardHistoryTableViewController.swift; sourceTree = "<group>"; };
+		23ED11231DB481830087D88E /* GuardProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuardProfileViewController.swift; sourceTree = "<group>"; };
+		23ED11251DB482770087D88E /* Personal Trainer-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Personal Trainer-25.png"; sourceTree = "<group>"; };
 		30616C871D9E0CA700771AEB /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		7F04B7121D89F234002581CC /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		7F04B7141D89F5DE002581CC /* ProfileImage 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ProfileImage 2.jpg"; sourceTree = "<group>"; };
@@ -80,7 +92,7 @@
 		ACC34A341D9C69A400C60FFA /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		ACC34A351D9C69A400C60FFA /* HistoryTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTableTableViewController.swift; sourceTree = "<group>"; };
 		ACC34A361D9C69A400C60FFA /* PGTeamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PGTeamViewController.swift; sourceTree = "<group>"; };
-		ACC34A371D9C69A400C60FFA /* GuardTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuardTabViewController.swift; sourceTree = "<group>"; };
+		ACC34A371D9C69A400C60FFA /* HostTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostTabViewController.swift; sourceTree = "<group>"; };
 		ACFFE5E61D89EE8C005EFB35 /* Menu Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Menu Filled-50.png"; sourceTree = "<group>"; };
 		ACFFE5E81D89EF1A005EFB35 /* SWRevealViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		ACFFE5E91D89EF24005EFB35 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
@@ -126,19 +138,25 @@
 				ACC34A341D9C69A400C60FFA /* ProfileViewController.swift */,
 				ACC34A351D9C69A400C60FFA /* HistoryTableTableViewController.swift */,
 				ACC34A361D9C69A400C60FFA /* PGTeamViewController.swift */,
-				ACC34A371D9C69A400C60FFA /* GuardTabViewController.swift */,
+				ACC34A371D9C69A400C60FFA /* HostTabViewController.swift */,
 				23DDEB651D7FA2220045A2AA /* BasicLoginViewController.swift */,
 				23DDEB671D7FA2220045A2AA /* Main.storyboard */,
+				23ED11231DB481830087D88E /* GuardProfileViewController.swift */,
+				23ED11211DB4805D0087D88E /* GuardHistoryTableViewController.swift */,
+				23ED111F1DB47FB20087D88E /* GuardAlertTableViewController.swift */,
+				23ED111D1DB47D5E0087D88E /* GuardTabViewController.swift */,
 				30616C871D9E0CA700771AEB /* ForgotPasswordViewController.swift */,
 				AF13E90C1D94C14000D4A757 /* IncidentLocationTableViewController.swift */,
 				AC6347BD1D80C8A60080B62A /* FraternityTableViewController.swift */,
 				AC6347711D80B4860080B62A /* InfoViewController.swift */,
 				231704D31D7FB0D7005BEF99 /* HostLoginViewController.swift */,
+				23ED111B1DB478750087D88E /* GuardLoginViewController.swift */,
 				231704CF1D7FA6B5005BEF99 /* BasicRegisterViewController.swift */,
 				7F04B7121D89F234002581CC /* MenuViewController.swift */,
 				7F04B7141D89F5DE002581CC /* ProfileImage 2.jpg */,
 				23DDEB6A1D7FA2220045A2AA /* Assets.xcassets */,
 				ACFFE5E61D89EE8C005EFB35 /* Menu Filled-50.png */,
+				23ED11251DB482770087D88E /* Personal Trainer-25.png */,
 				ACC34A291D9C697B00C60FFA /* User Female-25.png */,
 				AC6347771D80C1A50080B62A /* SPE.gif */,
 				ACC34A2B1D9C698D00C60FFA /* Gender Neutral User-50.png */,
@@ -240,6 +258,7 @@
 				AC6347781D80C1A50080B62A /* SPE.gif in Resources */,
 				AC63477A1D80C1AA0080B62A /* TKE.gif in Resources */,
 				ACC34A301D9C698D00C60FFA /* User Groups-25.png in Resources */,
+				23ED11261DB482770087D88E /* Personal Trainer-25.png in Resources */,
 				AF13E9151D94C75700D4A757 /* AKL.png in Resources */,
 				AF13E9131D94C75100D4A757 /* DC.png in Resources */,
 				23DDEB6B1D7FA2220045A2AA /* Assets.xcassets in Resources */,
@@ -259,10 +278,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACFFE5EA1D89EF24005EFB35 /* SWRevealViewController.m in Sources */,
+				23ED11221DB4805D0087D88E /* GuardHistoryTableViewController.swift in Sources */,
 				231704D41D7FB0D7005BEF99 /* HostLoginViewController.swift in Sources */,
 				23DDEB661D7FA2220045A2AA /* BasicLoginViewController.swift in Sources */,
+				23ED11241DB481830087D88E /* GuardProfileViewController.swift in Sources */,
 				23DDEB641D7FA2220045A2AA /* AppDelegate.swift in Sources */,
+				23ED111C1DB478750087D88E /* GuardLoginViewController.swift in Sources */,
 				7F82DDC01D9B05A30095E5E1 /* AcceptAlertViewController.swift in Sources */,
+				23ED11201DB47FB20087D88E /* GuardAlertTableViewController.swift in Sources */,
+				23ED111E1DB47D5E0087D88E /* GuardTabViewController.swift in Sources */,
 				AF13E90D1D94C14000D4A757 /* IncidentLocationTableViewController.swift in Sources */,
 				ACC34A391D9C69A400C60FFA /* ProfileViewController.swift in Sources */,
 				30616C881D9E0CA700771AEB /* ForgotPasswordViewController.swift in Sources */,
@@ -270,7 +294,7 @@
 				ACC34A381D9C69A400C60FFA /* AlertTableViewController.swift in Sources */,
 				7F82DDC21D9B19DF0095E5E1 /* ClaimAlertViewController.swift in Sources */,
 				ACC34A3A1D9C69A400C60FFA /* HistoryTableTableViewController.swift in Sources */,
-				ACC34A3C1D9C69A400C60FFA /* GuardTabViewController.swift in Sources */,
+				ACC34A3C1D9C69A400C60FFA /* HostTabViewController.swift in Sources */,
 				AC6347BE1D80C8A60080B62A /* FraternityTableViewController.swift in Sources */,
 				ACC34A3B1D9C69A400C60FFA /* PGTeamViewController.swift in Sources */,
 				7FB2890C1D9C2A2E008CA62E /* IssueTableViewController.swift in Sources */,

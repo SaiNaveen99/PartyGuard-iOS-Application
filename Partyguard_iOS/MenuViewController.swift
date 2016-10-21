@@ -48,6 +48,10 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         {
             self.performSegueWithIdentifier("LogoutBasic", sender: self)
         }
+        if(indexPath.row == 0)
+        {
+            self.performSegueWithIdentifier("BasicUserProfileSegue", sender: self)
+        }
     }
 
     override func didReceiveMemoryWarning() {

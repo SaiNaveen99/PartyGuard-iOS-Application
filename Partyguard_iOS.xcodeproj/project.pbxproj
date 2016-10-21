@@ -50,6 +50,7 @@
 		AF13E90D1D94C14000D4A757 /* IncidentLocationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF13E90C1D94C14000D4A757 /* IncidentLocationTableViewController.swift */; };
 		AF13E9131D94C75100D4A757 /* DC.png in Resources */ = {isa = PBXBuildFile; fileRef = AF13E9121D94C75100D4A757 /* DC.png */; };
 		AF13E9151D94C75700D4A757 /* AKL.png in Resources */ = {isa = PBXBuildFile; fileRef = AF13E9141D94C75700D4A757 /* AKL.png */; };
+		AF4F50041DBA91A3004A8AD4 /* BasicUserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4F50031DBA91A3004A8AD4 /* BasicUserProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +101,7 @@
 		AF13E9121D94C75100D4A757 /* DC.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DC.png; sourceTree = "<group>"; };
 		AF13E9141D94C75700D4A757 /* AKL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AKL.png; sourceTree = "<group>"; };
 		AF2A97B61D88A7B100C0D52E /* Partyguard_iOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Partyguard_iOS-Bridging-Header.h"; sourceTree = "<group>"; };
+		AF4F50031DBA91A3004A8AD4 /* BasicUserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicUserProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 				231704CF1D7FA6B5005BEF99 /* BasicRegisterViewController.swift */,
 				7F04B7121D89F234002581CC /* MenuViewController.swift */,
 				7F04B7141D89F5DE002581CC /* ProfileImage 2.jpg */,
+				AF4F50031DBA91A3004A8AD4 /* BasicUserProfileViewController.swift */,
 				23DDEB6A1D7FA2220045A2AA /* Assets.xcassets */,
 				ACFFE5E61D89EE8C005EFB35 /* Menu Filled-50.png */,
 				23ED11251DB482770087D88E /* Personal Trainer-25.png */,
@@ -293,6 +296,7 @@
 				231704D01D7FA6B5005BEF99 /* BasicRegisterViewController.swift in Sources */,
 				ACC34A381D9C69A400C60FFA /* AlertTableViewController.swift in Sources */,
 				7F82DDC21D9B19DF0095E5E1 /* ClaimAlertViewController.swift in Sources */,
+				AF4F50041DBA91A3004A8AD4 /* BasicUserProfileViewController.swift in Sources */,
 				ACC34A3A1D9C69A400C60FFA /* HistoryTableTableViewController.swift in Sources */,
 				ACC34A3C1D9C69A400C60FFA /* HostTabViewController.swift in Sources */,
 				AC6347BE1D80C8A60080B62A /* FraternityTableViewController.swift in Sources */,

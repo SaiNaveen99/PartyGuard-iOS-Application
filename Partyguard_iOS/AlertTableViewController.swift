@@ -40,9 +40,9 @@ class AlertTableViewController: UITableViewController {
 
   
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("AlertCell", forIndexPath: indexPath)
-        cell.textLabel!.text = "Katie Harris"
-        cell.detailTextLabel?.text = "Main Floor"
+        let cell = tableView.dequeueReusableCellWithIdentifier("AlertCell", forIndexPath: indexPath)//for index and alert
+        cell.textLabel!.text = "Katie Harris"//katie
+        cell.detailTextLabel?.text = "Main Floor"//floor information
         cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         // Configure the cell...
 

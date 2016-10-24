@@ -59,8 +59,9 @@ class AcceptAlertViewController: UIViewController {
     
     func acceptHandler()
     {
-        let cvc = ClaimAlertViewController()
-        self.presentViewController(cvc, animated: true, completion: nil)
+        self.performSegueWithIdentifier("claimSegue", sender: self)
+        //let cvc = ClaimAlertViewController()
+       // self.presentViewController(cvc, animated: true, completion: nil)
     }
     
     func declineHandler()

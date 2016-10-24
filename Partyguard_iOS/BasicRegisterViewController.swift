@@ -53,14 +53,14 @@ class BasicRegisterViewController: UIViewController, UIImagePickerControllerDele
         }
         else
         {
-            self.performSegueWithIdentifier("createAccountSegue", sender: self)
-        var parameters = ["Email": EmailTF.text!, "Password": PasswordTF.text!, "ConfirmPassword" : RepeatPasswordTF.text!] as Dictionary<String, String>
+            //self.performSegueWithIdentifier("createAccountSegue", sender: self)
+        var parameters = ["Email": EmailTF.text!, "Password": PasswordTF.text!, "ConfirmPassword" : RepeatPasswordTF.text!, "firstName": FirstNameTF.text!, "lastName": LastNameTF.text!, "phoneNumber": PhoneNumberTF.text!, "userType": "basic"] as Dictionary<String, String>
         
       do {
             
             let jsonData = try NSJSONSerialization.dataWithJSONObject(parameters, options: .PrettyPrinted)
             
-            let url = NSURL(string: "http://partyguardservices20160912122440.azurewebsites.net/api/Account/Register")
+            let url = NSURL(string: "http://partyguardservices20161023022749.azurewebsites.net/api/Account/Register")
             
             let request = NSMutableURLRequest(URL: url!)
             request.HTTPMethod = "POST"
@@ -77,17 +77,14 @@ class BasicRegisterViewController: UIViewController, UIImagePickerControllerDele
                 }
                 else
                 {
+                    //self.performSegueWithIdentifier("createAccountSegue", sender: self)
                     print("Success")
+                    NSOperationQueue.mainQueue().addOperationWithBlock {
+                        self.performSegueWithIdentifier("createAccountSegue", sender: self)
+                    }
                 }
                 
-//                do {
-//                    let result = try NSJSONSerialization.JSONObjectWithData(data!, options: .MutableLeaves) as? [String:AnyObject]
-//                    
-//                    print("Result -> \(result)")
-//                    
-//                } catch {
-//                    print("Error -> \(error)")
-//                }
+
             }
             
             task.resume()

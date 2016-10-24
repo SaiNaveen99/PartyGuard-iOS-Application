@@ -18,6 +18,8 @@ class ResolutionAlertViewController: UIViewController {
         self.view.backgroundColor = UIColor.whiteColor()
 
         // Do any additional setup after loading the view.
+        print("resolution")
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,7 +27,6 @@ class ResolutionAlertViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     override func viewWillAppear(animated: Bool) {
-        
         let titleText:String = guardUserResolved + " sent a resolution"
         let resolutionAlert = UIAlertController(title:titleText, message: " ", preferredStyle: UIAlertControllerStyle.Alert)
         
@@ -35,7 +36,7 @@ class ResolutionAlertViewController: UIViewController {
         
         
         self.presentViewController(resolutionAlert, animated: true, completion: nil)
-       
+
         
     }
 

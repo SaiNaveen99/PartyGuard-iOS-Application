@@ -21,7 +21,10 @@ class BasicLoginViewController: UIViewController {
     
     @IBAction func LoginButton(sender: AnyObject)
     {
-        
+        NSOperationQueue.mainQueue().addOperationWithBlock {
+            self.performSegueWithIdentifier("LoginSegue", sender: self)
+            
+        /*
         if(EmailTF.text == "" || PasswordTF.text == "")
         {
             let alert = UIAlertView()
@@ -35,16 +38,16 @@ class BasicLoginViewController: UIViewController {
         {
          
            
-            let ivc:InfoViewController = InfoViewController()
+            //let ivc:InfoViewController = InfoViewController()
             
-            presentViewController(ivc, animated: true, completion: nil)
+            //presentViewController(ivc, animated: true, completion: nil)
             
         let textdata = "username="+EmailTF.text!+"&password="+PasswordTF.text!+"&grant_type=password"
         
         do {
            
             
-            let url = NSURL(string: "http://partyguardservices20160912122440.azurewebsites.net/token")!
+            let url = NSURL(string: "http://partyguardservices20161023022749.azurewebsites.net/token")!
             let request = NSMutableURLRequest(URL: url)
             request.HTTPMethod = "POST"
             
@@ -66,10 +69,15 @@ class BasicLoginViewController: UIViewController {
                 else
                 {
                 do {
-                    let result = try NSJSONSerialization.JSONObjectWithData(data!, options: []) as? [String:AnyObject]
+                    let result = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments) as? [String:AnyObject]
                     
                     print("Result -> \(result)")
-                     self.performSegueWithIdentifier("LoginSegue", sender: self)
+                   
+                    NSOperationQueue.mainQueue().addOperationWithBlock {
+                        self.performSegueWithIdentifier("LoginSegue", sender: self)
+                    }
+
+                    
                     
                 } catch {
                     print("Error -> \(error)")
@@ -81,7 +89,9 @@ class BasicLoginViewController: UIViewController {
                 
            
         }
+ */
         }
+
         
     }    
     

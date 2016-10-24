@@ -34,8 +34,9 @@ class ClaimAlertViewController: UIViewController {
     
     func claimHandler()
     {
-        let rvc = ResolutionAlertViewController()
-        self.presentViewController(rvc, animated: true, completion: nil)
+        self.performSegueWithIdentifier("resolutionSegue", sender: self)
+      // let rvc = ResolutionAlertViewController()
+      //  self.presentViewController(rvc, animated: true, completion: nil)
      
         
     }

@@ -3,7 +3,7 @@
 //  Partyguard_iOS
 //
 //  Created by Mallampati,Sai Naveen on 9/27/16.
-//  Copyright Â© 2016 BashGuardians. All rights reserved.
+//  Copyright © 2016 BashGuardians. All rights reserved.
 //
 
 import UIKit
@@ -27,7 +27,7 @@ class ResolutionAlertViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     override func viewWillAppear(animated: Bool) {
-        let titleText:String = guardUserResolved + " sent a resolution"
+        let titleText:String = guardUserResolved + " sent a resolution"// text String
         let resolutionAlert = UIAlertController(title:titleText, message: " ", preferredStyle: UIAlertControllerStyle.Alert)
         
         resolutionAlert.addAction(UIAlertAction(title: "Decline", style: UIAlertActionStyle.Default, handler: { action in self.declineHandler() }))
@@ -35,7 +35,7 @@ class ResolutionAlertViewController: UIViewController {
         resolutionAlert.addAction(UIAlertAction(title: "Accept", style: UIAlertActionStyle.Default, handler: { action in self.acceptHandler() }))
         
         
-        self.presentViewController(resolutionAlert, animated: true, completion: nil)
+        self.presentViewController(resolutionAlert, animated: true, completion: nil)// present view controller
 
         
     }
@@ -53,8 +53,8 @@ class ResolutionAlertViewController: UIViewController {
     }
     func declineHandler()
     {
-        let fvc = FraternityTableViewController()
-        presentViewController(fvc, animated: true, completion: nil)
+        let fvc = FraternityTableViewController()  // var fvc
+        presentViewController(fvc, animated: true, completion: nil)// above declared present view controller
         
     }
 }

@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -268,7 +269,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qOY-K1-h9g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-199.5" y="957"/>
+            <point key="canvasLocation" x="-702" y="486.75"/>
         </scene>
         <!--Basic Register View Controller-->
         <scene sceneID="7YI-ef-9Pt">
@@ -469,13 +470,14 @@
                         <outlet property="PinTF" destination="Stl-dU-SrD" id="l1V-9L-V1B"/>
                         <outlet property="ProfileIV" destination="NZg-MO-YdH" id="bbV-C8-Kph"/>
                         <outlet property="RepeatPasswordTF" destination="nsb-LS-vyS" id="Z8v-Rl-PhW"/>
-                        <segue destination="Qjs-Py-Hx0" kind="show" id="MX2-7i-Y1L"/>
+                        <segue destination="Qjs-Py-Hx0" kind="show" identifier="BasicLoginAfterRegister2" id="MX2-7i-Y1L"/>
                         <segue destination="FF7-x8-a98" kind="show" identifier="createAccountSegue" id="zcT-5h-qE7"/>
+                        <segue destination="Qjs-Py-Hx0" kind="show" identifier="BasicLoginAfterRegister" id="w2E-yC-b1h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iGJ-n3-p0K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="852" y="420"/>
+            <point key="canvasLocation" x="681" y="409.5"/>
         </scene>
         <!--PartyGuard-->
         <scene sceneID="oJF-Ed-QfI">
@@ -487,7 +489,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FraternityCell" textLabel="9aO-87-YfP" detailTextLabel="qqg-9w-J0e" style="IBUITableViewCellStyleSubtitle" id="X1v-hC-35S">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="X1v-hC-35S" id="W22-Ci-KZ0">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
@@ -552,7 +554,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Issue_cell" id="2tj-Wn-C6Z">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2tj-Wn-C6Z" id="64A-Pv-w0Y">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
@@ -583,7 +585,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="IncidentLocationCellID" id="64L-rz-Z30">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="64L-rz-Z30" id="a1I-wD-rmT">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
@@ -1994,9 +1996,9 @@
         <image name="User Groups-25.png" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="77d-eW-BIT"/>
+        <segue reference="w2E-yC-b1h"/>
+        <segue reference="zcT-5h-qE7"/>
         <segue reference="Hbh-P6-PgG"/>
-        <segue reference="os5-A4-NsS"/>
         <segue reference="K63-H4-hkl"/>
         <segue reference="e2v-Qh-A9J"/>
     </inferredMetricsTieBreakers>

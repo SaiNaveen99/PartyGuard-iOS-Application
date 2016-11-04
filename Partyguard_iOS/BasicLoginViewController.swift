@@ -21,11 +21,8 @@ class BasicLoginViewController: UIViewController {
     
     @IBAction func LoginButton(sender: AnyObject)
     {
-        NSOperationQueue.mainQueue().addOperationWithBlock {
-            self.performSegueWithIdentifier("LoginSegue", sender: self)
-            
-        /*
-        if(EmailTF.text == "" || PasswordTF.text == "")
+  
+        if(self.EmailTF.text == "" || self.PasswordTF.text == "")
         {
             let alert = UIAlertView()
             alert.title = "Invalid Login"
@@ -36,18 +33,13 @@ class BasicLoginViewController: UIViewController {
         }
         else
         {
-         
-           
-            //let ivc:InfoViewController = InfoViewController()
             
-            //presentViewController(ivc, animated: true, completion: nil)
-            
-        let textdata = "username="+EmailTF.text!+"&password="+PasswordTF.text!+"&grant_type=password"
+        let textdata = "username="+self.EmailTF.text!+"&password="+self.PasswordTF.text!+"&grant_type=password"
         
         do {
            
             
-            let url = NSURL(string: "http://partyguardservices20161023022749.azurewebsites.net/token")!
+            let url = NSURL(string: "http://partyguardservices20161025060016.azurewebsites.net/token")!
             let request = NSMutableURLRequest(URL: url)
             request.HTTPMethod = "POST"
             
@@ -72,9 +64,14 @@ class BasicLoginViewController: UIViewController {
                     let result = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments) as? [String:AnyObject]
                     
                     print("Result -> \(result)")
+                    if(result?.indexForKey("error") == nil)
+                    {
+                        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+                        appDelegate.accessToken = result!["access_token"] as! String
                    
                     NSOperationQueue.mainQueue().addOperationWithBlock {
                         self.performSegueWithIdentifier("LoginSegue", sender: self)
+                    }
                     }
 
                     
@@ -86,16 +83,15 @@ class BasicLoginViewController: UIViewController {
             }
             
             task.resume()
-                
+            
            
         }
- */
+ 
         }
 
         
-    }    
     
-    
+    }
     @IBAction func HostLoginButton(sender: AnyObject) {
         self.performSegueWithIdentifier("segue2", sender: self)
     }

@@ -20,8 +20,7 @@ class BasicRegisterViewController: UIViewController, UIImagePickerControllerDele
     
     @IBOutlet weak var EmailTF: UITextField!
     
-    
-    
+
     
     @IBOutlet weak var PasswordTF: UITextField!
     
@@ -42,6 +41,8 @@ class BasicRegisterViewController: UIViewController, UIImagePickerControllerDele
     
     
     @IBAction func CreateAccountButton(sender: AnyObject) {
+        
+        print("Basic User Create Account")
         if(EmailTF.text == "" || PasswordTF == "" || RepeatPasswordTF == "" || PhoneNumberTF == "" || DobTF == "")
         {
             let alert = UIAlertView()
@@ -53,46 +54,45 @@ class BasicRegisterViewController: UIViewController, UIImagePickerControllerDele
         }
         else
         {
-            //self.performSegueWithIdentifier("createAccountSegue", sender: self)
-        var parameters = ["Email": EmailTF.text!, "Password": PasswordTF.text!, "ConfirmPassword" : RepeatPasswordTF.text!, "firstName": FirstNameTF.text!, "lastName": LastNameTF.text!, "phoneNumber": PhoneNumberTF.text!, "userType": "basic"] as Dictionary<String, String>
-        
-      do {
+         
+            var parameters = ["Email": EmailTF.text!, "Password": PasswordTF.text!, "ConfirmPassword" : RepeatPasswordTF.text!, "firstName" : FirstNameTF.text!, "lastName" : LastNameTF.text!, "PhoneNumber" : PhoneNumberTF.text!, "userType" : "basic"] as Dictionary<String, String>
             
-            let jsonData = try NSJSONSerialization.dataWithJSONObject(parameters, options: .PrettyPrinted)
-            
-            let url = NSURL(string: "http://partyguardservices20161023022749.azurewebsites.net/api/Account/Register")
-            
-            let request = NSMutableURLRequest(URL: url!)
-            request.HTTPMethod = "POST"
-            
-        
-            request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
-            request.HTTPBody = jsonData
-            
-            
-            let task = NSURLSession.sharedSession().dataTaskWithRequest(request){ data, response, error in
-                if error != nil{
-                    print("Error -> \(error)")
-                    return
-                }
-                else
-                {
-                    //self.performSegueWithIdentifier("createAccountSegue", sender: self)
-                    print("Success")
-                    NSOperationQueue.mainQueue().addOperationWithBlock {
-                        self.performSegueWithIdentifier("createAccountSegue", sender: self)
-                    }
-                }
+                  do {
                 
-
-            }
-            
-            task.resume()
-            //return task
-        
-            } catch {
-            print(error)
-        }
+                            let jsonData = try NSJSONSerialization.dataWithJSONObject(parameters, options: .PrettyPrinted)
+                
+                            let url = NSURL(string: "http://partyguardservices20161025060016.azurewebsites.net/api/Account/Register")
+                
+                            let request = NSMutableURLRequest(URL: url!)
+                            request.HTTPMethod = "POST"
+                
+                
+                            request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+                            request.HTTPBody = jsonData
+                
+                
+                            let task = NSURLSession.sharedSession().dataTaskWithRequest(request){ data, response, error in
+                                if error != nil{
+                                    print("Error -> \(error)")
+                                    return
+                                }
+                                else
+                                {
+                                    print("Success")
+                                    print(response)
+                            NSOperationQueue.mainQueue().addOperationWithBlock {self.performSegueWithIdentifier("BasicLoginAfterRegister2", sender: self)
+                                  }
+                                }
+                
+                               
+                           }
+                    
+                            task.resume()
+                            //return task
+                        
+                            } catch {
+                                print(error)
+                            }
         }
     }
 

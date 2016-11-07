@@ -21,14 +21,14 @@ class AlertTableViewController: UITableViewController {
     }
 
     override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+        super.didReceiveMemoryWarning()// warning
         // Dispose of any resources that can be recreated.
         
     }
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int { //table view
         // #warning Incomplete implementation, return the number of sections
         return 1
     }

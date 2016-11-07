@@ -3,7 +3,7 @@
 //  Partyguard_iOS
 //
 //  Created by Tankasala,Nandeesh on 9/6/16.
-//  Copyright Â© 2016 BashGuardians. All rights reserved.
+//  Copyright © 2016 BashGuardians. All rights reserved.
 //
 
 import UIKit
@@ -27,7 +27,7 @@ class BasicLoginViewController: UIViewController {
             let alert = UIAlertView()
             alert.title = "Invalid Login"
             alert.message = "Please enter valid details"
-            alert.addButtonWithTitle("Ok!")
+            alert.addButtonWithTitle("Okay!")
             alert.show()
             
         }
@@ -53,7 +53,7 @@ class BasicLoginViewController: UIViewController {
                     print("Error -> \(error)")
                     let alert1 = UIAlertView()
                     alert1.title = "Invalid Login"
-                    alert1.message = "Username or password does not exists"
+                    alert1.message = "Username or password is incorrect"
                     alert1.addButtonWithTitle("Ok!")
                     alert1.show()
                     return

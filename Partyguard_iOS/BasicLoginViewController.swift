@@ -3,7 +3,7 @@
 //  Partyguard_iOS
 //
 //  Created by Tankasala,Nandeesh on 9/6/16.
-//  Copyright © 2016 BashGuardians. All rights reserved.
+//  Copyright 2016 BashGuardians. All rights reserved.
 //
 
 import UIKit
@@ -24,11 +24,15 @@ class BasicLoginViewController: UIViewController {
   
         if(self.EmailTF.text == "" || self.PasswordTF.text == "")
         {
-            let alert = UIAlertView()
-            alert.title = "Invalid Login"
-            alert.message = "Please enter valid details"
-            alert.addButtonWithTitle("Okay!")
-            alert.show()
+//            let alert = UIAlertView()
+//            alert.title = "Invalid Login"
+//            alert.message = "Please enter valid details"
+//            alert.addButtonWithTitle("Okay!")
+//            alert.show()
+            
+            NSOperationQueue.mainQueue().addOperationWithBlock {
+                self.performSegueWithIdentifier("LoginSegue", sender: self)
+            }
             
         }
         else

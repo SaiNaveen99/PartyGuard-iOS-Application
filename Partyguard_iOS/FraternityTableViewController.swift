@@ -3,7 +3,7 @@
 //  Partyguard_iOS
 //
 //  Created by Somu,Vinod Reddy on 9/7/16.
-//  Copyright © 2016 BashGuardians. All rights reserved.
+//  Copyright 2016 BashGuardians. All rights reserved.
 //
 
 import UIKit
@@ -23,8 +23,7 @@ class FraternityTableViewController: UITableViewController {
     
     override func viewDidLoad() {
                 super.viewDidLoad()
-                menuBarButton.target = self.revealViewController()
-                menuBarButton.action = #selector(SWRevealViewController.revealToggle(_:))
+               
         
         // Do any additional setup after loading the view.
     }
@@ -81,6 +80,12 @@ class FraternityTableViewController: UITableViewController {
     
     
     @IBAction func onClickMenuBarButton(sender: UIBarButtonItem) {
+        let transition = CATransition()
+        transition.duration = 0.3
+        transition.type = kCATransitionPush
+        transition.subtype = kCATransitionFromLeft
+        view.window!.layer.addAnimation(transition, forKey: kCATransition)
+        self.performSegueWithIdentifier("menuSegueFromFraternity", sender: self)
     }
     
     

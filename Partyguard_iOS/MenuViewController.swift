@@ -19,12 +19,29 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
         profileImageView.layer.cornerRadius = profileImageView.frame.size.width/2
         profileImageView.clipsToBounds = true
+        self.navigationItem.setHidesBackButton(true, animated: false)
+        let backbutton = UIBarButtonItem()
+        backbutton.image = UIImage(named: "Menu Filled-50.png")
+        backbutton.style = .Bordered
+        self.navigationItem.leftBarButtonItem = backbutton
+        self.navigationItem.leftBarButtonItem?.target = self
+        self.navigationItem.leftBarButtonItem?.action = Selector("backmenu")
         
         
 
         // Do any additional setup after loading the view.
     }
 
+    func backmenu() {
+        print("backmenu pressed")
+        let transition = CATransition()
+        transition.duration = 0.3
+        transition.type = kCATransitionPush
+        transition.subtype = kCATransitionFromRight
+        view.window!.layer.addAnimation(transition, forKey: kCATransition)
+        self.performSegueWithIdentifier("backmenuSegueToFraternity", sender: self)
+        
+    }
    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1

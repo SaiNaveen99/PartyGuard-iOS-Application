@@ -3,7 +3,7 @@
 //  Partyguard_iOS
 //
 //  Created by Mallampati,Sai Naveen on 9/27/16.
-//  Copyright © 2016 BashGuardians. All rights reserved.
+//  Copyright 2016 BashGuardians. All rights reserved.
 //
 
 import UIKit

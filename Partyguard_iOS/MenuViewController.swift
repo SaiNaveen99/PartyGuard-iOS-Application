@@ -1,7 +1,7 @@
 //
 //  MenuViewController.swift
 //  Partyguard_iOS
-//
+//  Checking commit from Individual Account on MacBook
 //  Created by Mallampati,Sai Naveen on 9/14/16.
 //  Copyright © 2016 BashGuardians. All rights reserved.
 //

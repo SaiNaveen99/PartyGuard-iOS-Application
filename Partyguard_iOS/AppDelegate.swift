@@ -1,7 +1,7 @@
 //
 //  AppDelegate.swift
 //  Partyguard_iOS
-//
+// 
 //  Created by Tankasala,Nandeesh on 9/6/16.
 //  Copyright © 2016 BashGuardians. All rights reserved.
 //

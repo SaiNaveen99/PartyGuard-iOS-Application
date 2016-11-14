@@ -12,13 +12,12 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     
     
-    @IBOutlet weak var profileImageView: UIImageView!
+    
     var MenuItem = ["Profile","Location Change","Logout","Settings","About PartyGuard"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        profileImageView.layer.cornerRadius = profileImageView.frame.size.width/2
-        profileImageView.clipsToBounds = true
+       
         self.navigationItem.setHidesBackButton(true, animated: false)
         let backbutton = UIBarButtonItem()
         backbutton.image = UIImage(named: "Menu Filled-50.png")
@@ -51,9 +50,34 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         return MenuItem.count
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("MenuCellID", forIndexPath: indexPath)
-        cell.textLabel?.text = MenuItem[indexPath.row]
-        // Configure the cell...
+        var cellIdentifier:String = ""
+        if(indexPath.row == 0)
+        {
+            cellIdentifier = "ProfileImageCell"
+        }
+        else
+        {
+           cellIdentifier = "MenuCellID"
+       
+        
+        }
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath)
+        if(cellIdentifier == "ProfileImageCell")
+        {
+             cell.imageView?.layer.masksToBounds = false
+            cell.imageView!.layer.cornerRadius = cell.imageView!.frame.size.width/2
+            cell.imageView!.clipsToBounds = true
+            cell.imageView?.layer.borderWidth = 3.0
+            cell.imageView?.layer.borderColor = UIColor.brownColor().CGColor
+           
+            
+        }
+        else
+        {
+            cell.textLabel?.text = MenuItem[indexPath.row-1]
+            
+        }
+       
         
         return cell
     }
@@ -61,11 +85,11 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     
         print("Logout")
-        if(indexPath.row == 2)
+        if(indexPath.row == 3)
         {
             self.performSegueWithIdentifier("LogoutBasic", sender: self)
         }
-        if(indexPath.row == 0)
+        if(indexPath.row == 1)
         {
             self.performSegueWithIdentifier("BasicUserProfileSegue", sender: self)
         }
@@ -74,6 +98,14 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if(indexPath.row == 0)
+        {
+            return 250.00
+        }
+        return 50.00
     }
     
 

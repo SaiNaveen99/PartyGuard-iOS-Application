@@ -684,6 +684,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sWk-60-wyf">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="Back to Faternities"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="87" y="189" width="396" height="30"/>
+                                </variation>
                                 <connections>
                                     <action selector="buttonAction:" destination="GC0-RT-uDm" eventType="touchUpInside" id="Jf1-pB-4u3"/>
                                 </connections>
@@ -1246,17 +1249,12 @@
                                     <rect key="frame" x="0.0" y="0.0" width="400" height="44"/>
                                 </variation>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ProfileImage 2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="dtN-HU-nnd">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="6" y="57" width="138" height="103"/>
-                                </variation>
-                            </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="e2H-yi-8Bj">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MenuCellID" id="bFS-kx-Sfj">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProfileImageCell" rowHeight="259" id="bFS-kx-Sfj">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bFS-kx-Sfj" id="BkZ-L0-E5P">
@@ -1272,15 +1270,56 @@
                                                         <rect key="frame" x="27" y="8" width="56" height="27"/>
                                                     </variation>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ProfileImage 2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="dcM-T1-DdY">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="8" y="19" width="250" height="250"/>
+                                                    </variation>
+                                                </imageView>
                                             </subviews>
                                             <variation key="default">
                                                 <mask key="subviews">
                                                     <exclude reference="Rvn-HP-Lma"/>
+                                                    <exclude reference="dcM-T1-DdY"/>
                                                 </mask>
                                             </variation>
                                             <variation key="widthClass=compact">
                                                 <mask key="subviews">
                                                     <include reference="Rvn-HP-Lma"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="heightClass=regular-widthClass=compact">
+                                                <mask key="subviews">
+                                                    <include reference="dcM-T1-DdY"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MenuCellID" id="cPy-EK-tW4">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cPy-EK-tW4" id="NP8-Et-Pec">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="buH-fm-Y4s">
+                                                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="27" y="8" width="56" height="27"/>
+                                                    </variation>
+                                                </label>
+                                            </subviews>
+                                            <variation key="default">
+                                                <mask key="subviews">
+                                                    <exclude reference="buH-fm-Y4s"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="widthClass=compact">
+                                                <mask key="subviews">
+                                                    <include reference="buH-fm-Y4s"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
@@ -1290,43 +1329,29 @@
                                     <rect key="frame" x="0.0" y="195" width="400" height="405"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="195" width="305" height="605"/>
+                                    <rect key="frame" x="0.0" y="44" width="305" height="756"/>
                                 </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="ndI-vo-vqY" id="0Mp-hS-cJE"/>
                                     <outlet property="delegate" destination="ndI-vo-vqY" id="o61-S8-4Py"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Jj-qO-VZo">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="53" y="166" width="45" height="21"/>
-                                </variation>
-                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="49Z-le-qKx"/>
-                                <exclude reference="dtN-HU-nnd"/>
                                 <exclude reference="e2H-yi-8Bj"/>
-                                <exclude reference="4Jj-qO-VZo"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="49Z-le-qKx"/>
-                                <include reference="dtN-HU-nnd"/>
                                 <include reference="e2H-yi-8Bj"/>
-                                <include reference="4Jj-qO-VZo"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="profileImageView" destination="dtN-HU-nnd" id="Ag0-BH-OdE"/>
                         <segue destination="Qjs-Py-Hx0" kind="show" identifier="LogoutBasic" id="77d-eW-BIT"/>
                         <segue destination="exg-6D-v5z" kind="show" identifier="BasicUserProfileSegue" id="YRZ-C0-dOg"/>
                         <segue destination="JSq-Sx-efB" kind="show" identifier="backmenuSegueToFraternity" id="mG2-be-2cl"/>
@@ -1334,7 +1359,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4fV-PU-hBh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-925.5" y="2664.75"/>
+            <point key="canvasLocation" x="-951" y="2502"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Okj-KE-nQD">

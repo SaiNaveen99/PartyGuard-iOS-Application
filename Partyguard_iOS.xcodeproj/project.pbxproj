@@ -22,6 +22,7 @@
 		23ED11241DB481830087D88E /* GuardProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ED11231DB481830087D88E /* GuardProfileViewController.swift */; };
 		23ED11261DB482770087D88E /* Personal Trainer-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 23ED11251DB482770087D88E /* Personal Trainer-25.png */; };
 		30616C881D9E0CA700771AEB /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30616C871D9E0CA700771AEB /* ForgotPasswordViewController.swift */; };
+		30FFCB191DDBCAF5008928E3 /* LocationChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FFCB181DDBCAF5008928E3 /* LocationChangeViewController.swift */; };
 		7F04B7131D89F234002581CC /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F04B7121D89F234002581CC /* MenuViewController.swift */; };
 		7F04B7151D89F5DE002581CC /* ProfileImage 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7F04B7141D89F5DE002581CC /* ProfileImage 2.jpg */; };
 		7F82DDC01D9B05A30095E5E1 /* AcceptAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F82DDBF1D9B05A30095E5E1 /* AcceptAlertViewController.swift */; };
@@ -71,6 +72,7 @@
 		23ED11231DB481830087D88E /* GuardProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuardProfileViewController.swift; sourceTree = "<group>"; };
 		23ED11251DB482770087D88E /* Personal Trainer-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Personal Trainer-25.png"; sourceTree = "<group>"; };
 		30616C871D9E0CA700771AEB /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		30FFCB181DDBCAF5008928E3 /* LocationChangeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationChangeViewController.swift; sourceTree = "<group>"; };
 		7F04B7121D89F234002581CC /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		7F04B7141D89F5DE002581CC /* ProfileImage 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ProfileImage 2.jpg"; sourceTree = "<group>"; };
 		7F82DDBF1D9B05A30095E5E1 /* AcceptAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcceptAlertViewController.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				AF2A97B51D88A76100C0D52E /* SWRevealViewController */,
 				23DDEB631D7FA2220045A2AA /* AppDelegate.swift */,
 				ACC34A331D9C69A400C60FFA /* AlertTableViewController.swift */,
+				30FFCB181DDBCAF5008928E3 /* LocationChangeViewController.swift */,
 				ACC34A341D9C69A400C60FFA /* ProfileViewController.swift */,
 				ACC34A351D9C69A400C60FFA /* HistoryTableTableViewController.swift */,
 				ACC34A361D9C69A400C60FFA /* PGTeamViewController.swift */,
@@ -293,6 +296,7 @@
 				AF13E90D1D94C14000D4A757 /* IncidentLocationTableViewController.swift in Sources */,
 				ACC34A391D9C69A400C60FFA /* ProfileViewController.swift in Sources */,
 				30616C881D9E0CA700771AEB /* ForgotPasswordViewController.swift in Sources */,
+				30FFCB191DDBCAF5008928E3 /* LocationChangeViewController.swift in Sources */,
 				231704D01D7FA6B5005BEF99 /* BasicRegisterViewController.swift in Sources */,
 				ACC34A381D9C69A400C60FFA /* AlertTableViewController.swift in Sources */,
 				7F82DDC21D9B19DF0095E5E1 /* ClaimAlertViewController.swift in Sources */,

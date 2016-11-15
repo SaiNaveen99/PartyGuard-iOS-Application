@@ -13,7 +13,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     
     
-    var MenuItem = ["Profile","Location Change","Logout","Settings","About PartyGuard"]
+    var MenuItem = ["Profile","Location Change","Logout","Alert Log","About PartyGuard"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -99,7 +99,6 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if(indexPath.row == 0)
         {

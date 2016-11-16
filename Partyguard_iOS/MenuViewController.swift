@@ -13,7 +13,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     
     
-    var MenuItem = ["Profile","Location Change","Alert Log","Logout"]
+    var MenuItem = ["Profile","Location Change","Alert Log","Settings","Logout"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +47,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 5
+        return 6
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cellIdentifier:String = ""
@@ -83,12 +83,6 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    
-        print("Logout")
-        if(indexPath.row == 4)
-        {
-            self.performSegueWithIdentifier("LogoutBasic", sender: self)
-        }
         if(indexPath.row == 1)
         {
             self.performSegueWithIdentifier("BasicUserProfileSegue", sender: self)
@@ -100,6 +94,15 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         if(indexPath.row == 3)
         {
             self.performSegueWithIdentifier("alertLogID", sender: self)
+        }
+        if(indexPath.row == 4)
+        {
+            self.performSegueWithIdentifier("settingsID", sender: self)
+        }
+        print("Logout")
+        if(indexPath.row == 5)
+        {
+            self.performSegueWithIdentifier("logOutID", sender: self)
         }
     }
 

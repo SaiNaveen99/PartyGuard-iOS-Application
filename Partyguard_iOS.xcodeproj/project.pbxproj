@@ -25,6 +25,7 @@
 		30FFCB191DDBCAF5008928E3 /* LocationChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FFCB181DDBCAF5008928E3 /* LocationChangeViewController.swift */; };
 		30FFCB1D1DDBD676008928E3 /* AlertLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FFCB1C1DDBD676008928E3 /* AlertLogViewController.swift */; };
 		30FFCB1F1DDBD958008928E3 /* Edit-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 30FFCB1E1DDBD958008928E3 /* Edit-25.png */; };
+		30FFCB211DDBDC2E008928E3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FFCB201DDBDC2E008928E3 /* SettingsViewController.swift */; };
 		7F04B7131D89F234002581CC /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F04B7121D89F234002581CC /* MenuViewController.swift */; };
 		7F04B7151D89F5DE002581CC /* ProfileImage 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7F04B7141D89F5DE002581CC /* ProfileImage 2.jpg */; };
 		7F82DDC01D9B05A30095E5E1 /* AcceptAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F82DDBF1D9B05A30095E5E1 /* AcceptAlertViewController.swift */; };
@@ -77,6 +78,7 @@
 		30FFCB181DDBCAF5008928E3 /* LocationChangeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationChangeViewController.swift; sourceTree = "<group>"; };
 		30FFCB1C1DDBD676008928E3 /* AlertLogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlertLogViewController.swift; path = ../AlertLogViewController.swift; sourceTree = "<group>"; };
 		30FFCB1E1DDBD958008928E3 /* Edit-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Edit-25.png"; sourceTree = "<group>"; };
+		30FFCB201DDBDC2E008928E3 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		7F04B7121D89F234002581CC /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		7F04B7141D89F5DE002581CC /* ProfileImage 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ProfileImage 2.jpg"; sourceTree = "<group>"; };
 		7F82DDBF1D9B05A30095E5E1 /* AcceptAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcceptAlertViewController.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				ACC34A371D9C69A400C60FFA /* HostTabViewController.swift */,
 				23DDEB651D7FA2220045A2AA /* BasicLoginViewController.swift */,
 				23DDEB671D7FA2220045A2AA /* Main.storyboard */,
+				30FFCB201DDBDC2E008928E3 /* SettingsViewController.swift */,
 				23ED11231DB481830087D88E /* GuardProfileViewController.swift */,
 				23ED11211DB4805D0087D88E /* GuardHistoryTableViewController.swift */,
 				23ED111F1DB47FB20087D88E /* GuardAlertTableViewController.swift */,
@@ -313,6 +316,7 @@
 				AC6347BE1D80C8A60080B62A /* FraternityTableViewController.swift in Sources */,
 				ACC34A3B1D9C69A400C60FFA /* PGTeamViewController.swift in Sources */,
 				7FB2890C1D9C2A2E008CA62E /* IssueTableViewController.swift in Sources */,
+				30FFCB211DDBDC2E008928E3 /* SettingsViewController.swift in Sources */,
 				7F82DDC41D9B1E290095E5E1 /* ResolutionAlertViewController.swift in Sources */,
 				30FFCB1D1DDBD676008928E3 /* AlertLogViewController.swift in Sources */,
 				AC6347721D80B4860080B62A /* InfoViewController.swift in Sources */,

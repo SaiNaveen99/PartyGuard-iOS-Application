@@ -81,13 +81,10 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
        
         if(indexPath.row == 2)
         {
-            self.performSegueWithIdentifier("settingsID", sender: self)
+            self.performSegueWithIdentifier("BasicUserProfileSegue", sender: self)
         }
         print("Logout")
-        if(indexPath.row == 5)
-        {
-            self.performSegueWithIdentifier("logOutID", sender: self)
-        }
+       
     }
 
     override func didReceiveMemoryWarning() {

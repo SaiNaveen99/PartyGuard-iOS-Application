@@ -61,7 +61,7 @@ class BasicRegisterViewController: UIViewController, UIImagePickerControllerDele
                 
                             let jsonData = try NSJSONSerialization.dataWithJSONObject(parameters, options: .PrettyPrinted)
                 
-                            let url = NSURL(string: "http://partyguardservices20161025060016.azurewebsites.net/api/Account/Register")
+                            let url = NSURL(string: "http://partyguardservices20161110094537.azurewebsites.net/api/Account/Register")
                 
                             let request = NSMutableURLRequest(URL: url!)
                             request.HTTPMethod = "POST"

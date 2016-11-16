@@ -24,15 +24,11 @@ class BasicLoginViewController: UIViewController {
   
         if(self.EmailTF.text == "" || self.PasswordTF.text == "")
         {
-//            let alert = UIAlertView()
-//            alert.title = "Invalid Login"
-//            alert.message = "Please enter valid details"
-//            alert.addButtonWithTitle("Okay!")
-//            alert.show()
-            
-            NSOperationQueue.mainQueue().addOperationWithBlock {
-                self.performSegueWithIdentifier("LoginSegue", sender: self)
-            }
+            let alert = UIAlertView()
+            alert.title = "Invalid Login"
+            alert.message = "Please enter valid details"
+            alert.addButtonWithTitle("Okay!")
+            alert.show()
             
         }
         else
@@ -43,7 +39,7 @@ class BasicLoginViewController: UIViewController {
         do {
            
             
-            let url = NSURL(string: "http://partyguardservices20161025060016.azurewebsites.net/token")!
+            let url = NSURL(string: "http://partyguardservices20161110094537.azurewebsites.net/token")!
             let request = NSMutableURLRequest(URL: url)
             request.HTTPMethod = "POST"
             
@@ -72,6 +68,8 @@ class BasicLoginViewController: UIViewController {
                     {
                         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
                         appDelegate.accessToken = result!["access_token"] as! String
+                        
+                        print("Login Succesful")
                    
                     NSOperationQueue.mainQueue().addOperationWithBlock {
                         self.performSegueWithIdentifier("LoginSegue", sender: self)

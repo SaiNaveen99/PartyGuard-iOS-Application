@@ -52,7 +52,7 @@ class BasicUserProfileViewController: UIViewController {
         
          let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         
-        let url = NSURL(string: "http://partyguardservices20161025060016.azurewebsites.net/api/Account/UserInfo")!
+        let url = NSURL(string: "http://partyguardservices20161110094537.azurewebsites.net/api/Account/UserInfo")!
             let request = NSMutableURLRequest(URL: url)
             request.HTTPMethod = "GET"
              request.setValue("Bearer \(appDelegate.accessToken)", forHTTPHeaderField: "Authorization")
@@ -73,6 +73,16 @@ class BasicUserProfileViewController: UIViewController {
                        do
                        {
                         let result = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments) as? [String:AnyObject]
+                        
+                        self.FirstNameTF.text = result!["FirstName"] as? String
+                        self.lastNameTF.text = result!["LastName"] as? String
+                        self.UniversityTF.text = result!["University"] as? String
+                        self.phoneNumberTF.text = result!["PhoneNumber"] as? String
+                        self.EmailIdTF.text = result!["Email"] as? String
+                        
+                        
+                        
+                        
                         
                         print("Result of Profile View-> \(result)")
                         }

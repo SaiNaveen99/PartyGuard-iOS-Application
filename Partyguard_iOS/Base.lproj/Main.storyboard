@@ -684,9 +684,6 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sWk-60-wyf">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="Back to Faternities"/>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="87" y="189" width="396" height="30"/>
-                                </variation>
                                 <connections>
                                     <action selector="buttonAction:" destination="GC0-RT-uDm" eventType="touchUpInside" id="Jf1-pB-4u3"/>
                                 </connections>
@@ -1161,34 +1158,6 @@
             </objects>
             <point key="canvasLocation" x="-27" y="1052.25"/>
         </scene>
-        <!--Settings View Controller-->
-        <scene sceneID="XJS-VN-rFi">
-            <objects>
-                <viewController id="IA0-tN-Ws3" customClass="SettingsViewController" customModule="Partyguard_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="7gt-9X-rAM"/>
-                        <viewControllerLayoutGuide type="bottom" id="JaS-8O-iwc"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="9iS-kx-9B5">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e3Q-RS-eEW">
-                                <rect key="frame" x="53" y="114" width="207" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Change Password"/>
-                                <connections>
-                                    <action selector="changePasswordBTN:" destination="IA0-tN-Ws3" eventType="touchUpInside" id="hRQ-cA-cCh"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TYr-kd-KB3" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1720" y="3191"/>
-        </scene>
         <!--Basic User Profile View Controller-->
         <scene sceneID="hqO-eo-xFm">
             <objects>
@@ -1244,7 +1213,7 @@
                                             <rect key="frame" x="8" y="34" width="91" height="21"/>
                                         </variation>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Sai Naveen" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Wj-Va-scJ">
+                                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Wj-Va-scJ">
                                         <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -1278,7 +1247,7 @@
                                             <rect key="frame" x="8" y="150" width="110" height="21"/>
                                         </variation>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Northwest Missouri State University" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ua5-Jf-9Vf">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ua5-Jf-9Vf">
                                         <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -1400,6 +1369,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MtT-Ju-0jr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="223.5" y="3351.75"/>
+        </scene>
+        <!--Basic User Settings View Controller-->
+        <scene sceneID="7VZ-ZV-XWv">
+            <objects>
+                <viewController id="MrU-qV-JXi" customClass="BasicUserSettingsViewController" customModule="Partyguard_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QTM-EJ-L4M"/>
+                        <viewControllerLayoutGuide type="bottom" id="5n2-Ek-IVc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="M9P-hL-tgn">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A8Q-Vk-mwV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1690.5" y="2557.5"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="L33-6q-hLs">
@@ -1535,14 +1521,13 @@
                         <segue destination="exg-6D-v5z" kind="show" identifier="BasicUserProfileSegue" id="YRZ-C0-dOg"/>
                         <segue destination="JSq-Sx-efB" kind="show" identifier="backmenuSegueToFraternity" id="mG2-be-2cl"/>
                         <segue destination="eBm-F0-JTI" kind="show" identifier="locationChangeID" id="zhS-oW-MbB"/>
-                        <segue destination="LMF-qp-1U2" kind="show" identifier="alertLogID" id="ORk-Pn-V8e"/>
-                        <segue destination="IA0-tN-Ws3" kind="show" identifier="settingsID" id="NMY-g7-ats"/>
                         <segue destination="Qjs-Py-Hx0" kind="show" identifier="logOutID" id="F8K-Rt-GP4"/>
+                        <segue destination="MrU-qV-JXi" kind="show" identifier="BasicUserSettings" id="ggT-Y1-zwI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4fV-PU-hBh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-951" y="2502"/>
+            <point key="canvasLocation" x="-1024.5" y="2484.75"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Okj-KE-nQD">
@@ -1632,7 +1617,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GLe-pL-Ty6">
                                 <rect key="frame" x="28" y="284" width="188" height="56"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wef-cq-gNR">
@@ -1646,7 +1631,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Northwest Missouri State University" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GDl-RW-Be0">
                                 <rect key="frame" x="28" y="361" width="392" height="57"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -2231,10 +2216,10 @@
         <image name="User Groups-25.png" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="srY-tB-llc"/>
+        <segue reference="F8K-Rt-GP4"/>
+        <segue reference="mG2-be-2cl"/>
         <segue reference="os5-A4-NsS"/>
         <segue reference="K63-H4-hkl"/>
-        <segue reference="mG2-be-2cl"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>

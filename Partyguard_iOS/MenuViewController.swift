@@ -81,7 +81,12 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
        
         if(indexPath.row == 2)
         {
-            self.performSegueWithIdentifier("BasicUserProfileSegue", sender: self)
+            self.performSegueWithIdentifier("settingsID", sender: self)
+        }
+        print("Logout")
+        if(indexPath.row == 5)
+        {
+            self.performSegueWithIdentifier("logOutID", sender: self)
         }
     }
 
@@ -89,7 +94,6 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if(indexPath.row == 0)
         {

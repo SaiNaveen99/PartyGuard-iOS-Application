@@ -30,7 +30,7 @@
 •	 You will see this dialog whenever you create a new project. This allows you to set up different types of projects with a single click, including Scrum and Kanban.
 •	Choose Demo Project and click next. This will create a new project that has sample data. We won't be using the Demo Project for this tutorial, however the issues in the project contain handy information about JIRA. Take a few minutes to browse through them.
  
-#Create an Issue:
+#How to create an issue?
 •	Click Create at the top of the screen to open the Create Issue dialog box.
 •	Select the relevant Project and Issue Type on the Create Issue dialog box.
 •	Type a Summary for the issue and complete any appropriate fields — at least required ones which are marked by an asterisk.

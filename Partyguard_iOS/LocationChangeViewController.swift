@@ -16,6 +16,7 @@ class LocationChangeViewController: UIViewController{
         // Do any additional setup after loading the view.
     }
     @IBOutlet weak var currentLocationLBL: UILabel!
+    @IBOutlet weak var editBTN: UIButton!
 //var textToShow : String?
 //    override func viewWillAppear(animated: Bool) {
 //        if let textToShow = textToShow {

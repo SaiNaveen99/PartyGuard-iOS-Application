@@ -23,6 +23,8 @@
 		23ED11261DB482770087D88E /* Personal Trainer-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 23ED11251DB482770087D88E /* Personal Trainer-25.png */; };
 		30616C881D9E0CA700771AEB /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30616C871D9E0CA700771AEB /* ForgotPasswordViewController.swift */; };
 		30FFCB191DDBCAF5008928E3 /* LocationChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FFCB181DDBCAF5008928E3 /* LocationChangeViewController.swift */; };
+		30FFCB1D1DDBD676008928E3 /* AlertLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FFCB1C1DDBD676008928E3 /* AlertLogViewController.swift */; };
+		30FFCB1F1DDBD958008928E3 /* Edit-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 30FFCB1E1DDBD958008928E3 /* Edit-25.png */; };
 		7F04B7131D89F234002581CC /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F04B7121D89F234002581CC /* MenuViewController.swift */; };
 		7F04B7151D89F5DE002581CC /* ProfileImage 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7F04B7141D89F5DE002581CC /* ProfileImage 2.jpg */; };
 		7F82DDC01D9B05A30095E5E1 /* AcceptAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F82DDBF1D9B05A30095E5E1 /* AcceptAlertViewController.swift */; };
@@ -73,6 +75,8 @@
 		23ED11251DB482770087D88E /* Personal Trainer-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Personal Trainer-25.png"; sourceTree = "<group>"; };
 		30616C871D9E0CA700771AEB /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		30FFCB181DDBCAF5008928E3 /* LocationChangeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationChangeViewController.swift; sourceTree = "<group>"; };
+		30FFCB1C1DDBD676008928E3 /* AlertLogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlertLogViewController.swift; path = ../AlertLogViewController.swift; sourceTree = "<group>"; };
+		30FFCB1E1DDBD958008928E3 /* Edit-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Edit-25.png"; sourceTree = "<group>"; };
 		7F04B7121D89F234002581CC /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		7F04B7141D89F5DE002581CC /* ProfileImage 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ProfileImage 2.jpg"; sourceTree = "<group>"; };
 		7F82DDBF1D9B05A30095E5E1 /* AcceptAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcceptAlertViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +143,7 @@
 				AF2A97B51D88A76100C0D52E /* SWRevealViewController */,
 				23DDEB631D7FA2220045A2AA /* AppDelegate.swift */,
 				ACC34A331D9C69A400C60FFA /* AlertTableViewController.swift */,
+				30FFCB1C1DDBD676008928E3 /* AlertLogViewController.swift */,
 				30FFCB181DDBCAF5008928E3 /* LocationChangeViewController.swift */,
 				ACC34A341D9C69A400C60FFA /* ProfileViewController.swift */,
 				ACC34A351D9C69A400C60FFA /* HistoryTableTableViewController.swift */,
@@ -165,6 +170,7 @@
 				23ED11251DB482770087D88E /* Personal Trainer-25.png */,
 				ACC34A291D9C697B00C60FFA /* User Female-25.png */,
 				AC6347771D80C1A50080B62A /* SPE.gif */,
+				30FFCB1E1DDBD958008928E3 /* Edit-25.png */,
 				ACC34A2B1D9C698D00C60FFA /* Gender Neutral User-50.png */,
 				ACC34A2C1D9C698D00C60FFA /* User Groups-25.png */,
 				ACC34A2D1D9C698D00C60FFA /* Error-25.png */,
@@ -266,6 +272,7 @@
 				ACC34A301D9C698D00C60FFA /* User Groups-25.png in Resources */,
 				23ED11261DB482770087D88E /* Personal Trainer-25.png in Resources */,
 				AF13E9151D94C75700D4A757 /* AKL.png in Resources */,
+				30FFCB1F1DDBD958008928E3 /* Edit-25.png in Resources */,
 				AF13E9131D94C75100D4A757 /* DC.png in Resources */,
 				23DDEB6B1D7FA2220045A2AA /* Assets.xcassets in Resources */,
 				ACC34A2F1D9C698D00C60FFA /* Gender Neutral User-50.png in Resources */,
@@ -307,6 +314,7 @@
 				ACC34A3B1D9C69A400C60FFA /* PGTeamViewController.swift in Sources */,
 				7FB2890C1D9C2A2E008CA62E /* IssueTableViewController.swift in Sources */,
 				7F82DDC41D9B1E290095E5E1 /* ResolutionAlertViewController.swift in Sources */,
+				30FFCB1D1DDBD676008928E3 /* AlertLogViewController.swift in Sources */,
 				AC6347721D80B4860080B62A /* InfoViewController.swift in Sources */,
 				7F04B7131D89F234002581CC /* MenuViewController.swift in Sources */,
 			);

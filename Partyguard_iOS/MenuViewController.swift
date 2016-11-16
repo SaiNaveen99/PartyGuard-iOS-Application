@@ -13,7 +13,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     
     
-    var MenuItem = ["Profile","Location Change","Logout","Alert Log","About PartyGuard"]
+    var MenuItem = ["Profile","Location Change","Alert Log","Logout"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +47,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return MenuItem.count
+        return 5
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cellIdentifier:String = ""
@@ -85,13 +85,21 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     
         print("Logout")
-        if(indexPath.row == 3)
+        if(indexPath.row == 4)
         {
             self.performSegueWithIdentifier("LogoutBasic", sender: self)
         }
         if(indexPath.row == 1)
         {
             self.performSegueWithIdentifier("BasicUserProfileSegue", sender: self)
+        }
+        if(indexPath.row == 2)
+        {
+            self.performSegueWithIdentifier("locationChangeID", sender: self)
+        }
+        if(indexPath.row == 3)
+        {
+            self.performSegueWithIdentifier("alertLogID", sender: self)
         }
     }
 

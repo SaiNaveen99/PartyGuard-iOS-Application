@@ -9,9 +9,34 @@
 import UIKit
 
 class BasicUserProfileViewController: UIViewController {
+    
+    
+    @IBOutlet weak var FirstNameTF: UITextField!
+    
+    
+    @IBOutlet weak var lastNameTF: UITextField!
+    
+    
+    @IBOutlet weak var UniversityTF: UITextField!
+    
+    
+    @IBOutlet weak var EmailIdTF: UITextField!
+    
+    
 
+    @IBOutlet weak var phoneNumberTF: UITextField!
+    
+    
+    @IBOutlet weak var Editbutton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        FirstNameTF.borderStyle = .None
+        lastNameTF.borderStyle = .None
+        UniversityTF.borderStyle = .None
+        EmailIdTF.borderStyle = .None
+        phoneNumberTF.borderStyle = .None
+        Editbutton.titleLabel?.text = "Edit"
 
        
     }
@@ -61,6 +86,28 @@ class BasicUserProfileViewController: UIViewController {
         task.resume()
     }
     
+    
+    
+    @IBAction func EditAction(sender: AnyObject) {
+        if(Editbutton.titleLabel?.text == "Edit")
+        {
+        FirstNameTF.userInteractionEnabled = true
+        FirstNameTF.borderStyle = .Line
+        lastNameTF.userInteractionEnabled = true
+        lastNameTF.borderStyle = .Line
+        UniversityTF.userInteractionEnabled = true
+        UniversityTF.borderStyle = .Line
+        EmailIdTF.borderStyle = .Line
+        EmailIdTF.userInteractionEnabled = true
+        phoneNumberTF.userInteractionEnabled = true
+        phoneNumberTF.borderStyle = .Line
+       
+        Editbutton.setTitle("Update", forState: .Normal)
+        print(Editbutton.titleLabel?.text)
+            
+        }
+        
+    }
 
     /*
     // MARK: - Navigation

@@ -12,8 +12,10 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     
     
+
+   
     
-    var MenuItem = ["Profile","Location Change","Logout","Settings","About PartyGuard"]
+    var MenuItem = ["Home","Profile","Log","Settings","Change Location"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,49 +49,37 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return MenuItem.count
+        return MenuItem.count+1
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cellIdentifier:String = ""
+        var cell1:ProfileTableViewCell
+        var cell2:UITableViewCell
         if(indexPath.row == 0)
         {
-            cellIdentifier = "ProfileImageCell"
-        }
-        else
-        {
-           cellIdentifier = "MenuCellID"
-       
-        
-        }
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath)
-        if(cellIdentifier == "ProfileImageCell")
-        {
-             cell.imageView?.layer.masksToBounds = false
-            cell.imageView!.layer.cornerRadius = cell.imageView!.frame.size.width/2
-            cell.imageView!.clipsToBounds = true
-            cell.imageView?.layer.borderWidth = 3.0
-            cell.imageView?.layer.borderColor = UIColor.brownColor().CGColor
-           
+            cell1 = tableView.dequeueReusableCellWithIdentifier("ProfileImageCell", forIndexPath: indexPath) as! ProfileTableViewCell
+            cell1.profileImageView.layer.masksToBounds = false
+            cell1.profileImageView.layer.cornerRadius = cell1.profileImageView!.frame.size.width/2
+            cell1.profileImageView!.clipsToBounds = true
+            cell1.profileImageView?.layer.borderWidth = 3.0
+            cell1.profileImageView?.layer.borderColor = UIColor.blackColor().CGColor
+            return cell1
             
         }
         else
         {
-            cell.textLabel?.text = MenuItem[indexPath.row-1]
-            
-        }
+            cell2 = tableView.dequeueReusableCellWithIdentifier("MenuCellID", forIndexPath: indexPath)
+            cell2.textLabel?.text = MenuItem[indexPath.row-1]
+            return cell2
        
         
-        return cell
+        }
+        
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     
-        print("Logout")
-        if(indexPath.row == 3)
-        {
-            self.performSegueWithIdentifier("LogoutBasic", sender: self)
-        }
-        if(indexPath.row == 1)
+       
+        if(indexPath.row == 2)
         {
             self.performSegueWithIdentifier("BasicUserProfileSegue", sender: self)
         }

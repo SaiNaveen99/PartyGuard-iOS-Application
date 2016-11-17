@@ -29,10 +29,7 @@ class BasicLoginViewController: UIViewController {
             alert.message = "Please enter valid details"
             alert.addButtonWithTitle("Okay!")
             alert.show()
-            NSOperationQueue.mainQueue().addOperationWithBlock {
-                self.performSegueWithIdentifier("LoginSegue", sender: self)
-            }
-            
+          self.performSegueWithIdentifier("HostLoginSegue", sender: self)
         }
         else
         {

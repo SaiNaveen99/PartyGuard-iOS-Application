@@ -265,11 +265,13 @@
                         <outlet property="EmailTF" destination="ap5-uy-aii" id="5aP-wI-egQ"/>
                         <outlet property="PasswordTF" destination="OXS-Hn-JUD" id="zDJ-n0-3e7"/>
                         <segue destination="FF7-x8-a98" kind="show" identifier="LoginSegue" id="os5-A4-NsS"/>
+                        <segue destination="UJP-sb-odK" kind="show" identifier="HostLoginSegue" id="mfW-NT-CSB"/>
+                        <segue destination="l77-Eo-xHr" kind="show" identifier="GuardLoginSegue" id="b4O-yn-IFV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qOY-K1-h9g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-868" y="1019"/>
+            <point key="canvasLocation" x="-1515" y="-1545"/>
         </scene>
         <!--Basic Register View Controller-->
         <scene sceneID="7YI-ef-9Pt">
@@ -1798,7 +1800,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6o-3g-aIr">
                                                     <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="widthClass=compact" fixedFrame="YES">
                                                         <rect key="frame" x="35" y="140" width="42" height="21"/>
@@ -1880,7 +1882,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TkB-Gh-0e9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3576" y="-448"/>
+            <point key="canvasLocation" x="3552" y="-982.5"/>
         </scene>
         <!--Host Tab View Controller-->
         <scene sceneID="fUN-no-Wc3">
@@ -1997,7 +1999,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jDV-z8-ct0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1011" y="-896.25"/>
+            <point key="canvasLocation" x="-1104" y="-864.75"/>
         </scene>
         <!--History-->
         <scene sceneID="Hah-Pj-1ep">
@@ -2050,9 +2052,11 @@
         <image name="User Groups-25.png" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="srY-tB-llc"/>
         <segue reference="os5-A4-NsS"/>
-        <segue reference="vE6-kw-Kn6"/>
+        <segue reference="srY-tB-llc"/>
+        <segue reference="b4O-yn-IFV"/>
+        <segue reference="K63-H4-hkl"/>
+        <segue reference="mfW-NT-CSB"/>
         <segue reference="bpR-LC-zL7"/>
         <segue reference="7Qq-Ww-Nx0"/>
         <segue reference="WUX-2o-Iq1"/>

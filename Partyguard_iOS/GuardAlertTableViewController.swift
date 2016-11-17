@@ -9,6 +9,9 @@
 import UIKit
 
 class GuardAlertTableViewController: UITableViewController {
+    
+    var basicuserNames:[String] = [String]()
+    var issues:[String] = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,17 +37,74 @@ class GuardAlertTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        return issues.count
     }
 
    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("GuardAlerts", forIndexPath: indexPath)
-        cell.textLabel!.text = "Katie Harris"
-        cell.detailTextLabel?.text = "Main Floor"
+        cell.textLabel!.text = basicuserNames[indexPath.row]
+        cell.detailTextLabel?.text = issues[indexPath.row]
         cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         // Configure the cell...
         return cell
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        
+        let url = NSURL(string: "http://partyguardservices20161110094537.azurewebsites.net//api/IssueList")!
+        let request = NSMutableURLRequest(URL: url)
+        
+        request.HTTPMethod = "GET"
+        request.setValue("Bearer \(appDelegate.accessToken)", forHTTPHeaderField: "Authorization")
+        
+        
+        let task = NSURLSession.sharedSession().dataTaskWithRequest(request){ data, response, error in
+            if error != nil{
+                print("Error -> \(error)")
+                let alert1 = UIAlertView()
+                alert1.title = "Invalid Login"
+                alert1.message = "Username or password does not exists"
+                alert1.addButtonWithTitle("Ok!")
+                alert1.show()
+                return
+            }
+            else
+            {
+                do
+                {
+                    let result = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments) as? [[String:AnyObject]]
+                    
+                   print("Issues")
+                    
+                    for(var i=0; i<result?.count; i++)
+                    {
+
+                        self.basicuserNames.append("\(result![i]["BasicUserProfileModel"]!["firstName"] as! String) \(result![i]["BasicUserProfileModel"]!["lastName"] as! String)")
+                        self.issues.append(result![i]["issueName"] as! String)
+
+                        
+                    }
+                    
+                    dispatch_async(dispatch_get_main_queue()) {
+                        self.tableView.reloadData()
+                    }
+                    
+                   
+                }
+                catch {
+                    print("Error -> \(error)")
+                }
+                
+                
+                
+                
+            }
+        }
+        task.resume()
+        
     }
  
 

@@ -12,6 +12,7 @@ class GuardAlertTableViewController: UITableViewController {
     
     var basicuserNames:[String] = [String]()
     var issues:[String] = [String]()
+    var nameSelected:String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +51,22 @@ class GuardAlertTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        nameSelected = basicuserNames[indexPath.row]
+        print("Name selected \(nameSelected)")
+        NSOperationQueue.mainQueue().addOperationWithBlock {self.performSegueWithIdentifier("GuardAlerttoClaim", sender: self)
+        }
+        
+    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        print("Name selected \(nameSelected)")
+        if(segue.identifier == "GuardAlerttoClaim")
+        {
+         
+            let guardissueclaimcontroller = segue.destinationViewController as! GuardIssueClaimViewController
+             guardissueclaimcontroller.basicUserName  = nameSelected
+        }
+    }
     override func viewWillAppear(animated: Bool) {
         
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate

@@ -27,6 +27,8 @@
 		3FBF06281DDC131C00BB8BE9 /* GuardHistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBF06271DDC131C00BB8BE9 /* GuardHistoryTableViewController.swift */; };
 		3FBF062B1DDC134600BB8BE9 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FBF062A1DDC134600BB8BE9 /* SWRevealViewController.m */; };
 		3FBF062D1DDC282A00BB8BE9 /* BasicUserSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBF062C1DDC282A00BB8BE9 /* BasicUserSettingsViewController.swift */; };
+		3FBF062F1DDE37B100BB8BE9 /* GuardRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBF062E1DDE37B100BB8BE9 /* GuardRegisterViewController.swift */; };
+		3FBF06311DDE421000BB8BE9 /* GuardIssueClaimViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBF06301DDE421000BB8BE9 /* GuardIssueClaimViewController.swift */; };
 		7F04B7131D89F234002581CC /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F04B7121D89F234002581CC /* MenuViewController.swift */; };
 		7F04B7151D89F5DE002581CC /* ProfileImage 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7F04B7141D89F5DE002581CC /* ProfileImage 2.jpg */; };
 		7F82DDC01D9B05A30095E5E1 /* AcceptAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F82DDBF1D9B05A30095E5E1 /* AcceptAlertViewController.swift */; };
@@ -81,6 +83,8 @@
 		3FBF06291DDC133500BB8BE9 /* SWRevealViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		3FBF062A1DDC134600BB8BE9 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		3FBF062C1DDC282A00BB8BE9 /* BasicUserSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicUserSettingsViewController.swift; sourceTree = "<group>"; };
+		3FBF062E1DDE37B100BB8BE9 /* GuardRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuardRegisterViewController.swift; sourceTree = "<group>"; };
+		3FBF06301DDE421000BB8BE9 /* GuardIssueClaimViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuardIssueClaimViewController.swift; sourceTree = "<group>"; };
 		7F04B7121D89F234002581CC /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		7F04B7141D89F5DE002581CC /* ProfileImage 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ProfileImage 2.jpg"; sourceTree = "<group>"; };
 		7F82DDBF1D9B05A30095E5E1 /* AcceptAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcceptAlertViewController.swift; sourceTree = "<group>"; };
@@ -190,6 +194,8 @@
 				7FB2890B1D9C2A2E008CA62E /* IssueTableViewController.swift */,
 				3FBF06221DDAD12E00BB8BE9 /* ProfileTableViewCell.swift */,
 				3FBF06241DDC0F4B00BB8BE9 /* AppInfoViewController.swift */,
+				3FBF062E1DDE37B100BB8BE9 /* GuardRegisterViewController.swift */,
+				3FBF06301DDE421000BB8BE9 /* GuardIssueClaimViewController.swift */,
 			);
 			path = Partyguard_iOS;
 			sourceTree = "<group>";
@@ -286,6 +292,7 @@
 				23ED11241DB481830087D88E /* GuardProfileViewController.swift in Sources */,
 				23DDEB641D7FA2220045A2AA /* AppDelegate.swift in Sources */,
 				23ED111C1DB478750087D88E /* GuardLoginViewController.swift in Sources */,
+				3FBF06311DDE421000BB8BE9 /* GuardIssueClaimViewController.swift in Sources */,
 				3FBF062B1DDC134600BB8BE9 /* SWRevealViewController.m in Sources */,
 				7F82DDC01D9B05A30095E5E1 /* AcceptAlertViewController.swift in Sources */,
 				23ED11201DB47FB20087D88E /* GuardAlertTableViewController.swift in Sources */,
@@ -294,6 +301,7 @@
 				AF13E90D1D94C14000D4A757 /* IncidentLocationTableViewController.swift in Sources */,
 				30616C881D9E0CA700771AEB /* ForgotPasswordViewController.swift in Sources */,
 				231704D01D7FA6B5005BEF99 /* BasicRegisterViewController.swift in Sources */,
+				3FBF062F1DDE37B100BB8BE9 /* GuardRegisterViewController.swift in Sources */,
 				ACC34A381D9C69A400C60FFA /* AlertTableViewController.swift in Sources */,
 				7F82DDC21D9B19DF0095E5E1 /* ClaimAlertViewController.swift in Sources */,
 				3FBF062D1DDC282A00BB8BE9 /* BasicUserSettingsViewController.swift in Sources */,

@@ -10,8 +10,8 @@ import UIKit
 
 class AcceptAlertViewController: UIViewController {
     
-    var alertType: String = "Feeling Uncomfortable"
-    var location: String = "Basement"
+    var issueName: String = "Feeling Uncomfortable"
+    var issueLocation: String = "Basement"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +38,7 @@ class AcceptAlertViewController: UIViewController {
         paragraphStyle.alignment = NSTextAlignment.Left
         
         let messageText = NSMutableAttributedString(
-            string: "Alert Type:\n "+alertType+"\nLocation\n "+location+"\nComments",
+            string: "Alert Type:\n "+issueName+"\nLocation\n "+issueLocation+"\nComments",
             attributes: [
                 NSParagraphStyleAttributeName: paragraphStyle,
                 NSFontAttributeName : UIFont.preferredFontForTextStyle(UIFontTextStyleBody),
@@ -59,9 +59,50 @@ class AcceptAlertViewController: UIViewController {
     
     func acceptHandler()
     {
-        self.performSegueWithIdentifier("claimSegue", sender: self)
-        //let cvc = ClaimAlertViewController()
-       // self.presentViewController(cvc, animated: true, completion: nil)
+        
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        
+            var parameters = ["issueName":"Fight","issueLocation":"Basement","issueDate":"May 2016","comments":"Need Help","fraternityName":"sigmaphi"] as Dictionary<String, String>
+            
+            do {
+                
+                let jsonData = try NSJSONSerialization.dataWithJSONObject(parameters, options: .PrettyPrinted)
+                
+                let url = NSURL(string: "http://partyguardservices20161110094537.azurewebsites.net/api/IssuesModels")
+                
+                let request = NSMutableURLRequest(URL: url!)
+                request.HTTPMethod = "POST"
+                request.setValue("Bearer \(appDelegate.accessToken)", forHTTPHeaderField: "Authorization")
+                
+                
+                request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+                request.HTTPBody = jsonData
+                
+                
+                let task = NSURLSession.sharedSession().dataTaskWithRequest(request){ data, response, error in
+                    if error != nil{
+                        print("Error -> \(error)")
+                        return
+                    }
+                    else
+                    {
+                        print("Success")
+                        print(response)
+                       
+                        
+                    }
+                    
+                    
+                }
+                
+                task.resume()
+                //return task
+                
+            } catch {
+                print(error)
+            }
+        
+        
     }
     
     func declineHandler()

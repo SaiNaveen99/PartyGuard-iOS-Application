@@ -11,6 +11,8 @@ import UIKit
 class IssueTableViewController: UITableViewController {
     
     var Issues = ["Accident","FeelingUnsafe","Fight","Other"]
+    var fraternitytext:String = "sigmaphi"
+    var issueSelected:String = "abc"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +29,15 @@ class IssueTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-  
+    override func viewWillAppear(animated: Bool) {
+        
+        dispatch_async(dispatch_get_main_queue()) {
+            self.tableView.reloadData()
+        }
+
+
+        
+    }
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -47,7 +57,7 @@ class IssueTableViewController: UITableViewController {
         {
             print("Inside loop")
             
-            cell.textLabel?.text = "SigEp"
+            cell.textLabel?.text = fraternitytext
             cell.detailTextLabel?.text = "Sigma Phi Epsilon"
             cell.imageView?.image = UIImage(named: "SPE.gif")
         }
@@ -68,6 +78,22 @@ class IssueTableViewController: UITableViewController {
         
 
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        issueSelected = Issues[indexPath.row-1]
+    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier == "IssueToIncident")
+        {
+        
+    var incidentVC = segue.destinationViewController as! IncidentLocationTableViewController
+        incidentVC.fraternitySelected = self.fraternitytext
+        incidentVC.issueSelected = self.issueSelected
+        }
+        
+        
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {

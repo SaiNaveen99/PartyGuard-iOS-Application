@@ -30,18 +30,12 @@ class BasicUserProfileViewController: UIViewController {
     @IBOutlet weak var Editbutton: UIButton!
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-        FirstNameTF.borderStyle = .None
-        lastNameTF.borderStyle = .None
-        UniversityTF.borderStyle = .None
-        EmailIdTF.borderStyle = .None
-        phoneNumberTF.borderStyle = .None
-        Editbutton.titleLabel?.text = "Edit"
-
-       
-    }
+            }
 
     @IBAction func editBTN(sender: AnyObject) {
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -9,6 +9,9 @@
 import UIKit
 
 class IncidentLocationTableViewController: UITableViewController {
+    
+    var fraternitySelected:String = "abc"
+    var issueSelected:String = "abc"
 
     var incidentLocation = ["Upstairs","Main Floor","Basement","Deck"]
     override func viewDidLoad() {
@@ -45,13 +48,13 @@ class IncidentLocationTableViewController: UITableViewController {
         {
             print("Inside loop")
             
-            cell.textLabel?.text = "SigEp"
+            cell.textLabel?.text = fraternitySelected
             cell.detailTextLabel?.text = "Sigma Phi Epsilon"
             cell.imageView?.image = UIImage(named: "SPE.gif")
         }
         else if(indexPath.row == 1)
         {
-            cell.textLabel?.text = "Feeling Unsafe"
+            cell.textLabel?.text = issueSelected
              cell.backgroundColor = UIColor.lightGrayColor()
             
         }

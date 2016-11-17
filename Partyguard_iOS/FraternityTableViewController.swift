@@ -1,3 +1,4 @@
+
 //
 //  FraternityTableViewController.swift
 //  Partyguard_iOS
@@ -14,8 +15,9 @@ class FraternityTableViewController: UITableViewController {
 
     
     @IBOutlet weak var menuBarButton: UIBarButtonItem!
-    var Fraternities = ["SigEp","TKE","PhiDelta","PhiSig","Delta Chi","AKL"]
-    var subtitles = ["Sigma Phi Epsilon","Tau Kappa Epsilon","Phi Delta Theta","Phi Sigma Kappa","Delta Chi","Alpha Kappa Lambda"]
+    var fraternitySelected:String = "abc"
+    var Fraternities:[String] = ["sigmaphi"]
+    var subtitles:[String] = ["sigma"]
     var Icons = ["SPE.gif","TKE.gif","PDT.gif","PSK1.png","DC.png","AKL.png"]
     
     
@@ -23,10 +25,9 @@ class FraternityTableViewController: UITableViewController {
     
     override func viewDidLoad() {
                 super.viewDidLoad()
-               
         
-        // Do any additional setup after loading the view.
-    }
+      
+            }
     
     override func viewWillAppear(animated: Bool) {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
@@ -52,20 +53,33 @@ class FraternityTableViewController: UITableViewController {
                 print("Fraternity List \(response)")
                 do
                 {
+                    
                     let result = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments) as? [[String:AnyObject]]
                     
-                    print("Result of Faternity View-> \(result)")
+                    for(var i=0; i<result?.count; i++)
+                 {
+                  
+                    self.Fraternities[i] = result![i]["fraternityName"] as! String
+                    self.subtitles[i] = result![i]["nickName"] as! String
+                   
+                }
+                    
+                    print(self.Fraternities)
+                    print(self.subtitles
+                    )
+                  
                 }
                 catch {
                     print("Error -> \(error)")
                 }
                 
                 
-                
-                
             }
         }
         task.resume()
+        dispatch_async(dispatch_get_main_queue()) {
+            self.tableView.reloadData()
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -91,6 +105,7 @@ class FraternityTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
+        print("count in number of rows \(Fraternities.count)")
         return Fraternities.count
     }
     
@@ -101,8 +116,26 @@ class FraternityTableViewController: UITableViewController {
         cell.imageView?.image = UIImage(named: Icons[indexPath.row])
         cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         // Configure the cell...
-        
+      
         return cell
+        
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+
+        fraternitySelected = Fraternities[indexPath.row]
+        
+        
+        
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier == "FraternityToIssueSegue")
+        {
+        let ivc = segue.destinationViewController as! IssueTableViewController
+        ivc.fraternitytext = fraternitySelected
+        }
+        
     }
     
     

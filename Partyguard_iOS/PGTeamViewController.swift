@@ -8,62 +8,32 @@
 
 import UIKit
 
-class PGTeamViewController: UIViewController {
+class PGTeamViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource{
+    
+    //var names = ["vinod","naveen","nandeesh"]
 
-   
-    @IBOutlet weak var Image1: UIImageView!
-    
-    
-    @IBOutlet weak var Image2: UIImageView!
-    
-    
-    @IBOutlet weak var Image3: UIImageView!
-    
-    
-    @IBOutlet weak var Image4: UIImageView!
-    
-    
-    @IBOutlet weak var Image5: UIImageView!
-    
-    
-    @IBOutlet weak var Image6: UIImageView!
-    
-    
-    @IBOutlet weak var Image7: UIImageView!
-    
-    
-    
-    @IBOutlet weak var Image8: UIImageView!
-    
-    
-    
-    @IBOutlet weak var Image9: UIImageView!
-    
+
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        return 1
+    }
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! MyCollectionViewCell
+        let bcolor : UIColor = UIColor( red: 0.2, green: 0.2, blue:0.2, alpha: 0.3 )
+        cell.layer.borderColor = bcolor.CGColor
+        cell.layer.borderWidth = 0.5
+        cell.layer.cornerRadius = 7
+
+        cell.guardname.text = "nandeesh-vinod"
+        cell.guardimage.image = UIImage(named: "User Female-25.png")
+        //viewDidLoad()
+        return cell
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Image1.image = UIImage(named: "Gender Neutral User-50.png")
-        Image2.image = UIImage(named: "Gender Neutral User-50.png")
-        Image3.image = UIImage(named: "Gender Neutral User-50.png")
-        Image1.layer.borderWidth = 0.5
-        Image2.layer.borderWidth = 0.5
-        Image3.layer.borderWidth = 0.5
-        Image4.layer.borderWidth = 0.5
-        Image5.layer.borderWidth = 0.5
-        Image6.layer.borderWidth = 0.5
-        Image7.layer.borderWidth = 0.5
-        Image8.layer.borderWidth = 0.5
-        Image9.layer.borderWidth = 0.5
-        Image1.layer.borderColor = UIColor.lightGrayColor().CGColor
-        Image2.layer.borderColor = UIColor.lightGrayColor().CGColor
-        Image3.layer.borderColor = UIColor.lightGrayColor().CGColor
-        Image4.layer.borderColor = UIColor.lightGrayColor().CGColor
-        Image5.layer.borderColor = UIColor.lightGrayColor().CGColor
-        Image6.layer.borderColor = UIColor.lightGrayColor().CGColor
-        Image7.layer.borderColor = UIColor.lightGrayColor().CGColor
-        Image8.layer.borderColor = UIColor.lightGrayColor().CGColor
-        Image9.layer.borderColor = UIColor.lightGrayColor().CGColor
+        
         
                 // Do any additional setup after loading the view.
     }

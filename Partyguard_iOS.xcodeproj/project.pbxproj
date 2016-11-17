@@ -10,6 +10,7 @@
 		231704D01D7FA6B5005BEF99 /* BasicRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231704CF1D7FA6B5005BEF99 /* BasicRegisterViewController.swift */; };
 		231704D21D7FAB14005BEF99 /* Dummy_profile.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 231704D11D7FAB14005BEF99 /* Dummy_profile.jpg */; };
 		231704D41D7FB0D7005BEF99 /* HostLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231704D31D7FB0D7005BEF99 /* HostLoginViewController.swift */; };
+		2318BB601DDD4472000E8CE4 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2318BB5F1DDD4472000E8CE4 /* MyCollectionViewCell.swift */; };
 		23DDEB641D7FA2220045A2AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DDEB631D7FA2220045A2AA /* AppDelegate.swift */; };
 		23DDEB661D7FA2220045A2AA /* BasicLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DDEB651D7FA2220045A2AA /* BasicLoginViewController.swift */; };
 		23DDEB691D7FA2220045A2AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23DDEB671D7FA2220045A2AA /* Main.storyboard */; };
@@ -59,6 +60,7 @@
 		231704CF1D7FA6B5005BEF99 /* BasicRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicRegisterViewController.swift; sourceTree = "<group>"; };
 		231704D11D7FAB14005BEF99 /* Dummy_profile.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Dummy_profile.jpg; sourceTree = "<group>"; };
 		231704D31D7FB0D7005BEF99 /* HostLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostLoginViewController.swift; sourceTree = "<group>"; };
+		2318BB5F1DDD4472000E8CE4 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 		23DDEB601D7FA2220045A2AA /* Partyguard_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Partyguard_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23DDEB631D7FA2220045A2AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23DDEB651D7FA2220045A2AA /* BasicLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicLoginViewController.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				ACC34A371D9C69A400C60FFA /* HostTabViewController.swift */,
 				23DDEB651D7FA2220045A2AA /* BasicLoginViewController.swift */,
 				23DDEB671D7FA2220045A2AA /* Main.storyboard */,
+				2318BB5F1DDD4472000E8CE4 /* MyCollectionViewCell.swift */,
 				23ED11231DB481830087D88E /* GuardProfileViewController.swift */,
 				23ED111F1DB47FB20087D88E /* GuardAlertTableViewController.swift */,
 				23ED111D1DB47D5E0087D88E /* GuardTabViewController.swift */,
@@ -300,6 +303,7 @@
 				ACC34A3C1D9C69A400C60FFA /* HostTabViewController.swift in Sources */,
 				AC6347BE1D80C8A60080B62A /* FraternityTableViewController.swift in Sources */,
 				ACC34A3B1D9C69A400C60FFA /* PGTeamViewController.swift in Sources */,
+				2318BB601DDD4472000E8CE4 /* MyCollectionViewCell.swift in Sources */,
 				7FB2890C1D9C2A2E008CA62E /* IssueTableViewController.swift in Sources */,
 				7F82DDC41D9B1E290095E5E1 /* ResolutionAlertViewController.swift in Sources */,
 				AC6347721D80B4860080B62A /* InfoViewController.swift in Sources */,

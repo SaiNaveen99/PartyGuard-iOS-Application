@@ -54,6 +54,7 @@ class BasicUserProfileViewController: UIViewController {
         
         let url = NSURL(string: "http://partyguardservices20161110094537.azurewebsites.net/api/Account/UserInfo")!
             let request = NSMutableURLRequest(URL: url)
+    
             request.HTTPMethod = "GET"
              request.setValue("Bearer \(appDelegate.accessToken)", forHTTPHeaderField: "Authorization")
         

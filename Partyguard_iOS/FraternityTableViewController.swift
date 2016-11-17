@@ -31,7 +31,7 @@ class FraternityTableViewController: UITableViewController {
     override func viewWillAppear(animated: Bool) {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         
-        let url = NSURL(string: "http://partyguardservices20161025060016.azurewebsites.net/FraternityList")!
+        let url = NSURL(string: "http://partyguardservices20161110094537.azurewebsites.net/FraternityList")!
         let request = NSMutableURLRequest(URL: url)
         request.HTTPMethod = "GET"
         request.setValue("Bearer \(appDelegate.accessToken)", forHTTPHeaderField: "Authorization")
@@ -52,7 +52,7 @@ class FraternityTableViewController: UITableViewController {
                 print("Fraternity List \(response)")
                 do
                 {
-                    let result = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments) as? [String:AnyObject]
+                    let result = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments) as? [[String:AnyObject]]
                     
                     print("Result of Faternity View-> \(result)")
                 }

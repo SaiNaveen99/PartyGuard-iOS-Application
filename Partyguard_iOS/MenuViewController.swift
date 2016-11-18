@@ -15,7 +15,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
 
    
     
-    var MenuItem = ["Home","Profile","Log","Settings","Change Location"]
+    var MenuItem = ["Home","Profile","Log","Settings","Change Location","Log out"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,10 +78,17 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     
-       
         if(indexPath.row == 2)
         {
             self.performSegueWithIdentifier("BasicUserProfileSegue", sender: self)
+        }
+        else if(indexPath.row == 3)
+        {
+            self.performSegueWithIdentifier("BasicLogSegue", sender: self)
+        }
+        else if(indexPath.row == 4)
+        {
+            self.performSegueWithIdentifier("BasicSettingsSegue", sender: self)
         }
         print("Logout")
        

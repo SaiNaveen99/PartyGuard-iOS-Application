@@ -59,8 +59,8 @@ class FraternityTableViewController: UITableViewController {
                     for(var i=0; i<result?.count; i++)
                  {
                   
-                    self.Fraternities[i] = result![i]["fraternityName"] as! String
-                    self.subtitles[i] = result![i]["nickName"] as! String
+                    //self.Fraternities[i] = result![i]["fraternityName"] as! String
+                    //self.subtitles[i] = result![i]["nickName"] as! String
                    
                 }
                     

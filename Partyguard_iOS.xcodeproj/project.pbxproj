@@ -44,6 +44,8 @@
 		AC63477E1D80C1B40080B62A /* PSK.png in Resources */ = {isa = PBXBuildFile; fileRef = AC63477D1D80C1B40080B62A /* PSK.png */; };
 		AC6347801D80C2B20080B62A /* PSK1.png in Resources */ = {isa = PBXBuildFile; fileRef = AC63477F1D80C2B20080B62A /* PSK1.png */; };
 		AC6347BE1D80C8A60080B62A /* FraternityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6347BD1D80C8A60080B62A /* FraternityTableViewController.swift */; };
+		AC8B0CF01DDE7C2C009775E9 /* BasicLogTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8B0CEF1DDE7C2C009775E9 /* BasicLogTableViewController.swift */; };
+		AC8B0CF21DDE815C009775E9 /* BasicUserLocationChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8B0CF11DDE815C009775E9 /* BasicUserLocationChangeViewController.swift */; };
 		ACC34A2A1D9C697B00C60FFA /* User Female-25.png in Resources */ = {isa = PBXBuildFile; fileRef = ACC34A291D9C697B00C60FFA /* User Female-25.png */; };
 		ACC34A2F1D9C698D00C60FFA /* Gender Neutral User-50.png in Resources */ = {isa = PBXBuildFile; fileRef = ACC34A2B1D9C698D00C60FFA /* Gender Neutral User-50.png */; };
 		ACC34A301D9C698D00C60FFA /* User Groups-25.png in Resources */ = {isa = PBXBuildFile; fileRef = ACC34A2C1D9C698D00C60FFA /* User Groups-25.png */; };
@@ -102,6 +104,8 @@
 		AC63477D1D80C1B40080B62A /* PSK.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PSK.png; sourceTree = "<group>"; };
 		AC63477F1D80C2B20080B62A /* PSK1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PSK1.png; sourceTree = "<group>"; };
 		AC6347BD1D80C8A60080B62A /* FraternityTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FraternityTableViewController.swift; sourceTree = "<group>"; };
+		AC8B0CEF1DDE7C2C009775E9 /* BasicLogTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicLogTableViewController.swift; sourceTree = "<group>"; };
+		AC8B0CF11DDE815C009775E9 /* BasicUserLocationChangeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicUserLocationChangeViewController.swift; sourceTree = "<group>"; };
 		ACC34A291D9C697B00C60FFA /* User Female-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "User Female-25.png"; sourceTree = "<group>"; };
 		ACC34A2B1D9C698D00C60FFA /* Gender Neutral User-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Gender Neutral User-50.png"; sourceTree = "<group>"; };
 		ACC34A2C1D9C698D00C60FFA /* User Groups-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "User Groups-25.png"; sourceTree = "<group>"; };
@@ -132,6 +136,7 @@
 		23DDEB571D7FA2220045A2AA = {
 			isa = PBXGroup;
 			children = (
+				AC8B0CEF1DDE7C2C009775E9 /* BasicLogTableViewController.swift */,
 				3FBF062C1DDC282A00BB8BE9 /* BasicUserSettingsViewController.swift */,
 				23DDEB621D7FA2220045A2AA /* Partyguard_iOS */,
 				23DDEB611D7FA2220045A2AA /* Products */,
@@ -161,6 +166,7 @@
 				ACC34A371D9C69A400C60FFA /* HostTabViewController.swift */,
 				23DDEB651D7FA2220045A2AA /* BasicLoginViewController.swift */,
 				23DDEB671D7FA2220045A2AA /* Main.storyboard */,
+				AC8B0CF11DDE815C009775E9 /* BasicUserLocationChangeViewController.swift */,
 				2318BB5F1DDD4472000E8CE4 /* MyCollectionViewCell.swift */,
 				23ED11231DB481830087D88E /* GuardProfileViewController.swift */,
 				23ED111F1DB47FB20087D88E /* GuardAlertTableViewController.swift */,
@@ -315,8 +321,10 @@
 				3FBF06251DDC0F4B00BB8BE9 /* AppInfoViewController.swift in Sources */,
 				AF4F50041DBA91A3004A8AD4 /* BasicUserProfileViewController.swift in Sources */,
 				ACC34A3A1D9C69A400C60FFA /* HistoryTableTableViewController.swift in Sources */,
+				AC8B0CF01DDE7C2C009775E9 /* BasicLogTableViewController.swift in Sources */,
 				ACC34A3C1D9C69A400C60FFA /* HostTabViewController.swift in Sources */,
 				AC6347BE1D80C8A60080B62A /* FraternityTableViewController.swift in Sources */,
+				AC8B0CF21DDE815C009775E9 /* BasicUserLocationChangeViewController.swift in Sources */,
 				ACC34A3B1D9C69A400C60FFA /* PGTeamViewController.swift in Sources */,
 				2318BB601DDD4472000E8CE4 /* MyCollectionViewCell.swift in Sources */,
 				7FB2890C1D9C2A2E008CA62E /* IssueTableViewController.swift in Sources */,

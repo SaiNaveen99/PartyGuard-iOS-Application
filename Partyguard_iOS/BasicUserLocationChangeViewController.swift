@@ -1,32 +1,15 @@
 //
-//  BasicUserSettingsViewController.swift
+//  BasicUserLocationChangeViewController.swift
 //  Partyguard_iOS
 //
-//  Created by Sai Naveen Mallampati on 11/15/16.
+//  Created by Somu,Vinod Reddy on 11/17/16.
 //  Copyright © 2016 BashGuardians. All rights reserved.
 //
 
 import UIKit
 
-class BasicUserSettingsViewController: UIViewController {
-    
-    
-    
-    @IBOutlet weak var Oldpwd: UITextField!
-    
-    
-    @IBOutlet weak var Newpwd: UITextField!
+class BasicUserLocationChangeViewController: UIViewController {
 
-    @IBOutlet weak var Repeatpwd: UITextField!
-    
-    
-    
-    @IBAction func Editclicked(sender: AnyObject)
-    {
-        
-    }
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 

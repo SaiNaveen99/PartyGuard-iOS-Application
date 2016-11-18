@@ -1632,7 +1632,52 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aMX-sc-76W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1041" y="3384"/>
+            <point key="canvasLocation" x="-1356" y="3385.5"/>
+        </scene>
+        <!--Basic Log Table View Controller-->
+        <scene sceneID="LZi-3t-gUs">
+            <objects>
+                <tableViewController id="dst-7Y-qwM" customClass="BasicLogTableViewController" customModule="Partyguard_iOS" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="qks-hW-pZe">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LogCell" textLabel="ne9-CR-ciE" detailTextLabel="cmX-3J-1lp" style="IBUITableViewCellStyleSubtitle" id="JbG-cr-ZuS">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JbG-cr-ZuS" id="itP-J0-qly">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ne9-CR-ciE">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="heightClass=regular-widthClass=compact">
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            </variation>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cmX-3J-1lp">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="heightClass=regular-widthClass=compact">
+                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            </variation>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="dst-7Y-qwM" id="LAv-G5-Sjq"/>
+                            <outlet property="delegate" destination="dst-7Y-qwM" id="ckB-EA-RfB"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eyh-Kj-qjS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-429" y="2986.5"/>
         </scene>
         <!--App Info View Controller-->
         <scene sceneID="sD1-QO-vkD">
@@ -1653,12 +1698,124 @@
                     <view key="view" contentMode="scaleToFill" id="M9P-hL-tgn">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UUG-rq-Oqd">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="PartyGuard" id="feZ-kW-tz2"/>
+                                </items>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="44"/>
+                                </variation>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fpu-Z4-2Xh">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="101" y="67" width="232" height="30"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Old Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OC9-zu-dvE">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="45" y="144" width="114" height="21"/>
+                                </variation>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="**********" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F1v-On-pln">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="167" y="141" width="159" height="30"/>
+                                </variation>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lv7-b9-aah">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="41" y="207" width="118" height="21"/>
+                                </variation>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="**********" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C5Y-mi-Txf">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="167" y="204" width="159" height="30"/>
+                                </variation>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repat Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lW0-31-EGt">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="31" y="269" width="128" height="21"/>
+                                </variation>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="**********" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TNv-xd-GEf">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="167" y="265" width="159" height="30"/>
+                                </variation>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1n4-AE-1kP">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Edit"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="167" y="337" width="30" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="Editclicked:" destination="MrU-qV-JXi" eventType="touchUpInside" id="uru-GE-fQF"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="UUG-rq-Oqd"/>
+                                <exclude reference="Fpu-Z4-2Xh"/>
+                                <exclude reference="OC9-zu-dvE"/>
+                                <exclude reference="F1v-On-pln"/>
+                                <exclude reference="Lv7-b9-aah"/>
+                                <exclude reference="C5Y-mi-Txf"/>
+                                <exclude reference="lW0-31-EGt"/>
+                                <exclude reference="TNv-xd-GEf"/>
+                                <exclude reference="1n4-AE-1kP"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="UUG-rq-Oqd"/>
+                                <include reference="Fpu-Z4-2Xh"/>
+                                <include reference="OC9-zu-dvE"/>
+                                <include reference="F1v-On-pln"/>
+                                <include reference="Lv7-b9-aah"/>
+                                <include reference="C5Y-mi-Txf"/>
+                                <include reference="lW0-31-EGt"/>
+                                <include reference="TNv-xd-GEf"/>
+                                <include reference="1n4-AE-1kP"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="Newpwd" destination="C5Y-mi-Txf" id="4Ab-5j-kOW"/>
+                        <outlet property="Oldpwd" destination="F1v-On-pln" id="kTs-dU-vrb"/>
+                        <outlet property="Repeatpwd" destination="TNv-xd-GEf" id="LQP-IS-wcq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A8Q-Vk-mwV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1690.5" y="2557.5"/>
+            <point key="canvasLocation" x="-1861.5" y="2584.5"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="L33-6q-hLs">
@@ -1795,12 +1952,13 @@
                         <segue destination="JSq-Sx-efB" kind="show" identifier="backmenuSegueToFraternity" id="mG2-be-2cl"/>
                         <segue destination="eBm-F0-JTI" kind="show" identifier="locationChangeID" id="zhS-oW-MbB"/>
                         <segue destination="Qjs-Py-Hx0" kind="show" identifier="logOutID" id="F8K-Rt-GP4"/>
-                        <segue destination="MrU-qV-JXi" kind="show" identifier="BasicUserSettings" id="ggT-Y1-zwI"/>
+                        <segue destination="MrU-qV-JXi" kind="show" identifier="BasicSettingsSegue" id="y5v-Q5-Ghz"/>
+                        <segue destination="dst-7Y-qwM" kind="show" identifier="BasicLogSegue" id="rsI-2c-oH6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4fV-PU-hBh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1024.5" y="2484.75"/>
+            <point key="canvasLocation" x="-988.5" y="2496.75"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Okj-KE-nQD">
@@ -1820,10 +1978,10 @@
             </objects>
             <point key="canvasLocation" x="723" y="1043.25"/>
         </scene>
-        <!--Location Change View Controller-->
+        <!--Basic User Location Change View Controller-->
         <scene sceneID="Fk5-19-rXR">
             <objects>
-                <viewController id="eBm-F0-JTI" customClass="LocationChangeViewController" customModule="Partyguard_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="eBm-F0-JTI" customClass="BasicUserLocationChangeViewController" customModule="Partyguard_iOS" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dy5-KT-OWR"/>
                         <viewControllerLayoutGuide type="bottom" id="zrA-gg-bCP"/>
@@ -1852,8 +2010,27 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iee-F7-tho">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="PartyGuard" id="pe3-Tg-18p"/>
+                                </items>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="44"/>
+                                </variation>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Iee-F7-tho"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Iee-F7-tho"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="currentLocationLBL" destination="GLe-pL-Ty6" id="qng-2t-sbJ"/>
@@ -2227,7 +2404,7 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="pgcell" id="ye9-Dc-e8w" customClass="GuardCell" customModule="Partyguard_iOS" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="187" height="235"/>
+                                <rect key="frame" x="0.0" y="64" width="187" height="235"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="187" height="235"/>
@@ -2335,14 +2512,14 @@
         <image name="User Groups-25.png" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="os5-A4-NsS"/>
-        <segue reference="OTd-xs-9D8"/>
-        <segue reference="K63-H4-hkl"/>
-        <segue reference="mfW-NT-CSB"/>
         <segue reference="bpR-LC-zL7"/>
-        <segue reference="7Qq-Ww-Nx0"/>
-        <segue reference="WUX-2o-Iq1"/>
+        <segue reference="mfW-NT-CSB"/>
+        <segue reference="F8K-Rt-GP4"/>
         <segue reference="mG2-be-2cl"/>
+        <segue reference="K63-H4-hkl"/>
+        <segue reference="os5-A4-NsS"/>
+        <segue reference="WUX-2o-Iq1"/>
+        <segue reference="7Qq-Ww-Nx0"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>

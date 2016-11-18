@@ -24,7 +24,7 @@ class PGTeamViewController: UIViewController,UICollectionViewDelegate,UICollecti
         cell.layer.borderWidth = 0.5
         cell.layer.cornerRadius = 7
 
-        cell.guardname.text = "nandeesh-vinod"
+        cell.guardname.text = ""
         cell.guardimage.image = UIImage(named: "User Female-25.png")
         //viewDidLoad()
         return cell

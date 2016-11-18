@@ -1,32 +1,25 @@
 //
-//  BasicUserSettingsViewController.swift
+//  BasicLogViewController.swift
 //  Partyguard_iOS
 //
-//  Created by Sai Naveen Mallampati on 11/15/16.
+//  Created by Somu,Vinod Reddy on 11/17/16.
 //  Copyright © 2016 BashGuardians. All rights reserved.
 //
 
 import UIKit
 
-class BasicUserSettingsViewController: UIViewController {
-    
-    
-    
-    @IBOutlet weak var Oldpwd: UITextField!
-    
-    
-    @IBOutlet weak var Newpwd: UITextField!
-
-    @IBOutlet weak var Repeatpwd: UITextField!
-    
-    
-    
-    @IBAction func Editclicked(sender: AnyObject)
-    {
-        
+class BasicLogViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
     }
     
-    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        cell
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

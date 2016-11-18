@@ -15,10 +15,10 @@ class FraternityTableViewController: UITableViewController {
 
     
     @IBOutlet weak var menuBarButton: UIBarButtonItem!
-    var fraternitySelected:String = "abc"
-    var Fraternities:[String] = ["sigmaphi"]
-    var subtitles:[String] = ["sigma"]
-    var Icons = ["SPE.gif","TKE.gif","PDT.gif","PSK1.png","DC.png","AKL.png"]
+    var fraternitySelected:String!
+    var Fraternities:[String] = [String]()
+    var subtitles:[String] = [String]()
+   
     
     
     
@@ -50,24 +50,23 @@ class FraternityTableViewController: UITableViewController {
             }
             else
             {
-                print("Fraternity List \(response)")
+                
                 do
                 {
                     
                     let result = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments) as? [[String:AnyObject]]
-                    
+                    self.Fraternities = [String]()
                     for(var i=0; i<result?.count; i++)
-                 {
-                  
-                    //self.Fraternities[i] = result![i]["fraternityName"] as! String
-                    //self.subtitles[i] = result![i]["nickName"] as! String
-                   
-                }
+                    {
+                        
+                        self.Fraternities.append(result![i]["fraternityName"] as! String)
+                        self.subtitles.append(result![i]["nickName"] as! String)
+                        
+                    }
+                    dispatch_async(dispatch_get_main_queue()) {
+                        self.tableView.reloadData()
+                    }
                     
-                    print(self.Fraternities)
-                    print(self.subtitles
-                    )
-                  
                 }
                 catch {
                     print("Error -> \(error)")
@@ -77,9 +76,7 @@ class FraternityTableViewController: UITableViewController {
             }
         }
         task.resume()
-        dispatch_async(dispatch_get_main_queue()) {
-            self.tableView.reloadData()
-        }
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -113,7 +110,7 @@ class FraternityTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("FraternityCell", forIndexPath: indexPath)
         cell.textLabel?.text = Fraternities[indexPath.row]
         cell.detailTextLabel?.text = subtitles[indexPath.row]
-        cell.imageView?.image = UIImage(named: Icons[indexPath.row])
+       
         cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         // Configure the cell...
       
@@ -122,18 +119,23 @@ class FraternityTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-
+        
         fraternitySelected = Fraternities[indexPath.row]
+        print("Fraternity Selected in did select row \(fraternitySelected)")
+       
+        self.performSegueWithIdentifier("FraternityToIssue", sender: nil)
         
         
         
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if(segue.identifier == "FraternityToIssueSegue")
+        
+        if(segue.identifier == "FraternityToIssue")
         {
         let ivc = segue.destinationViewController as! IssueTableViewController
-        ivc.fraternitytext = fraternitySelected
+          print("Fraternity Selected \(fraternitySelected)")
+        ivc.fraternitySelected = fraternitySelected
         }
         
     }

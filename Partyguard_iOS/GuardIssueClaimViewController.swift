@@ -54,13 +54,15 @@ class GuardIssueClaimViewController: UIViewController {
         var parameters = ["id": issueId] as Dictionary<String, Int>
         
         do {
-            
+            let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+
             let jsonData = try NSJSONSerialization.dataWithJSONObject(parameters, options: .PrettyPrinted)
             
-            let url = NSURL(string: "http://partyguardservices20161110094537.azurewebsites.net/api/Account/Register")
+            let url = NSURL(string: "http://partyguardservices20161110094537.azurewebsites.net/GuardAlertsClaim")
             
             let request = NSMutableURLRequest(URL: url!)
             request.HTTPMethod = "POST"
+            request.setValue("Bearer \(appDelegate.accessToken)", forHTTPHeaderField: "Authorization")
             
             
             request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
@@ -77,10 +79,12 @@ class GuardIssueClaimViewController: UIViewController {
                     do
                     {
                         let resultforUserInfo = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments) as? [String:AnyObject]
+                        print(resultforUserInfo)
+                        
                     }
                     catch
                     {
-                        
+                        print("error")
                     }
                     
                 }

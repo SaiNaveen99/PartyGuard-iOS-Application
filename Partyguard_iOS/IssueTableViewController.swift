@@ -11,8 +11,8 @@ import UIKit
 class IssueTableViewController: UITableViewController {
     
     var Issues = ["Accident","FeelingUnsafe","Fight","Other"]
-    var fraternitytext:String = "sigmaphi"
-    var issueSelected:String = "abc"
+    var fraternitySelected:String!
+    var issueSelected:String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,11 +55,10 @@ class IssueTableViewController: UITableViewController {
 
         if (indexPath.row == 0)
         {
-            print("Inside loop")
+           
+            cell.textLabel?.text = fraternitySelected
             
-            cell.textLabel?.text = fraternitytext
-            cell.detailTextLabel?.text = "Sigma Phi Epsilon"
-            cell.imageView?.image = UIImage(named: "SPE.gif")
+           
         }
         else if(indexPath.row >= 1 && indexPath.row <= 4)
         {
@@ -83,13 +82,14 @@ class IssueTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         issueSelected = Issues[indexPath.row-1]
+        self.performSegueWithIdentifier("IssueToIncident", sender: nil)
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier == "IssueToIncident")
         {
         
     var incidentVC = segue.destinationViewController as! IncidentLocationTableViewController
-        incidentVC.fraternitySelected = self.fraternitytext
+        incidentVC.fraternitySelected = self.fraternitySelected
         incidentVC.issueSelected = self.issueSelected
         }
         

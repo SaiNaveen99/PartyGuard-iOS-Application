@@ -13,6 +13,8 @@ class GuardAlertTableViewController: UITableViewController {
     var basicuserNames:[String] = [String]()
     var issues:[String] = [String]()
     var nameSelected:String!
+    var issueIds:[Int] = [Int]()
+    var issueIDSelected:Int!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,18 +55,20 @@ class GuardAlertTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         nameSelected = basicuserNames[indexPath.row]
+        issueIDSelected = issueIds[indexPath.row]
         print("Name selected \(nameSelected)")
         NSOperationQueue.mainQueue().addOperationWithBlock {self.performSegueWithIdentifier("GuardAlerttoClaim", sender: self)
         }
         
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        print("Name selected \(nameSelected)")
+        
         if(segue.identifier == "GuardAlerttoClaim")
         {
          
             let guardissueclaimcontroller = segue.destinationViewController as! GuardIssueClaimViewController
              guardissueclaimcontroller.basicUserName  = nameSelected
+            guardissueclaimcontroller.issueId = issueIDSelected
         }
     }
     override func viewWillAppear(animated: Bool) {
@@ -101,6 +105,7 @@ class GuardAlertTableViewController: UITableViewController {
 
                         self.basicuserNames.append("\(result![i]["BasicUserProfileModel"]!["firstName"] as! String) \(result![i]["BasicUserProfileModel"]!["lastName"] as! String)")
                         self.issues.append(result![i]["issueName"] as! String)
+                        self.issueIds.append(result![i]["issueID"] as! Int)
 
                         
                     }

@@ -640,9 +640,6 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="7ry-Y8-VAz" kind="show" identifier="FraternityToIssueSegue" id="NT7-L6-YpK"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -661,6 +658,7 @@
                     <connections>
                         <outlet property="menuBarButton" destination="Khw-8s-cJg" id="w4x-y0-R5r"/>
                         <segue destination="ndI-vo-vqY" kind="show" identifier="menuSegueFromFraternity" id="JUP-Wa-VOT"/>
+                        <segue destination="7ry-Y8-VAz" kind="show" identifier="FraternityToIssue" id="LAN-kS-xNY"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5kJ-53-Gxd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -683,9 +681,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="WOi-w9-bJm" kind="show" identifier="IssueToIncident" id="9Qy-Bc-bfI"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -693,6 +688,9 @@
                             <outlet property="delegate" destination="7ry-Y8-VAz" id="cYI-Sf-gux"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="WOi-w9-bJm" kind="show" identifier="IssueToIncident" id="Pcv-1i-k7H"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K7z-0F-g1V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -735,9 +733,6 @@
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="g33-H0-Ozh" kind="show" id="UeV-0f-bC2"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -745,10 +740,13 @@
                             <outlet property="delegate" destination="WOi-w9-bJm" id="Vfh-f7-nML"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="g33-H0-Ozh" kind="show" identifier="IncidenttoSendAlert" id="fWY-G4-fMg"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Svd-P8-1D3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2181" y="2844"/>
+            <point key="canvasLocation" x="1398" y="3483.75"/>
         </scene>
         <!--Accept Alert View Controller-->
         <scene sceneID="IgN-rf-z18">
@@ -769,7 +767,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vIg-3P-iDz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1840.5" y="3621"/>
+            <point key="canvasLocation" x="2490" y="3460.5"/>
         </scene>
         <!--Claim Alert View Controller-->
         <scene sceneID="f4W-l2-daF">
@@ -1639,15 +1637,19 @@
             <objects>
                 <tableViewController id="dst-7Y-qwM" customClass="BasicLogTableViewController" customModule="Partyguard_iOS" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="qks-hW-pZe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LogCell" textLabel="ne9-CR-ciE" detailTextLabel="cmX-3J-1lp" style="IBUITableViewCellStyleSubtitle" id="JbG-cr-ZuS">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JbG-cr-ZuS" id="itP-J0-qly">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ne9-CR-ciE">
+                                            <rect key="frame" x="15" y="1" width="34" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -1657,6 +1659,7 @@
                                             </variation>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cmX-3J-1lp">
+                                            <rect key="frame" x="15" y="22" width="59" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -2397,30 +2400,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="oPc-5g-tUR">
-                            <size key="itemSize" width="187" height="235"/>
+                            <size key="itemSize" width="179" height="216"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="pgcell" id="ye9-Dc-e8w" customClass="GuardCell" customModule="Partyguard_iOS" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="64" width="187" height="235"/>
+                                <rect key="frame" x="0.0" y="64" width="179" height="216"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="187" height="235"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="179" height="216"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DC.png" translatesAutoresizingMaskIntoConstraints="NO" id="JQg-mQ-bBu">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Gender Neutral User-50.png" translatesAutoresizingMaskIntoConstraints="NO" id="JQg-mQ-bBu">
                                             <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                             <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                <rect key="frame" x="4" y="8" width="179" height="131"/>
+                                                <rect key="frame" x="4" y="8" width="137" height="116"/>
                                             </variation>
                                         </imageView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8fP-y2-Yjv">
                                             <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                             <state key="normal" title="View"/>
                                             <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                <rect key="frame" x="36" y="153" width="105" height="30"/>
+                                                <rect key="frame" x="19" y="134" width="105" height="30"/>
                                             </variation>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hello" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LH7-IL-Ugw">
@@ -2438,7 +2441,7 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                             <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                <rect key="frame" x="58" y="199" width="71" height="21"/>
+                                                <rect key="frame" x="28" y="175" width="113" height="21"/>
                                             </variation>
                                         </label>
                                     </subviews>
@@ -2474,10 +2477,31 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="Iws-0k-rhd"/>
+                    <connections>
+                        <segue destination="x2b-mc-dFC" kind="show" identifier="guardProfileinHost" id="qHB-Dr-7be"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nz8-5a-wTU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4042.5" y="-1929.75"/>
+            <point key="canvasLocation" x="3882" y="-1950.75"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="OSe-7y-Ecv">
+            <objects>
+                <viewController id="x2b-mc-dFC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NY6-6g-58U"/>
+                        <viewControllerLayoutGuide type="bottom" id="YHg-D8-ak2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wOZ-FD-1Zd">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YQf-Mn-GZT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4624.5" y="-2041.5"/>
         </scene>
         <!--PG Team-->
         <scene sceneID="Ikh-QO-ffb">

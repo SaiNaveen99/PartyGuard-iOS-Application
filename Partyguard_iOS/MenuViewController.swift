@@ -90,6 +90,10 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         {
             self.performSegueWithIdentifier("BasicSettingsSegue", sender: self)
         }
+        else if(indexPath.row == 5)
+        {
+            self.performSegueWithIdentifier("locationChangeID", sender: self)
+        }
         print("Logout")
        
     }

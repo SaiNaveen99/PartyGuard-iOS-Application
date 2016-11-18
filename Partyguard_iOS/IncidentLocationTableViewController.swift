@@ -10,9 +10,10 @@ import UIKit
 
 class IncidentLocationTableViewController: UITableViewController {
     
-    var fraternitySelected:String!
-    var issueSelected:String!
+    
+    var incidentSelected:String!
 
+    let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     var incidentLocation = ["Upstairs","Main Floor","Basement","Deck"]
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,13 +49,13 @@ class IncidentLocationTableViewController: UITableViewController {
         {
             print("Inside loop")
             
-            cell.textLabel?.text = fraternitySelected
+            cell.textLabel?.text = appDelegate.fraternitySelected
             
             
         }
         else if(indexPath.row == 1)
         {
-            cell.textLabel?.text = issueSelected
+            cell.textLabel?.text = appDelegate.issueSelected
              cell.backgroundColor = UIColor.lightGrayColor()
             
         }
@@ -79,8 +80,17 @@ class IncidentLocationTableViewController: UITableViewController {
         return cellHeight
     }
         override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+            incidentSelected = incidentLocation[indexPath.row-2]
+            self.performSegueWithIdentifier("IncidenttoSendAlert", sender: nil)
+            
             
                  }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+      if(segue.identifier == "IncidenttoSendAlert")
+      {
+        appDelegate.incidentSelected = self.incidentSelected
+        }
+    }
 
     /*
     // Override to support conditional editing of the table view.

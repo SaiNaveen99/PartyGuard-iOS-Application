@@ -20,7 +20,7 @@ class FraternityTableViewController: UITableViewController {
     var subtitles:[String] = [String]()
    
     
-    
+    let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
     
     override func viewDidLoad() {
@@ -30,7 +30,7 @@ class FraternityTableViewController: UITableViewController {
             }
     
     override func viewWillAppear(animated: Bool) {
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        
         
         let url = NSURL(string: "http://partyguardservices20161110094537.azurewebsites.net/FraternityList")!
         let request = NSMutableURLRequest(URL: url)
@@ -133,9 +133,7 @@ class FraternityTableViewController: UITableViewController {
         
         if(segue.identifier == "FraternityToIssue")
         {
-        let ivc = segue.destinationViewController as! IssueTableViewController
-          print("Fraternity Selected \(fraternitySelected)")
-        ivc.fraternitySelected = fraternitySelected
+           appDelegate.fraternitySelected = self.fraternitySelected
         }
         
     }

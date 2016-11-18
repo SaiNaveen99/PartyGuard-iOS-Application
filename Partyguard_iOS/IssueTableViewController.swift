@@ -11,9 +11,10 @@ import UIKit
 class IssueTableViewController: UITableViewController {
     
     var Issues = ["Accident","FeelingUnsafe","Fight","Other"]
-    var fraternitySelected:String!
+    
     var issueSelected:String!
 
+     let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
               print("Issue Table View Controller")
@@ -56,7 +57,7 @@ class IssueTableViewController: UITableViewController {
         if (indexPath.row == 0)
         {
            
-            cell.textLabel?.text = fraternitySelected
+            cell.textLabel?.text = appDelegate.fraternitySelected
             
            
         }
@@ -87,11 +88,9 @@ class IssueTableViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier == "IssueToIncident")
         {
+            appDelegate.issueSelected = self.issueSelected
         
-    var incidentVC = segue.destinationViewController as! IncidentLocationTableViewController
-        incidentVC.fraternitySelected = self.fraternitySelected
-        incidentVC.issueSelected = self.issueSelected
-        }
+            }
         
         
     }

@@ -54,6 +54,7 @@ class GuardIssueClaimViewController: UIViewController {
         var parameters = ["id": issueId] as Dictionary<String, Int>
         
         do {
+            print(issueId)
             let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
 
             let jsonData = try NSJSONSerialization.dataWithJSONObject(parameters, options: .PrettyPrinted)

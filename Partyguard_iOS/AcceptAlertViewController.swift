@@ -10,9 +10,10 @@ import UIKit
 
 class AcceptAlertViewController: UIViewController {
     
-    var issueName: String = "Feeling Uncomfortable"
-    var issueLocation: String = "Basement"
+   
+    var commentsTextField: UITextField?
 
+     let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,18 +28,18 @@ class AcceptAlertViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         
         let alert = UIAlertController(title: "Are you sure?\n ______________________________", message: " ", preferredStyle: UIAlertControllerStyle.Alert)
-        var inputTextField: UITextField?
+        
         
         
         alert.addTextFieldWithConfigurationHandler({(textField: UITextField!) in
-            inputTextField = textField
+            self.commentsTextField = textField
         })
         
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.alignment = NSTextAlignment.Left
         
         let messageText = NSMutableAttributedString(
-            string: "Alert Type:\n "+issueName+"\nLocation\n "+issueLocation+"\nComments",
+            string: "Alert Type:\n "+appDelegate.issueSelected+"\nLocation\n "+appDelegate.incidentSelected+"\nComments",
             attributes: [
                 NSParagraphStyleAttributeName: paragraphStyle,
                 NSFontAttributeName : UIFont.preferredFontForTextStyle(UIFontTextStyleBody),
@@ -59,10 +60,10 @@ class AcceptAlertViewController: UIViewController {
     
     func acceptHandler()
     {
-        
+        print("Acept Handler Function")
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         
-            var parameters = ["issueName":"Fight","issueLocation":"Basement","issueDate":"May 2016","comments":"Need Help","fraternityName":"sigmaphi"] as Dictionary<String, String>
+            let parameters = ["issueName":appDelegate.issueSelected,"issueLocation":appDelegate.incidentSelected,"issueDate": "\(NSDate())","comments":(commentsTextField?.text)!,"fraternityName":appDelegate.fraternitySelected] as Dictionary<String, String>
             
             do {
                 
@@ -77,7 +78,7 @@ class AcceptAlertViewController: UIViewController {
                 
                 request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
                 request.HTTPBody = jsonData
-                
+                print("Sending request")
                 
                 let task = NSURLSession.sharedSession().dataTaskWithRequest(request){ data, response, error in
                     if error != nil{
@@ -86,10 +87,9 @@ class AcceptAlertViewController: UIViewController {
                     }
                     else
                     {
-                        print("Success")
-                        print(response)
-                       
+                        print("Came into else loop")
                         
+                        print("Response to Issue Submission \(response)")
                     }
                     
                     

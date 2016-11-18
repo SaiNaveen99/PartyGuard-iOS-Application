@@ -12,6 +12,9 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var fraternitySelected:String!
+    var issueSelected:String!
+    var incidentSelected:String!
     var accessToken:String!
     var userType:String!
 

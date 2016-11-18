@@ -46,6 +46,7 @@
 		AC6347BE1D80C8A60080B62A /* FraternityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6347BD1D80C8A60080B62A /* FraternityTableViewController.swift */; };
 		AC8B0CF01DDE7C2C009775E9 /* BasicLogTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8B0CEF1DDE7C2C009775E9 /* BasicLogTableViewController.swift */; };
 		AC8B0CF21DDE815C009775E9 /* BasicUserLocationChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8B0CF11DDE815C009775E9 /* BasicUserLocationChangeViewController.swift */; };
+		ACBB8BB31DDEAAF200CD953E /* NWMSU.png in Resources */ = {isa = PBXBuildFile; fileRef = ACBB8BB21DDEAAF200CD953E /* NWMSU.png */; };
 		ACC34A2A1D9C697B00C60FFA /* User Female-25.png in Resources */ = {isa = PBXBuildFile; fileRef = ACC34A291D9C697B00C60FFA /* User Female-25.png */; };
 		ACC34A2F1D9C698D00C60FFA /* Gender Neutral User-50.png in Resources */ = {isa = PBXBuildFile; fileRef = ACC34A2B1D9C698D00C60FFA /* Gender Neutral User-50.png */; };
 		ACC34A301D9C698D00C60FFA /* User Groups-25.png in Resources */ = {isa = PBXBuildFile; fileRef = ACC34A2C1D9C698D00C60FFA /* User Groups-25.png */; };
@@ -106,6 +107,7 @@
 		AC6347BD1D80C8A60080B62A /* FraternityTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FraternityTableViewController.swift; sourceTree = "<group>"; };
 		AC8B0CEF1DDE7C2C009775E9 /* BasicLogTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicLogTableViewController.swift; sourceTree = "<group>"; };
 		AC8B0CF11DDE815C009775E9 /* BasicUserLocationChangeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicUserLocationChangeViewController.swift; sourceTree = "<group>"; };
+		ACBB8BB21DDEAAF200CD953E /* NWMSU.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NWMSU.png; sourceTree = "<group>"; };
 		ACC34A291D9C697B00C60FFA /* User Female-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "User Female-25.png"; sourceTree = "<group>"; };
 		ACC34A2B1D9C698D00C60FFA /* Gender Neutral User-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Gender Neutral User-50.png"; sourceTree = "<group>"; };
 		ACC34A2C1D9C698D00C60FFA /* User Groups-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "User Groups-25.png"; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 				23ED11251DB482770087D88E /* Personal Trainer-25.png */,
 				ACC34A291D9C697B00C60FFA /* User Female-25.png */,
 				AC6347771D80C1A50080B62A /* SPE.gif */,
+				ACBB8BB21DDEAAF200CD953E /* NWMSU.png */,
 				ACC34A2B1D9C698D00C60FFA /* Gender Neutral User-50.png */,
 				ACC34A2C1D9C698D00C60FFA /* User Groups-25.png */,
 				ACC34A2D1D9C698D00C60FFA /* Error-25.png */,
@@ -288,6 +291,7 @@
 				ACC34A311D9C698D00C60FFA /* Error-25.png in Resources */,
 				ACFFE5E71D89EE8C005EFB35 /* Menu Filled-50.png in Resources */,
 				7F1D11BA1DDEA2230089BF25 /* Main.storyboard in Resources */,
+				ACBB8BB31DDEAAF200CD953E /* NWMSU.png in Resources */,
 				ACC34A2A1D9C697B00C60FFA /* User Female-25.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

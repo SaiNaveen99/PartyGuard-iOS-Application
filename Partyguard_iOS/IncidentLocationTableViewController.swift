@@ -10,10 +10,12 @@ import UIKit
 
 class IncidentLocationTableViewController: UITableViewController {
     
-    
+    ///This variable holds the selected incident
     var incidentSelected:String!
 
+    ///This variable holds the instance of AppDelegate
     let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+    ///This is an array variable holds the several locations
     var incidentLocation = ["Upstairs","Main Floor","Basement","Deck"]
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,17 +34,29 @@ class IncidentLocationTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
+    /**
+     This function defines number of sections in a tableview
+     :param: tableview
+     :returns: Number of sections
+     */
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
+    /**
+     This function defines number of rows in each esction
+     :returns: Number of rows
+     */
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return incidentLocation.count+2
     }
 
-   
+    /**
+     This function defines cell for each row
+     :returns: Tableview cell
+     */
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("IncidentLocationCellID", forIndexPath: indexPath)
         if (indexPath.row == 0)
@@ -71,6 +85,10 @@ class IncidentLocationTableViewController: UITableViewController {
         return cell
     }
  
+    /**
+     This function defines height of cell at particular row
+     :returns: Float value
+     */
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         
         let tableHeight = self.tableView.bounds.height
@@ -84,7 +102,15 @@ class IncidentLocationTableViewController: UITableViewController {
             self.performSegueWithIdentifier("IncidenttoSendAlert", sender: nil)
             
             
-                 }
+      
+    }
+    /**
+     This function carries data over segue from one ViewController to another ViewController
+     
+     :param: segue, sender
+     
+     */
+
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
       if(segue.identifier == "IncidenttoSendAlert")
       {

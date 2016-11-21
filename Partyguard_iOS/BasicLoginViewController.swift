@@ -11,14 +11,17 @@ import UIKit
 class BasicLoginViewController: UIViewController {
 
     
-    
+    ///This variable holds the Email user entered in the textfield
     @IBOutlet weak var EmailTF: UITextField!
     
-    
+    ///This variable holds the Password user entered in the textfield
     @IBOutlet weak var PasswordTF: UITextField!
    
 
-    
+    /**
+     This function is triggered when the user clicks the login button
+     :param: sender anyObject
+     */
     @IBAction func LoginButton(sender: AnyObject)
     {
   
@@ -152,15 +155,26 @@ class BasicLoginViewController: UIViewController {
         
     
     }
+    
+    /**
+     This function is triggered when the user clicks the Hostlogin button
+     :param: sender anyObject
+     */
     @IBAction func HostLoginButton(sender: AnyObject) {
         self.performSegueWithIdentifier("segue2", sender: self)
     }
    
-   
+    /**
+     This function is triggered when the user clicks the Guard login button
+     :param: sender anyObject
+     */
     @IBAction func GuardLoginButton(sender: AnyObject) {
         self.performSegueWithIdentifier("segue3", sender: self)
     }
-   
+    /**
+     This function is triggered when the user clicks the CreateAccount button
+     :param: sender anyObject
+     */
     @IBAction func RegisterButton(sender: AnyObject)
     {
         self.performSegueWithIdentifier("segue1", sender: self)

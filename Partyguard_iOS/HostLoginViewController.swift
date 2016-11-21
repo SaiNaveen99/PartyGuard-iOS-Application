@@ -12,10 +12,10 @@ class HostLoginViewController: UIViewController {
     
     
     
-    
+     ///This variable holds the Email user entered in the textfield
     @IBOutlet weak var EmailTF: UITextField!
     
-    
+     ///This variable holds the password user entered in the textfield
     @IBOutlet weak var PasswordTF: UITextField!
    
 
@@ -32,7 +32,10 @@ class HostLoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-  
+    /**
+     This function is triggered when the user clicks the Hostlogin button
+     :param: sender anyObject
+     */
     @IBAction func loginAction(sender: AnyObject) {
         
         

@@ -24,7 +24,10 @@ class InfoViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
+    /**
+     This function is triggered when the user clicks the Next Button
+     :param: sender Is an UIBarButtonItem
+     */
     @IBAction func onclickNextButton(sender: UIBarButtonItem) {
     }
     

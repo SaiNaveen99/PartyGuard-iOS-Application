@@ -10,10 +10,15 @@ import UIKit
 
 class GuardAlertTableViewController: UITableViewController {
     
+    ///This variable holds the basic user names that comes from web service
     var basicuserNames:[String] = [String]()
+    ///This variable holds the issues that comes from web service
     var issues:[String] = [String]()
+    ///This variable holds name selected
     var nameSelected:String!
+    ///This variable holds the issue ids
     var issueIds:[Int] = [Int]()
+    ///This variable holds the issue selected
     var issueIDSelected:Int!
 
     override func viewDidLoad() {
@@ -33,17 +38,30 @@ class GuardAlertTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
+    /**
+     This function defines number of sections in a tableview
+     :param: tableview
+     :returns: Number of sections
+     */
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
+    /**
+     This function defines number of rows in each esction
+     :returns: Number of rows
+     */
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return issues.count
     }
 
-   
+    /**
+     This function defines cell for each row
+     :returns: Tableview cell
+     */
+
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("GuardAlerts", forIndexPath: indexPath)
         cell.textLabel!.text = basicuserNames[indexPath.row]
@@ -52,7 +70,10 @@ class GuardAlertTableViewController: UITableViewController {
         // Configure the cell...
         return cell
     }
-    
+    /**
+     This function defines what has to happen when user clicks on the tableview cell at particular index
+     */
+
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         nameSelected = basicuserNames[indexPath.row]
         issueIDSelected = issueIds[indexPath.row]
@@ -61,6 +82,13 @@ class GuardAlertTableViewController: UITableViewController {
         }
         
     }
+    /**
+     This function carries data over segue from one ViewController to another ViewController
+     
+    :param: segue, sender
+    
+     */
+
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         if(segue.identifier == "GuardAlerttoClaim")
@@ -71,6 +99,11 @@ class GuardAlertTableViewController: UITableViewController {
             guardissueclaimcontroller.issueId = issueIDSelected
         }
     }
+    /**
+     This function triggered everytime the view appears
+     :param: animated  Is a boolean variable
+     */
+
     override func viewWillAppear(animated: Bool) {
         
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate

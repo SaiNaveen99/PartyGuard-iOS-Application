@@ -12,6 +12,7 @@ private let reuseIdentifier = "pgcell"
 
 class PGTeamCollectionViewController: UICollectionViewController {
     
+    ///This variable holds the guard names comes from the web service
     var guardnames:[String] = [String]()
     
     override func viewDidLoad() {
@@ -31,7 +32,10 @@ class PGTeamCollectionViewController: UICollectionViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    /**
+     This function is triggered every time page loads.
+     :param: Animated  Boolean variable
+ */
     override func viewWillAppear(animated: Bool) {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         
@@ -96,17 +100,31 @@ class PGTeamCollectionViewController: UICollectionViewController {
     
     // MARK: UICollectionViewDataSource
     
+    /**
+     This function defines number of sections in a collection view
+     :param: collectionview
+     :returns: Number of sections
+     */
+
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
-    
+    /**
+     This function defines number of items in each esction
+     :returns: Number of items
+     */
+
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
         return guardnames.count
     }
-    
+    /**
+     This function defines CollectionView cell for each row
+     :returns: Collection view cell
+     */
+
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         print("hello")

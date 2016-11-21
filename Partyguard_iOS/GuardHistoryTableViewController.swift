@@ -27,16 +27,32 @@ class GuardHistoryTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
+    /**
+     This function defines number of sections in a tableview
+     :param: tableview
+     :returns: Number of sections
+     */
+
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
+
+    /**
+     This function defines number of rows in each esction
+     :returns: Number of rows
+     */
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 2
     }
 
+    
+    /**
+     This function defines cell for each row
+     :returns: Tableview cell
+     */
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("GuardHistory", forIndexPath: indexPath)

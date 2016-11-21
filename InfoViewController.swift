@@ -11,14 +11,14 @@ import UIKit
 class InfoViewController: UIViewController {
 
  
-// extending the UIViewController class
+ ///Called after the controller's view is loaded into memory.
     override func viewDidLoad() {
         
         super.viewDidLoad()  // calling method from parent class.
 
         // Do any additional setup after loading the view.
     }
-
+///Sent to the view controller when the app receives a memory warning.
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()// Dispose 
         // Dispose of any resources that can be recreated.

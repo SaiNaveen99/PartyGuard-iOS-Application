@@ -10,12 +10,14 @@ import UIKit
 
 class ForgotPasswordViewController: UIViewController {
 
+    ///Called after the controller's view is loaded into memory.
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
 
+    ///Sent to the view controller when the app receives a memory warning.
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

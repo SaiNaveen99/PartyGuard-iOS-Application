@@ -179,6 +179,7 @@ class BasicLoginViewController: UIViewController {
     {
         self.performSegueWithIdentifier("segue1", sender: self)
     }
+    ///Called after the controller's view is loaded into memory.
     override func viewDidLoad()
     {
         self.view.backgroundColor = UIColor.lightTextColor()
@@ -186,7 +187,7 @@ class BasicLoginViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+///Sent to the view controller when the app receives a memory warning.
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

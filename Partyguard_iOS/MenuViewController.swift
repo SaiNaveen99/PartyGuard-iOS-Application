@@ -14,9 +14,10 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     
 
    
-    
+    ///This variable holds menu items
     var MenuItem = ["Home","Profile","Log","Settings","Change Location","Log out"]
 
+     ///Called after the controller's view is loaded into memory.
     override func viewDidLoad() {
         super.viewDidLoad()
        
@@ -33,6 +34,9 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         // Do any additional setup after loading the view.
     }
 
+    /**
+     This function is triggered when the user clicks the MenuBar button
+     */
     func backmenu() {
         print("backmenu pressed")
         let transition = CATransition()
@@ -43,14 +47,27 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.performSegueWithIdentifier("backmenuSegueToFraternity", sender: self)
         
     }
+    /**
+     This function defines number of sections in a tableview
+     :param: tableview
+     :returns: Number of sections
+     */
    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
+    /**
+     This function defines number of rows in each esction
+     :returns: Number of rows
+     */
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return MenuItem.count+1
     }
+    /**
+     This function defines cell for each row
+     :returns: Tableview cell
+     */
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell1:ProfileTableViewCell
         var cell2:UITableViewCell
@@ -75,6 +92,9 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
         
     }
+    /**
+     This function defines what has to happen when user clicks on the tableview cell at particular index
+     */
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     
@@ -97,11 +117,15 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         print("Logout")
        
     }
-
+///Sent to the view controller when the app receives a memory warning.
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    /**
+       This function defines hight of the tableview cell at particular index
+       :returns: Float value
+    */
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if(indexPath.row == 0)
         {

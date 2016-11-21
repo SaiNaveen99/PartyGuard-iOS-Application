@@ -12,6 +12,7 @@ class ClaimAlertViewController: UIViewController {
     
     var guardUserClaimed: String = "James Brown"
 
+     ///Called after the controller's view is loaded into memory.
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.whiteColor()
@@ -20,7 +21,10 @@ class ClaimAlertViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
-
+    /**
+     This function is triggered everytime view appears
+     :param: animated  Is a boolean type
+     */
     override func viewWillAppear(animated: Bool) {
         let titleText:String = guardUserClaimed + " has claimed your request for assistance"
          let claimAlert = UIAlertController(title:titleText, message: " ", preferredStyle: UIAlertControllerStyle.Alert)//
@@ -31,7 +35,10 @@ class ClaimAlertViewController: UIViewController {
         
        
     }
-    
+    /**
+     This function defines the action to be performed when user clicks claim
+     
+     */
     func claimHandler()
     {
         self.performSegueWithIdentifier("resolutionSegue", sender: self)
@@ -40,6 +47,7 @@ class ClaimAlertViewController: UIViewController {
      
         
     }
+    ///Sent to the view controller when the app receives a memory warning.
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

@@ -10,33 +10,33 @@ import UIKit
 
 class GuardRegisterViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-
+    ///This variable holds the FirstName Guarduser entered in the textfield
     @IBOutlet weak var guardfirstNameTF: UITextField!
     
-    
+    ///This variable holds the ProfileImage user selected from library
     @IBOutlet weak var ProfileIV: UIImageView!
-    
+    ///This variable holds the LastName Guarduser entered in the textfield
     @IBOutlet weak var lastNameTF: UITextField!
     
-    
+    ///This variable holds the E-mail Guarduser entered in the textfield
     @IBOutlet weak var EmailTF: UITextField!
     
-    
+    ///This variable holds the password Guarduser entered in the textfield
     @IBOutlet weak var PasswordTF: UITextField!
     
-    
+    ///This variable holds the instance of UploadImage Button
     @IBOutlet weak var uploadImageBTN: UIButton!
-    
+    ///This variable holds the password Guarduser entered in the textfield
     @IBOutlet weak var RepeatPasswordTF: UITextField!
     
-    
+    ///This variable holds the PhoneNumber Guarduser entered in the textfield
     @IBOutlet weak var phoneNumberTF: UITextField!
     
-    
+    ///This variable holds the GuardCode Guarduser entered in the textfield
     @IBOutlet weak var guardUserCode: UITextField!
     
     let imagePicker = UIImagePickerController()
-    
+     ///Called after the controller's view is loaded into memory.
     override func viewDidLoad() {
         imagePicker.delegate = self
         super.viewDidLoad()
@@ -44,10 +44,15 @@ class GuardRegisterViewController: UIViewController, UIImagePickerControllerDele
         // Do any additional setup after loading the view.
     }
 
+    ///Sent to the view controller when the app receives a memory warning.
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    /**
+     This function is defines what happens when user clicks on upload image button
+     :param: picker Is a UIImagePickerController object
+     */
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             ProfileIV.contentMode = .ScaleAspectFit
@@ -56,13 +61,20 @@ class GuardRegisterViewController: UIViewController, UIImagePickerControllerDele
         
         dismissViewControllerAnimated(true, completion: nil)
     }
-    
+    /**
+     This function is defines what has to be done when user clicks on cancel button
+     :param: picker Is a UIImageController object
+     */
+
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
         dismissViewControllerAnimated(true, completion: nil)
     }
     
     
-    
+    /**
+     This function is triggered when the user clicks the UploadImage button
+     :param: sender anyObject
+     */
     @IBAction func uploadImageAction(sender: AnyObject) {
         
         imagePicker.allowsEditing = false
@@ -71,6 +83,10 @@ class GuardRegisterViewController: UIViewController, UIImagePickerControllerDele
     }
 
     
+    /**
+     This function is triggered when the user clicks the CreateAccount button
+     :param: sender anyObject
+     */
     @IBAction func createAccountAction(sender: AnyObject) {
      
         if(EmailTF.text == "" || PasswordTF == "" || RepeatPasswordTF == "" || phoneNumberTF == "")

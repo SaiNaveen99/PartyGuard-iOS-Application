@@ -10,6 +10,7 @@ import UIKit
 
 class HistoryTableTableViewController: UITableViewController {
 
+    ///Called after the controller's view is loaded into memory.
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.tableFooterView = UIView()
@@ -20,6 +21,7 @@ class HistoryTableTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
+    ///Sent to the view controller when the app receives a memory warning
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

@@ -10,36 +10,41 @@ import UIKit
 
 class BasicRegisterViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
 
+    ///This variable holds the FirstName user entered in the textfield
     @IBOutlet weak var FirstNameTF: UITextField!
     
-    
+    ///This variable holds the LastName user entered in the textfield
     @IBOutlet weak var LastNameTF: UITextField!
     
-    
+    ///This variable holds the ProfileImage user selected from library
     @IBOutlet weak var ProfileIV: UIImageView!
     
+    ///This variable holds the Email user entered in the textfield
     @IBOutlet weak var EmailTF: UITextField!
     
 
-    
+    ///This variable holds the Password user entered in the textfield
     @IBOutlet weak var PasswordTF: UITextField!
     
-    
+    ///This variable holds the Password user entered in the textfield
     @IBOutlet weak var RepeatPasswordTF: UITextField!
     
     
-    
+    ///This variable holds the PhoneNumber user entered in the textfield
     @IBOutlet weak var PhoneNumberTF: UITextField!
     
-    
+    ///This variable holds the Date of Birth user entered in the textfield
     @IBOutlet weak var DobTF: UITextField!
     
-    
+    ///This variable holds the ZipCode user entered in the textfield
     @IBOutlet weak var PinTF: UITextField!
     
     let imagePicker = UIImagePickerController()
     
-    
+    /**
+     This function is triggered when the user clicks the CreateAccount button
+     :param: sender anyObject
+     */
     @IBAction func CreateAccountButton(sender: AnyObject) {
         
         print("Basic User Create Account")
@@ -96,6 +101,7 @@ class BasicRegisterViewController: UIViewController, UIImagePickerControllerDele
         }
     }
 
+     ///Called after the controller's view is loaded into memory.
 override func viewDidLoad()
     {
         
@@ -108,18 +114,25 @@ override func viewDidLoad()
     }
     
     
-    
+    /**
+     This function is triggered when the user clicks the UploadImage button
+     :param: sender anyObject
+     */
     @IBAction func uploadImageButtonAction(sender: UIButton) {
         imagePicker.allowsEditing = false
         imagePicker.sourceType = .PhotoLibrary
         
         presentViewController(imagePicker, animated: true, completion: nil)
     }
-
+///Sent to the view controller when the app receives a memory warning.
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    /**
+     This function is defines what happens when user clicks on upload image button
+     :param: picker Is a UIImagePickerController object
+     */
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             ProfileIV.contentMode = .ScaleAspectFit
@@ -128,7 +141,10 @@ override func viewDidLoad()
         
         dismissViewControllerAnimated(true, completion: nil)
     }
-    
+    /**
+     This function is defines what has to be done when user clicks on cancel button
+     :param: picker Is a UIImageController object 
+     */
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
         dismissViewControllerAnimated(true, completion: nil)
     }

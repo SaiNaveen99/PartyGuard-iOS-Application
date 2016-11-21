@@ -21,6 +21,7 @@ class GuardAlertTableViewController: UITableViewController {
     ///This variable holds the issue selected
     var issueIDSelected:Int!
 
+    ///Called after the controller's view is loaded into memory.
     override func viewDidLoad() {
         super.viewDidLoad()
  tableView.tableFooterView = UIView()
@@ -31,6 +32,7 @@ class GuardAlertTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
+    ///Sent to the view controller when the app receives a memory warning.
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

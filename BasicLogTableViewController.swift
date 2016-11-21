@@ -10,6 +10,7 @@ import UIKit
 
 class BasicLogTableViewController: UITableViewController {
 
+    ///This function is executed once when the app starts
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,7 +20,7 @@ class BasicLogTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
-
+ ///Sent to the view controller when the app receives a memory warning
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

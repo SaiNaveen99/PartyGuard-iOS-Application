@@ -13,6 +13,7 @@ class ResolutionAlertViewController: UIViewController {
     
     var guardUserResolved: String = "James Brown"
 
+     ///Called after the controller's view is loaded into memory.
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.whiteColor()
@@ -21,11 +22,15 @@ class ResolutionAlertViewController: UIViewController {
         print("resolution")
         
     }
-
+///Sent to the view controller when the app receives a memory warning.
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    /**
+     This function is triggered everytime view appears
+     :param: animated  Is a boolean type
+     */
     override func viewWillAppear(animated: Bool) {
         let titleText:String = guardUserResolved + " sent a resolution"// text String
         let resolutionAlert = UIAlertController(title:titleText, message: " ", preferredStyle: UIAlertControllerStyle.Alert)
@@ -42,15 +47,26 @@ class ResolutionAlertViewController: UIViewController {
 
     
     
-    
+    /**
+     This function is triggered when user clicks on Resolve button
+     :param: sender
+     */
     @IBAction func buttonAction(sender: AnyObject) {
         self.performSegueWithIdentifier("ResolutionSegue", sender: self)
         
     }
+    /**
+     This function defines the action to be performed when user clicks accept
+     
+     */
     func acceptHandler()
     {
        self.viewDidLoad()
     }
+    /**
+     This function defines the action to be performed when user clicks decline
+     
+     */
     func declineHandler()
     {
         let fvc = FraternityTableViewController()  // var fvc

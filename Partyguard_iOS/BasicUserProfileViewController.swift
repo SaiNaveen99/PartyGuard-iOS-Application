@@ -11,37 +11,51 @@ import UIKit
 class BasicUserProfileViewController: UIViewController {
     
     
+    ///This variable holds the FirstName of the user that comes from the web service
     @IBOutlet weak var FirstNameTF: UITextField!
     
     
+    ///This variable holds the LastName user of the that comes from the web service
     @IBOutlet weak var lastNameTF: UITextField!
     
     
+    ///This variable holds the UniversityName of the user that comes from the web service
     @IBOutlet weak var UniversityTF: UITextField!
     
     
+    ///This variable holds the Email of the user that comes from the web service
     @IBOutlet weak var EmailIdTF: UITextField!
     
     
-
+    
+   ///This variable holds the PhoneNumber of the user that comes from the web service
     @IBOutlet weak var phoneNumberTF: UITextField!
     
-    
+    ///This is a UIButton item that holds instance of Edit button
     @IBOutlet weak var Editbutton: UIButton!
-    
+     ///Called after the controller's view is loaded into memory.
     override func viewDidLoad() {
         
         super.viewDidLoad()
             }
+    /**
+     This function is triggered when the user clicks the Edit button
+     :param: sender anyObject
+     */
 
     @IBAction func editBTN(sender: AnyObject) {
         
     }
+    ///Sent to the view controller when the app receives a memory warning.
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    /**
+     This function is triggered everytime view appears
+     :param: animated  Is a boolean type
+     */
+ 
     override func viewWillAppear(animated: Bool) {
         
          let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
@@ -94,7 +108,11 @@ class BasicUserProfileViewController: UIViewController {
     }
     
     
-    
+    /**
+     This function is triggered when the user clicks the Edit button
+     :param: sender anyObject
+     */
+
     @IBAction func EditAction(sender: AnyObject) {
         if(Editbutton.titleLabel?.text == "Edit")
         {

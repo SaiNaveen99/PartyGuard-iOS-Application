@@ -14,7 +14,7 @@ class PGTeamCollectionViewController: UICollectionViewController {
     
     ///This variable holds the guard names comes from the web service
     var guardnames:[String] = [String]()
-    
+    ///Called after the controller's view is loaded into memory.
     override func viewDidLoad() {
         super.viewDidLoad()
         print("View did load")
@@ -27,7 +27,7 @@ class PGTeamCollectionViewController: UICollectionViewController {
         
         // Do any additional setup after loading the view.
     }
-    
+    ///Sent to the view controller when the app receives a memory warning
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

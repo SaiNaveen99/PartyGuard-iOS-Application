@@ -10,21 +10,26 @@ import UIKit
 
 class AcceptAlertViewController: UIViewController {
     
-   
+    ///This variable holds the Comment, user entered in the textfield
     var commentsTextField: UITextField?
-
+     ///This variable holds the instance of the AppDelegate
      let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+     ///Called after the controller's view is loaded into memory.
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
 
+    ///Sent to the view controller when the app receives a memory warning.
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    /**
+     This function is triggered everytime view appears
+     :param: animated  Is a boolean type
+     */
     override func viewWillAppear(animated: Bool) {
         
         let alert = UIAlertController(title: "Are you sure?\n ______________________________", message: " ", preferredStyle: UIAlertControllerStyle.Alert)
@@ -57,7 +62,10 @@ class AcceptAlertViewController: UIViewController {
         self.presentViewController(alert, animated: true, completion: nil)
         
     }
-    
+    /**
+     This function defines the action to be performed when user clicks accept
+     
+     */
     func acceptHandler()
     {
         print("Acept Handler Function")
@@ -104,7 +112,10 @@ class AcceptAlertViewController: UIViewController {
         
         
     }
-    
+    /**
+     This function defines the action to be performed when user clicks decline
+     
+     */
     func declineHandler()
     {
         let ivc = IncidentLocationTableViewController()
